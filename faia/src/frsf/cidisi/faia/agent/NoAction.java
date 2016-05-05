@@ -39,12 +39,10 @@ public class NoAction extends Action {
         return instance;
     }
 
-    @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         return est;
     }
 
-    @Override
     public String toString() {
         return "NoAction";
     }
