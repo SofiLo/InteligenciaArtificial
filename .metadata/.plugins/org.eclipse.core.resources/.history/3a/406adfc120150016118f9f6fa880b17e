@@ -399,54 +399,7 @@ public class Inicializacion {
 		nodoBaños2.agregarDestinos(Constantes.ESTE, nodoOficinaCivilGIMNI);
 		nodoBaños2.agregarDestinos(Constantes.SUR, nodoEscaleraElectrica);
 		
-		//aca tambien
-		nodoEscaleraElectrica.agregarDestinos(Constantes.SUR, nodoPuertaPatioInterno);
-		nodoEscaleraElectrica.agregarDestinos(Constantes.ESTE, nodoDptoCivil);
-		nodoEscaleraElectrica.agregarDestinos(Constantes.NORTE, nodoBaños2);
-		nodoEscaleraElectrica.agregarDestinos(Constantes.SUR, nodoEscaleraISI);
+		//me faltan desde escalera electrica en adelante... (segun el excel de eve)
 		
-		nodoPuertaEstadio.agregarDestinos(Constantes.OESTE, nodoIngresoTorre);
-		nodoPuertaEstadio.agregarDestinos(Constantes.NORTE, nodoDptoCivil);
-		nodoPuertaEstadio.agregarDestinos(Constantes.ESTE, nodoEstadio);
-		
-		nodoEstadio.agregarDestinos(Constantes.OESTE, nodoPuertaEstadio);
-		
-		nodoDptoIndustrial.agregarDestinos(Constantes.SUR, nodoAscensor);
-		
-		nodoAula20.agregarDestinos(Constantes.ESTE, nodoEscaleraChica);
-		nodoAula20.agregarDestinos(Constantes.NORTE, nodoAula21);
-		
-		nodoAula21.agregarDestinos(Constantes.SUR, nodoAula20);
-		nodoAula21.agregarDestinos(Constantes.NORTE, nodoAula22);
-		
-		nodoAula22.agregarDestinos(Constantes.OESTE, nodoAula21);
-		nodoAula22.agregarDestinos(Constantes.SUR, nodoEscaleraISI);
-		
-		//aca tambien
-		nodoEscaleraISI.agregarDestinos(Constantes.ESTE, nodoEscaleraChica);
-		nodoEscaleraISI.agregarDestinos(Constantes.NORTE, nodoEscaleraElectrica);
-		nodoEscaleraISI.agregarDestinos(Constantes.NORTE, nodoAula22);
-		nodoEscaleraISI.agregarDestinos(Constantes.ESTE, nodoLab1);
-		
-		nodoLab1.agregarDestinos(Constantes.OESTE, nodoEscaleraISI);
-		nodoLab1.agregarDestinos(Constantes.SUR, nodoCIDISI);
-		nodoLab1.agregarDestinos(Constantes.NORTE, nodoLab1);
-		
-		nodoCIDISI.agregarDestinos(Constantes.NORTE, nodoLab1);
-		nodoCIDISI.agregarDestinos(Constantes.SUR, nodoDptoISI);
-		
-		nodoLab2.agregarDestinos(Constantes.SUR, nodoLab1);
-		nodoLab2.agregarDestinos(Constantes.NORTE, nodoLab3);
-		
-		nodoLab3.agregarDestinos(Constantes.SUR, nodoLab2);
-		nodoLab3.agregarDestinos(Constantes.NORTE, nodoLabConectividad);
-		
-		nodoLabConectividad.agregarDestinos(Constantes.SUR, nodoLab3);
-		nodoLabConectividad.agregarDestinos(Constantes.NORTE, nodoLab4);
-		
-		nodoLab4.agregarDestinos(Constantes.SUR, nodoLabConectividad);
-		nodoLab4.agregarDestinos(Constantes.OESTE, nodoLab4);
-		
-		nodoLab5.agregarDestinos(Constantes.ESTE, nodoLab4);
 	} 
 }
