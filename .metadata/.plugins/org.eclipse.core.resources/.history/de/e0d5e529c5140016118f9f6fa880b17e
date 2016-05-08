@@ -11,7 +11,6 @@ public class Inicializacion {
 		//Creamos los nodos
 		Nodo nodoInicial = new Nodo();
 		Nodo nodoCantina = new Nodo();
-		Nodo nodoBiblioteca = new Nodo();
 		Nodo nodoAlumnado = new Nodo();
 		Nodo nodoIngresoTorre = new Nodo();
 		Nodo nodoEscaleraTorre = new Nodo();
@@ -29,7 +28,7 @@ public class Inicializacion {
 		Nodo nodoAscensor = new Nodo();
 		Nodo nodoEscaleraPpal = new Nodo();
 		Nodo nodoBañosPlantaBaja = new Nodo();
-		Nodo nodoEscaleraBasicas = new Nodo();
+		Nodo nodoEcaleraBasicas = new Nodo();
 		Nodo nodoAula9 = new Nodo();
 		Nodo nodoAula12 = new Nodo();
 		Nodo nodoAula18 = new Nodo();
@@ -68,11 +67,6 @@ public class Inicializacion {
 		nodoCantina.setIdNodo(1);
 		nodoCantina.setNivel(0);
 		nodoCantina.setObstaculo(false);
-		
-		nodoBiblioteca.setNombre("Biblioteca");
-		nodoBiblioteca.setIdNodo(46);
-		nodoBiblioteca.setNivel(0);
-		nodoBiblioteca.setObstaculo(false);
 		
 		nodoAlumnado.setNombre("Alumnado");
 		nodoAlumnado.setIdNodo(2);
@@ -129,7 +123,7 @@ public class Inicializacion {
 		nodoAulaEstudio.setNivel(0);
 		nodoAulaEstudio.setObstaculo(false);
 		
-		nodoDptoMecanica.setNombre("Departamento Mecánica");
+		nodoDptoMecanica.setNombre("Departamento Mecanica");
 		nodoDptoMecanica.setIdNodo(13);
 		nodoDptoMecanica.setNivel(0);
 		nodoDptoMecanica.setObstaculo(false);
@@ -139,7 +133,7 @@ public class Inicializacion {
 		nodoPuertaPatioInterno.setNivel(0);
 		nodoPuertaPatioInterno.setObstaculo(false);
 		
-		nodoDptoElectrica.setNombre("Departamento Eléctrica");
+		nodoDptoElectrica.setNombre("Departamento Electrica");
 		nodoDptoElectrica.setIdNodo(15);
 		nodoDptoElectrica.setNivel(0);
 		nodoDptoElectrica.setObstaculo(false);
@@ -159,10 +153,10 @@ public class Inicializacion {
 		nodoBañosPlantaBaja.setNivel(0);
 		nodoBañosPlantaBaja.setObstaculo(false);
 		
-		nodoEscaleraBasicas.setNombre("Escalera Básicas");
-		nodoEscaleraBasicas.setIdNodo(19);
-		nodoEscaleraBasicas.setNivel(0);
-		nodoEscaleraBasicas.setObstaculo(false);
+		nodoEcaleraBasicas.setNombre("Ecalera Basicas");
+		nodoEcaleraBasicas.setIdNodo(19);
+		nodoEcaleraBasicas.setNivel(0);
+		nodoEcaleraBasicas.setObstaculo(false);
 		
 		nodoAula9.setNombre("Aula 9");
 		nodoAula9.setIdNodo(20);
@@ -209,7 +203,7 @@ public class Inicializacion {
 		nodoBaños2.setNivel(1);
 		nodoBaños2.setObstaculo(false);		
 		
-		nodoEscaleraElectrica.setNombre("Escalera Eléctrica");
+		nodoEscaleraElectrica.setNombre("Escalera Electrica");
 		nodoEscaleraElectrica.setIdNodo(29);
 		nodoEscaleraElectrica.setNivel(0);
 		nodoEscaleraElectrica.setObstaculo(false);
@@ -294,112 +288,8 @@ public class Inicializacion {
 		nodoLab5.setNivel(2);
 		nodoLab5.setObstaculo(false);
 		
-		nodoInicial.agregarDestinos(Constantes.OESTE, nodoCantina);
+		nodoInicial.agregarDestinos(Constantes.NORTE, nodoCantina);
 		nodoInicial.agregarDestinos(Constantes.SUR, nodoPuertaPpal);
-		
-		nodoCantina.agregarDestinos(Constantes.ESTE, nodoInicial);
-		nodoCantina.agregarDestinos(Constantes.OESTE, nodoBiblioteca);
 
-		nodoBiblioteca.agregarDestinos(Constantes.ESTE, nodoCantina);
-		nodoBiblioteca.agregarDestinos(Constantes.OESTE, nodoAlumnado);
-		
-		nodoAlumnado.agregarDestinos(Constantes.ESTE, nodoBiblioteca);
-		nodoAlumnado.agregarDestinos(Constantes.OESTE, nodoIngresoTorre);
-		
-		nodoIngresoTorre.agregarDestinos(Constantes.ESTE, nodoAlumnado);
-		nodoIngresoTorre.agregarDestinos(Constantes.SUR, nodoEscaleraTorre);
-		
-		nodoEscaleraTorre.agregarDestinos(Constantes.NORTE, nodoIngresoTorre);
-		nodoEscaleraTorre.agregarDestinos(Constantes.ESTE, nodoPuertaEstadio);
-		
-		nodoPuertaPpal.agregarDestinos(Constantes.ESTE, nodoInicial);
-		nodoPuertaPpal.agregarDestinos(Constantes.NORTE, nodoFotocopiadora);
-		nodoPuertaPpal.agregarDestinos(Constantes.ESTE, nodoAula1);
-		nodoPuertaPpal.agregarDestinos(Constantes.OESTE, nodoAulaEstudio);
-		
-		nodoFotocopiadora.agregarDestinos(Constantes.SUR, nodoPuertaPpal);
-		nodoFotocopiadora.agregarDestinos(Constantes.NORTE, nodoAula2);
-		
-		nodoAula2.agregarDestinos(Constantes.SUR, nodoFotocopiadora);
-		nodoAula2.agregarDestinos(Constantes.NORTE, nodoAula3);
-		
-		nodoAula3.agregarDestinos(Constantes.SUR, nodoAula2);
-		nodoAula3.agregarDestinos(Constantes.NORTE, nodoAula4);
-		
-		nodoAula4.agregarDestinos(Constantes.SUR, nodoAula3);
-		nodoAula4.agregarDestinos(Constantes.NORTE, nodoAula5);
-		
-		nodoAula5.agregarDestinos(Constantes.SUR, nodoAula4);
-		
-		nodoAula1.agregarDestinos(Constantes.OESTE, nodoPuertaPpal);
-		nodoAula1.agregarDestinos(Constantes.SUR, nodoEscaleraBasicas);
-		
-		nodoAulaEstudio.agregarDestinos(Constantes.ESTE, nodoPuertaPpal);
-		nodoAulaEstudio.agregarDestinos(Constantes.OESTE, nodoDptoMecanica);
-		nodoAulaEstudio.agregarDestinos(Constantes.NORTE, nodoEscaleraPpal);
-		
-		nodoDptoMecanica.agregarDestinos(Constantes.ESTE, nodoAulaEstudio);
-		nodoDptoMecanica.agregarDestinos(Constantes.OESTE, nodoPuertaPatioInterno);
-		
-		nodoPuertaPatioInterno.agregarDestinos(Constantes.ESTE, nodoDptoMecanica);
-		nodoPuertaPatioInterno.agregarDestinos(Constantes.NORTE, nodoDptoElectrica);
-		nodoPuertaPatioInterno.agregarDestinos(Constantes.OESTE, nodoAscensor);
-		// hayq ue ver bien este. porque los dos van al norte y no se deberia poder
-	//	nodoPuertaPatioInterno.agregarDestinos(Constantes.NORTE, nodoEscaleraElectrica);
-		
-		nodoDptoElectrica.agregarDestinos(Constantes.SUR, nodoPuertaPatioInterno);
-		
-		//este tmb hay que ver como definimos bien el nivel.. porque tengo tres este
-		nodoAscensor.agregarDestinos(Constantes.ESTE, nodoPuertaPatioInterno);
-		nodoAscensor.agregarDestinos(Constantes.ESTE, nodoDptoCivil);
-		nodoAscensor.agregarDestinos(Constantes.NORTE, nodoDptoIndustrial);
-		nodoAscensor.agregarDestinos(Constantes.ESTE, nodoDptoISI);
-		
-		
-		//acá tmb ver
-		nodoEscaleraPpal.agregarDestinos(Constantes.SUR, nodoAulaEstudio);
-		nodoEscaleraPpal.agregarDestinos(Constantes.NORTE, nodoBañosPlantaBaja);
-		nodoEscaleraPpal.agregarDestinos(Constantes.NORTE, nodoBañosPrimerPiso);
-		
-		nodoBañosPlantaBaja.agregarDestinos(Constantes.SUR, nodoEscaleraPpal);
-		
-		nodoEscaleraBasicas.agregarDestinos(Constantes.NORTE, nodoAula1);
-		nodoEscaleraBasicas.agregarDestinos(Constantes.SUR, nodoAula9);
-		
-		nodoAula9.agregarDestinos(Constantes.SUR, nodoEscaleraBasicas);
-		nodoAula9.agregarDestinos(Constantes.NORTE, nodoAula12);
-		
-		nodoAula12.agregarDestinos(Constantes.SUR, nodoAula9);
-		nodoAula12.agregarDestinos(Constantes.NORTE, nodoAula18);
-		nodoAula12.agregarDestinos(Constantes.OESTE, nodoAula19);
-		
-		nodoAula18.agregarDestinos(Constantes.SUR, nodoAula12);
-		
-		nodoAula19.agregarDestinos(Constantes.ESTE, nodoAula12);
-		nodoAula19.agregarDestinos(Constantes.SUR, nodoBañosPrimerPiso);
-		
-		nodoBañosPrimerPiso.agregarDestinos(Constantes.SUR, nodoEscaleraPpal);
-		nodoBañosPrimerPiso.agregarDestinos(Constantes.NORTE, nodoAula19);
-		nodoBañosPrimerPiso.agregarDestinos(Constantes.OESTE, nodoOficinaCivilGIMNI);
-		
-		//aca tambien
-		nodoEscaleraChica.agregarDestinos(Constantes.ESTE, nodoDptoMecanica);
-		nodoEscaleraChica.agregarDestinos(Constantes.OESTE, nodoDptoCivil);
-		nodoEscaleraChica.agregarDestinos(Constantes.NORTE, nodoAula20);
-		nodoEscaleraChica.agregarDestinos(Constantes.NORTE, nodoEscaleraISI);
-		
-		nodoOficinaCivilGIMNI.agregarDestinos(Constantes.ESTE, nodoBañosPrimerPiso);
-		nodoOficinaCivilGIMNI.agregarDestinos(Constantes.OESTE, nodoBaños2);
-		
-		nodoDptoCivil.agregarDestinos(Constantes.OESTE, nodoAscensor);
-		nodoDptoCivil.agregarDestinos(Constantes.ESTE, nodoEscaleraChica);
-		nodoDptoCivil.agregarDestinos(Constantes.NORTE, nodoEscaleraElectrica);
-		nodoDptoCivil.agregarDestinos(Constantes.SUR, nodoPuertaEstadio);
-		
-		nodoBaños2.agregarDestinos(Constantes.ESTE, nodoOficinaCivilGIMNI);
-		nodoBaños2.agregarDestinos(Constantes.SUR, nodoEscaleraElectrica);
-		
-		//me faltan desde escalera electrica en adelante... (segun el excel de eve)
-		
 	} 
 }

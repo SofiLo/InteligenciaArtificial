@@ -1,9 +1,6 @@
 package Pantallas;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.*;
 
 public class Inicio extends JFrame {
@@ -54,23 +51,8 @@ public class Inicio extends JFrame {
 		lblDestino = new JLabel("Ingrese destino");
 		panel.add(lblDestino);
 		
-		cb2 = new JComboBox(aulas);
+		cb2 = new JComboBox();
 		panel.add(cb2);
-		
-		//ACTION LISTENERS
-		 ActionListener actionListener = new ActionListener() 
-		 {
-			 public void actionPerformed(ActionEvent actionEvent) {
-		        System.out.println("Selected: " + cb1.getSelectedItem());
-		        System.out.println(", Position: " + cb1.getSelectedIndex());
-
-		        System.out.println("Selected: " + cb2.getSelectedItem());
-		        System.out.println(", Position: " + cb2.getSelectedIndex());
-		      }
-		 };
-		cb1.addActionListener(actionListener);
-		cb2.addActionListener(actionListener);
-		
 		
 		lbl = new JLabel();
 		lbl.setHorizontalAlignment(SwingConstants.CENTER);
