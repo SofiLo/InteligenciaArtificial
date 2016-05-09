@@ -225,7 +225,6 @@ public class LatexOutput implements EventHandler {
         }
     }
 
-    @Override
     public void runEventHandler(Object[] params) {
         try {
             this.compileLatexFiles(true);
@@ -238,7 +237,6 @@ public class LatexOutput implements EventHandler {
 
 class PdfFilesFilter implements FilenameFilter {
 
-    @Override
     public boolean accept(File arg0, String arg1) {
         return (arg1.toLowerCase().endsWith(".pdf"));
     }
@@ -246,7 +244,7 @@ class PdfFilesFilter implements FilenameFilter {
 
 class TexFilter implements FilenameFilter {
 
-    @Override
+
     public boolean accept(File arg0, String arg1) {
         return (arg1.toLowerCase().endsWith(".tex"));
     }
@@ -254,7 +252,6 @@ class TexFilter implements FilenameFilter {
 
 class TempFilesFilter implements FilenameFilter {
 
-    @Override
     public boolean accept(File arg0, String arg1) {
         return (arg1.toLowerCase().endsWith(".aux") || arg1.toLowerCase().endsWith(".log"));
     }
