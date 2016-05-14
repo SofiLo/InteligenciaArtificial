@@ -284,7 +284,6 @@ public class NTree implements Cloneable, Comparable<NTree> {
         return resultado;
     }
 
-    @Override
     public boolean equals(Object obj) {
         return agentState.equals(((NTree) obj).getAgentState());
     }
