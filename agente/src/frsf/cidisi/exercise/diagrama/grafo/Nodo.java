@@ -10,6 +10,10 @@ public class Nodo {
 	HashMap<String, Nodo> destinos = new HashMap<String, Nodo>();
 	HashMap<String, Integer> distancias = new HashMap<String, Integer>();
 	
+	public Nodo(){
+		
+	}
+	
 	public int getIdNodo() {
 		return idNodo;
 	}
@@ -44,10 +48,8 @@ public class Nodo {
 	public String getNombre() {
 		return nombre;
 	}
-	
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
 	
 }
