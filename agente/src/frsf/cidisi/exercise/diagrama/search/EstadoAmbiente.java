@@ -1,5 +1,9 @@
 package frsf.cidisi.exercise.diagrama.search;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import frsf.cidisi.exercise.diagrama.grafo.Nodo;
 import frsf.cidisi.faia.state.EnvironmentState;
 
 /**
@@ -7,17 +11,18 @@ import frsf.cidisi.faia.state.EnvironmentState;
  */
 public class EstadoAmbiente extends EnvironmentState {
 	
-	//TODO: Setup Variables
-    //private Other posicionAgente;
-    //private Other nodos;
+	 private Nodo posicionAgente;
+	 private List<Nodo> nodos;
 	
     public EstadoAmbiente() {
         
-        //TODO: Complete Method
-    	/*
-			// posicionAgente = initData0;
-			// nodos = initData1;
-        */
+    	//TODO: Complete Method
+    	// posicionAgente = initData0;
+		// nodos = initData1;
+   	
+    	posicionAgente = new Nodo();
+    	nodos = new ArrayList<Nodo>();
+    	
         this.initState();
     }
 
@@ -28,6 +33,14 @@ public class EstadoAmbiente extends EnvironmentState {
     public void initState() {
 
         //TODO: Complete Method
+    	//este seria el estado inicial del AMBIENTE. El escenario de entrada
+    	//y deberiamos indicarle cual seria el nodo incial
+    	
+    	Nodo nodoInicial = new Nodo();
+    	posicionAgente = nodoInicial;
+    	
+    	
+    	
     }
 
     /**
