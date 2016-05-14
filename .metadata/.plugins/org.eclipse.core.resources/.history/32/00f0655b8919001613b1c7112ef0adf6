@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idemia:AgentModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:idemia="utn.frsf.cidisi">
+  <Environment name="Ambiente">
+    <EnvironmentState name="EstadoAmbiente">
+      <DataStructure name="posicionAgente" type="Other"/>
+      <DataStructure name="nodos" type="Other"/>
+    </EnvironmentState>
+  </Environment>
+  <Agent name="Agente">
+    <Strategy xsi:type="idemia:Search"/>
+    <Goal name="ObjetivoAgente" value=" NodoActual = NodoDestino"/>
+    <AgentState name="EstadoAgente">
+      <DataStructure name="posicion" type="Other"/>
+      <DataStructure name="energia"/>
+      <DataStructure name="listaObstaculo" type="Other"/>
+    </AgentState>
+  </Agent>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrNorte"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrSur"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrEste"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrOeste"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="existeobstaculo"/>
+</idemia:AgentModel>

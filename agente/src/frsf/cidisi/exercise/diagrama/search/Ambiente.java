@@ -21,7 +21,7 @@ public class Ambiente extends Environment {
      * @param agent
      * @return A perception that will be given to the agent by the simulator.
      */
-
+    @Override
     public  AgentePerception getPercept() {
         // Create a new perception to return
          AgentePerception perception = new AgentePerception();
