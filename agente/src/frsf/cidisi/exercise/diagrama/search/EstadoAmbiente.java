@@ -9,14 +9,14 @@ public class EstadoAmbiente extends EnvironmentState {
 	
 	//TODO: Setup Variables
     //private Other posicionAgente;
-    //private Other nodos;
+    //private Other mapa;
 	
     public EstadoAmbiente() {
         
         //TODO: Complete Method
     	/*
 			// posicionAgente = initData0;
-			// nodos = initData1;
+			// mapa = initData1;
         */
         this.initState();
     }
@@ -24,7 +24,7 @@ public class EstadoAmbiente extends EnvironmentState {
     /**
      * This method is used to setup the initial real world.
      */
-    
+    @Override
     public void initState() {
 
         //TODO: Complete Method
@@ -33,7 +33,7 @@ public class EstadoAmbiente extends EnvironmentState {
     /**
      * String representation of the real world state.
      */
-    
+    @Override
     public String toString() {
         String str = "";
 
@@ -51,11 +51,11 @@ public class EstadoAmbiente extends EnvironmentState {
 //     public void setposicionAgente(Other arg){
 //        posicionAgente = arg;
 //     }
-//     public Other getnodos(){
-//        return nodos;
+//     public Other getmapa(){
+//        return mapa;
 //     }
-//     public void setnodos(Other arg){
-//        nodos = arg;
+//     public void setmapa(Other arg){
+//        mapa = arg;
 //     }
 	
 

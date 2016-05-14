@@ -3,7 +3,7 @@
   <Environment name="Ambiente">
     <EnvironmentState name="EstadoAmbiente">
       <DataStructure name="posicionAgente" type="Other"/>
-      <DataStructure name="nodos" type="Other"/>
+      <DataStructure name="mapa" type="Other"/>
     </EnvironmentState>
   </Environment>
   <Agent name="Agente">
@@ -13,11 +13,20 @@
       <DataStructure name="posicion" type="Other"/>
       <DataStructure name="energia"/>
       <DataStructure name="listaObstaculo" type="Other"/>
+      <DataStructure name="nodoDestino" type="Other"/>
     </AgentState>
   </Agent>
   <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrNorte"/>
   <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrSur"/>
   <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrEste"/>
   <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrOeste"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="SubirNorte"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="SubirEste"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="SubirSur"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="SubirOeste"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="BajarNorte"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="BajarSur"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="BajarEste"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="BajarOeste"/>
   <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="existeobstaculo"/>
 </idemia:AgentModel>

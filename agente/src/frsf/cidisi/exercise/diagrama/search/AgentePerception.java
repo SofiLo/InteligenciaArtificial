@@ -26,7 +26,7 @@ public class AgentePerception extends Perception {
     /**
      * This method is used to setup the perception.
      */
-    
+    @Override
     public void initPerception(Agent agentIn, Environment environmentIn) {
     	
     	//TODO: Complete Method
@@ -39,7 +39,7 @@ public class AgentePerception extends Perception {
         
     }
     
-   
+    @Override
     public String toString() {
         StringBuffer str = new StringBuffer();
 

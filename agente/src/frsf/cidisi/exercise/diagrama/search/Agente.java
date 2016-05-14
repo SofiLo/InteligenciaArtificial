@@ -4,6 +4,14 @@ import frsf.cidisi.exercise.diagrama.search.actions.IrNorte;
 import frsf.cidisi.exercise.diagrama.search.actions.IrSur;
 import frsf.cidisi.exercise.diagrama.search.actions.IrEste;
 import frsf.cidisi.exercise.diagrama.search.actions.IrOeste;
+import frsf.cidisi.exercise.diagrama.search.actions.SubirNorte;
+import frsf.cidisi.exercise.diagrama.search.actions.SubirEste;
+import frsf.cidisi.exercise.diagrama.search.actions.SubirSur;
+import frsf.cidisi.exercise.diagrama.search.actions.SubirOeste;
+import frsf.cidisi.exercise.diagrama.search.actions.BajarNorte;
+import frsf.cidisi.exercise.diagrama.search.actions.BajarSur;
+import frsf.cidisi.exercise.diagrama.search.actions.BajarEste;
+import frsf.cidisi.exercise.diagrama.search.actions.BajarOeste;
 
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.Problem;
@@ -32,6 +40,14 @@ public class Agente extends SearchBasedAgent {
         operators.addElement(new IrSur());	
         operators.addElement(new IrEste());	
         operators.addElement(new IrOeste());	
+        operators.addElement(new SubirNorte());	
+        operators.addElement(new SubirEste());	
+        operators.addElement(new SubirSur());	
+        operators.addElement(new SubirOeste());	
+        operators.addElement(new BajarNorte());	
+        operators.addElement(new BajarSur());	
+        operators.addElement(new BajarEste());	
+        operators.addElement(new BajarOeste());	
 
         // Create the Problem which the agent will resolve
         Problem problem = new Problem(agGoal, agState, operators);
@@ -41,7 +57,7 @@ public class Agente extends SearchBasedAgent {
     /**
      * This method is executed by the simulator to ask the agent for an action.
      */
-    
+    @Override
     public Action selectAction() {
 
         // Create the search strategy
@@ -76,7 +92,7 @@ public class Agente extends SearchBasedAgent {
      * Then it updates its state.
      * @param p
      */
-  
+    @Override
     public void see(Perception p) {
         this.getAgentState().updateState(p);
     }
