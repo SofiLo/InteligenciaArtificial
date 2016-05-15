@@ -1,6 +1,5 @@
 package frsf.cidisi.exercise.diagrama.search;
 
-import Pantallas.Inicio;
 import frsf.cidisi.faia.exceptions.PrologConnectorException;
 import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
 
@@ -21,9 +20,15 @@ public class AgenteMain {
         //obtengo el inicio y destino que se ingresó en la interfaz
         String inicio = interfaz.getInicio();
         String destino = interfaz.getDestino();
-        */
+        */        
         
+<<<<<<< HEAD
        
+=======
+        //TODO aca seteamos los obstaculos 
+        environment.getEnvironmentState().setearObstaculos("Escalera Torre");
+        
+>>>>>>> bd1a923895aca92aa4c4076e871f9ef3abc66fb2
         simulator.start();
     }
 

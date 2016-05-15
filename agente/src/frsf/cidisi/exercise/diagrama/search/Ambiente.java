@@ -1,14 +1,17 @@
 package frsf.cidisi.exercise.diagrama.search;
 
 import frsf.cidisi.faia.agent.Action;
-import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
 
 public class Ambiente extends Environment {
 
     public Ambiente() {
         // Create the environment state
+<<<<<<< HEAD
         this.environmentState = new EstadoAmbiente();
+=======
+        environmentState = new EstadoAmbiente();
+>>>>>>> bd1a923895aca92aa4c4076e871f9ef3abc66fb2
         environmentState.initState();
     }
 
