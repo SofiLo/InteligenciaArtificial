@@ -27,7 +27,7 @@ public class Ambiente extends Environment {
          AgentePerception perception = new AgentePerception();
 		
 		//TODO : Set the perceptions sensors
-        
+        perception.setExisteObstaculo( ((EstadoAmbiente) environmentState).getPosicionAgente().isObstaculo());
         // Return the perception
         return perception;
     }

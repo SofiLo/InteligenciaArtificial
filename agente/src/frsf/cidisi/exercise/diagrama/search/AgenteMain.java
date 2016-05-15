@@ -23,7 +23,7 @@ public class AgenteMain {
         */        
         
         //TODO aca seteamos los obstaculos 
-        environment.getEnvironmentState().setearObstaculos("Escalera Torre");
+        environment.getEnvironmentState().setearObstaculos("Mastil");
         
         simulator.start();
     }

@@ -46,9 +46,9 @@ public class EstadoAgente extends SearchBasedAgentState {
 	 */
 	@Override
 	public void initState() {
-		energia = 1;
-		mapaAgente = new Grafo();
-		posicion = new Nodo("Mastil", 0, 0, false);
+//		energia = 1;
+//		mapaAgente = new Grafo();
+//		posicion = new Nodo("Mastil", 0, 0, true);
 	}
 
 	/**

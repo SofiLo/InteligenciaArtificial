@@ -29,7 +29,7 @@ public class EstadoAmbiente extends EnvironmentState {
     	posicionAgente.setIdNodo(0);
     	posicionAgente.setNombre("Mastil");
     	posicionAgente.setNivel(0);
-    	posicionAgente.setObstaculo(false);
+    	posicionAgente.setObstaculo(true);
     }
     
     public void setearObstaculos(String nodoObstaculo) {  	
@@ -47,6 +47,14 @@ public class EstadoAmbiente extends EnvironmentState {
 
         return str;
     }
+
+	public Nodo getPosicionAgente() {
+		return posicionAgente;
+	}
+
+	public void setPosicionAgente(Nodo posicionAgente) {
+		this.posicionAgente = posicionAgente;
+	}
 
 	//TODO: Complete this section with agent-specific methods
     // The following methods are agent-specific:
