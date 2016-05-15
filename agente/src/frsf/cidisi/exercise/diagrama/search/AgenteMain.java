@@ -23,12 +23,7 @@ public class AgenteMain {
         String destino = interfaz.getDestino();
         */
         
-        //los agrego al estado del Ambiente
-        
-        String nodoObstaculo = "blabla";
-        EstadoAmbiente estadoAmbiente = new EstadoAmbiente();
-        estadoAmbiente.setearObstaculos(nodoObstaculo);
-        
+       
         simulator.start();
     }
 
