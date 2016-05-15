@@ -16,6 +16,13 @@ public class Nodo {
 		this.nivel = nivel;
 		this.obstaculo = obstaculo;*/
 	}
+	public Nodo(String nombre, int idNodo, int nivel, boolean obstaculo) {
+		super();
+		this.nombre = nombre;
+		this.idNodo = idNodo;
+		this.nivel = nivel;
+		this.obstaculo = obstaculo;
+	}
 	public int getIdNodo() {
 		return idNodo;
 	}
