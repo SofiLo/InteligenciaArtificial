@@ -22,13 +22,10 @@ public class AgenteMain {
         String destino = interfaz.getDestino();
         */        
         
-<<<<<<< HEAD
        
-=======
         //TODO aca seteamos los obstaculos 
         environment.getEnvironmentState().setearObstaculos("Escalera Torre");
         
->>>>>>> bd1a923895aca92aa4c4076e871f9ef3abc66fb2
         simulator.start();
     }
 
