@@ -6,15 +6,14 @@ public class Nodo {
 	private String nombre;
 	private int idNodo;
 	private int nivel;
-	private boolean obstaculo;
+	private boolean obstaculo = false;
 	HashMap<String, Nodo> destinos = new HashMap<String, Nodo>();
 	HashMap<String, Integer> distancias = new HashMap<String, Integer>();
 	
 	public Nodo(){
-		/*this.nombre = nombre;
-		this.idNodo = idNodo;
-		this.nivel = nivel;
-		this.obstaculo = obstaculo;*/
+		nombre = "1000";
+		nivel = 1000;
+		idNodo = 1000;
 	}
 	public Nodo(String nombre, int idNodo, int nivel, boolean obstaculo) {
 		this.nombre = nombre;

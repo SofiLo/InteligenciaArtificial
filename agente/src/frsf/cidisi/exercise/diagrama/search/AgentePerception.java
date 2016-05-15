@@ -11,7 +11,7 @@ public class AgentePerception extends Perception {
 	
 	
 	//TODO: Setup Sensors
-	private int existeobstaculo;
+	private boolean existeobstaculo;
 	
  
 
@@ -45,16 +45,16 @@ public class AgentePerception extends Perception {
 
         //TODO: Complete Method
 
-        return str.toString();
+        return (existeobstaculo?"Hay obstaculo" : "No hay obstaculo");
     }
 
     // The following methods are agent-specific:
     //TODO: Complete this section with the agent-specific methods
 	
-     public int getexisteobstaculo(){
+     public boolean getExisteObstaculo(){
         return existeobstaculo;
      }
-     public void setexisteobstaculo(int arg){
+     public void setExisteObstaculo(boolean arg){
         this.existeobstaculo = arg;
      }
 	
