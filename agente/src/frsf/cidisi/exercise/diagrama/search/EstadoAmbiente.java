@@ -32,8 +32,7 @@ public class EstadoAmbiente extends EnvironmentState {
     	posicionAgente.setObstaculo(false);
     }
     
-    public void setearObstaculos(String nodoObstaculo) {
-    	
+    public void setearObstaculos(String nodoObstaculo) {  	
     	mapa.getNodoPorNombre(nodoObstaculo).setObstaculo(true);
     }
 

@@ -17,7 +17,6 @@ public class Nodo {
 		this.obstaculo = obstaculo;*/
 	}
 	public Nodo(String nombre, int idNodo, int nivel, boolean obstaculo) {
-		super();
 		this.nombre = nombre;
 		this.idNodo = idNodo;
 		this.nivel = nivel;
@@ -60,7 +59,9 @@ public class Nodo {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public boolean equals(Nodo obj) {
-		return obj.getNombre() == nombre;
+	
+	@Override
+	public boolean equals(Object obj) {
+			return nombre.equals(((Nodo)obj).getNombre());	
 	}
 }
