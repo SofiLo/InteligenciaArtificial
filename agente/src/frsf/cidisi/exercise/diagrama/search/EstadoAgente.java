@@ -89,12 +89,12 @@ public class EstadoAgente extends SearchBasedAgentState {
 //     public void setposicion(Other arg){
 //        posicion = arg;
 //     }
-     public int getenergia(){
-        return energia;
-     }
-     public void setenergia(int arg){
-        energia = arg;
-     }
+//     public int getenergia(){
+//        return energia;
+//     }
+//     public void setenergia(int arg){
+//        energia = arg;
+//     }
 //     public Other getlistaObstaculo(){
 //        return listaObstaculo;
 //     }
