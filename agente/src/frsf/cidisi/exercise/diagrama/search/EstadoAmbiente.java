@@ -1,5 +1,8 @@
 package frsf.cidisi.exercise.diagrama.search;
 
+import frsf.cidisi.exercise.Inicializacion;
+import frsf.cidisi.exercise.diagrama.grafo.Grafo;
+import frsf.cidisi.exercise.diagrama.grafo.Nodo;
 import frsf.cidisi.faia.state.EnvironmentState;
 
 /**
@@ -11,23 +14,33 @@ public class EstadoAmbiente extends EnvironmentState {
     //private Other posicionAgente;
     //private Other mapa;
 	
+	private Nodo posicionAgente;
+	private Grafo mapa;
+	
     public EstadoAmbiente() {
-        
-        //TODO: Complete Method
-    	/*
-			// posicionAgente = initData0;
-			// mapa = initData1;
-        */
-        this.initState();
+    	
+    	// posicionAgente = initData0;
+		// mapa = initData1;
+    	
+    	posicionAgente = new Nodo();
+    	mapa = new Grafo();
+    	Inicializacion iniciar = new Inicializacion();
+    	
+    	iniciar.inicializacion(mapa);
+    	
+        //this.initState();
     }
 
     /**
      * This method is used to setup the initial real world.
      */
-    @Override
-    public void initState() {
-
-        //TODO: Complete Method
+    public void initState(){
+    	
+    }
+    
+    public void setearObstaculos(String nodoObstaculo) {
+    	
+    	mapa.getNodo(nodoObstaculo).setObstaculo(true);
     }
 
     /**

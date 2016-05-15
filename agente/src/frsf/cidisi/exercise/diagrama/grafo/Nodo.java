@@ -11,9 +11,11 @@ public class Nodo {
 	HashMap<String, Integer> distancias = new HashMap<String, Integer>();
 	
 	public Nodo(){
-		
+		/*this.nombre = nombre;
+		this.idNodo = idNodo;
+		this.nivel = nivel;
+		this.obstaculo = obstaculo;*/
 	}
-	
 	public int getIdNodo() {
 		return idNodo;
 	}

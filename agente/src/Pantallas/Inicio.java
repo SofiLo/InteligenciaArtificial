@@ -11,8 +11,8 @@ public class Inicio extends JFrame {
 	private JLabel lblInicio;
 	private JLabel lblDestino;
 	private ScrollPane scrollPane;
-	private JComboBox cb1;
-	private JComboBox cb2;
+	private JComboBox combobxInicio;
+	private JComboBox combobxDestino;
 
 	/**
 	 * Launch the application.
@@ -48,28 +48,28 @@ public class Inicio extends JFrame {
 		
 		//Edito el combobox
 		String aulas[] = {"Mástil", "Cantina", "Alumnado", "Ingreso a torre", "Escalera Torre", "Puerta Principal", "Fotocopiadora", "Aula 2", "Aula 3", "Aula 4", "Aula 5", "Aula 1", "Aula de Estudio", "Departamento Mecánica", "Puerta a Patio Interno", "Departamento Eléctrica", "Ascensor", "Escalera Principal", "Baños Planta Baja", "Escalera Básicas", "Aula 9", "Aula 12", "Aula 18", "Aula 19", "Baños Primer Piso", "Escalera Chica", "Civil GIMNI", "Departamento Civil", "Baños segundo piso", "Escalea Eléctrica", "Puerta Estadio", "Estadio", "Departamento Industrial", "Aula 20", "Aula 21", "Aula 22", "Escalera ISI", "Laboratorio 1", "CIDISI", "Laboratorio 2", "Departamento ISI", "TICS", "Laboratorio 3", "Laboratorio de Conectividad", "Laboratorio 4", "Laboratorio 5"};
-		cb1 = new JComboBox(aulas);
-		panel.add(cb1);
+		combobxInicio = new JComboBox(aulas);
+		panel.add(combobxInicio);
 				
 		lblDestino = new JLabel("Ingrese destino");
 		panel.add(lblDestino);
 		
-		cb2 = new JComboBox(aulas);
-		panel.add(cb2);
+		combobxDestino = new JComboBox(aulas);
+		panel.add(combobxDestino);
 		
 		//ACTION LISTENERS
 		 ActionListener actionListener = new ActionListener() 
 		 {
 			 public void actionPerformed(ActionEvent actionEvent) {
-		        System.out.println("Selected: " + cb1.getSelectedItem());
-		        System.out.println(", Position: " + cb1.getSelectedIndex());
+		        System.out.println("Selected: " + combobxInicio.getSelectedItem());
+		        System.out.println(", Position: " + combobxInicio.getSelectedIndex());
 
-		        System.out.println("Selected: " + cb2.getSelectedItem());
-		        System.out.println(", Position: " + cb2.getSelectedIndex());
+		        System.out.println("Selected: " + combobxDestino.getSelectedItem());
+		        System.out.println(", Position: " + combobxDestino.getSelectedIndex());
 		      }
 		 };
-		cb1.addActionListener(actionListener);
-		cb2.addActionListener(actionListener);
+		combobxInicio.addActionListener(actionListener);
+		combobxDestino.addActionListener(actionListener);
 		
 		
 		lbl = new JLabel();
@@ -81,4 +81,17 @@ public class Inicio extends JFrame {
 		getContentPane().add(scrollPane, BorderLayout.WEST);
 		
 	}
+
+	public String getInicio() {
+		String inicio = (String) combobxInicio.getSelectedItem();
+		
+		return inicio;
+	}
+
+	public String getDestino() {
+		String destino = (String) combobxDestino.getSelectedItem();
+		
+		return destino;
+	}
+	
 }

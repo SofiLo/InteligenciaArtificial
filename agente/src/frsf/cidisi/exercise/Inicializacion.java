@@ -7,9 +7,7 @@ import frsf.cidisi.exercise.diagrama.grafo.Nodo;
 
 public class Inicializacion {
 	
-	public static void inicializacion(){
-		
-		Grafo grafo = new Grafo();
+	public static void inicializacion(Grafo grafo){
 		
 		//Creamos los nodos
 		Nodo nodoInicial = new Nodo();
