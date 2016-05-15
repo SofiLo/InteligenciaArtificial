@@ -1,6 +1,5 @@
 package frsf.cidisi.exercise.diagrama.search;
 
-import frsf.cidisi.exercise.Inicializacion;
 import frsf.cidisi.exercise.diagrama.grafo.Grafo;
 import frsf.cidisi.exercise.diagrama.grafo.Nodo;
 import frsf.cidisi.faia.state.EnvironmentState;
@@ -9,26 +8,16 @@ import frsf.cidisi.faia.state.EnvironmentState;
  * This class represents the real world state.
  */
 public class EstadoAmbiente extends EnvironmentState {
-	
-	//TODO: Setup Variables
-    //private Other posicionAgente;
-    //private Other mapa;
-	
+		
 	private Nodo posicionAgente;
 	private Grafo mapa;
 	
     public EstadoAmbiente() {
-    	
-    	// posicionAgente = initData0;
-		// mapa = initData1;
-    	
+
     	posicionAgente = new Nodo();
-    	mapa = new Grafo();
-    	Inicializacion iniciar = new Inicializacion();
+    	mapa = new Grafo();	
     	
-    	iniciar.inicializacion(mapa);
-    	
-        //this.initState();
+        this.initState();
     }
 
     /**
@@ -36,11 +25,16 @@ public class EstadoAmbiente extends EnvironmentState {
      */
     public void initState(){
     	
+    	//la posicion inicial del agente sera el mastil
+    	posicionAgente.setIdNodo(0);
+    	posicionAgente.setNombre("Mastil");
+    	posicionAgente.setNivel(0);
+    	posicionAgente.setObstaculo(false);
     }
     
     public void setearObstaculos(String nodoObstaculo) {
     	
-    	mapa.getNodo(nodoObstaculo).setObstaculo(true);
+    	mapa.getNodoPorNombre(nodoObstaculo).setObstaculo(true);
     }
 
     /**

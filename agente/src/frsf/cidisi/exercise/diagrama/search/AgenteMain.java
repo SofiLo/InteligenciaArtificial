@@ -14,16 +14,19 @@ public class AgenteMain {
         SearchBasedAgentSimulator simulator =
                 new SearchBasedAgentSimulator(environment, agent);
         
-        //Aca se abre la interfaz? implemento a partir de eso. VER y CAMBIAR si es necesario
+        /*//Aca se abre la interfaz? implemento a partir de eso. VER y CAMBIAR si es necesario
         Inicio interfaz = new Inicio();
-        EstadoAmbiente estadoAmbiente = new EstadoAmbiente();
+
         
-        //obtengo el inicio y destino que se seteo en la interfaz
+        //obtengo el inicio y destino que se ingresó en la interfaz
         String inicio = interfaz.getInicio();
         String destino = interfaz.getDestino();
-        String nodoObstaculo = "blabla"; // = interfaz.getObstaculos();
+        */
         
         //los agrego al estado del Ambiente
+        
+        String nodoObstaculo = "blabla";
+        EstadoAmbiente estadoAmbiente = new EstadoAmbiente();
         estadoAmbiente.setearObstaculos(nodoObstaculo);
         
         simulator.start();

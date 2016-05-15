@@ -53,5 +53,7 @@ public class Nodo {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
+	public boolean equals(Nodo obj) {
+		return obj.getNombre() == nombre;
+	}
 }

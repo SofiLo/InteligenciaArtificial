@@ -11,16 +11,6 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
  */
 public class EstadoAgente extends SearchBasedAgentState {
 	
-	//TODO: Setup Variables
-    //private Other posicion;
-    //private Other listaObstaculo;
-    //private Other nodoDestino;
-	
-	private Nodo posicion;
-    private int energia;
-    private List<Nodo> listaObstaculo;
-    private Nodo nodoDestino;
-
     public EstadoAgente() {
     
     	//TODO: Complete Method
@@ -30,6 +20,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 			// listaObstaculo = initData2;
 			// nodoDestino = initData3;
         */
+    	
         this.initState();
     }
 
