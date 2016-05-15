@@ -22,7 +22,7 @@
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="utn.frsf.cidisi.idemia.diagram.part.IdemiaDiagramEditorID" itemType="typePlaceholder" x="899" y="22"/>
 <coolItem id="org.eclipse.wb.core.guiEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -32,23 +32,16 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Heuristic.java" partName="Heuristic.java" path="C:/Users/Sofía/Desktop/Sofia/_Facultad/Inteligencia Artificial/InteligenciaArtificial/agente/src/frsf/cidisi/exercise/diagrama/search/Heuristic.java" title="Heuristic.java" tooltip="agente/src/frsf/cidisi/exercise/diagrama/search/Heuristic.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/agente/src/frsf/cidisi/exercise/diagrama/search/Heuristic.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="437" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings"/>
+<expanded>&#x0A;<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
@@ -245,180 +238,12 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/agente/src/frsf/cidisi/exercise/Inicializacion.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" path="/agente/src/Pantallas/Inicio.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/agente/src/frsf/cidisi/exercise/diagrama/search/EstadoAmbiente.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/faia/src/frsf/cidisi/faia/solver/search/DepthFirstSearch.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/faia/src/frsf/cidisi/faia/solver/search/InformedSearchStrategy.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/faia/src/frsf/cidisi/faia/solver/search/Strategy.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/faia/src/frsf/cidisi/faia/solver/search/GreedySearch.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/faia/src/frsf/cidisi/faia/solver/search/Search.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/agente/src/frsf/cidisi/exercise/diagrama/search/CostFunction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/agente/src/frsf/cidisi/exercise/diagrama/search/Agente.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/faia/src/frsf/cidisi/faia/solver/search/AStarSearch.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/agente/src/frsf/cidisi/exercise/diagrama/search/AgenteMain.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="utn.frsf.cidisi.idemia.diagram.part.IdemiaDiagramEditorID" path="/agente/modeloIdemia/diagrama.idemia_diagram"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="utn.frsf.cidisi.idemia.diagram.part.IdemiaDiagramEditorID" path="/agente/modeloIdemia/diagrama.idemia_diagram"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="utn.frsf.cidisi.idemia.diagram.part.IdemiaDiagramEditorID" path="/AgenteRecargado/modeloIdemia/diagrama.idemia_diagram"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/agente/src/frsf/cidisi/exercise/diagrama/grafo/Nodo.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AgenteRecargado/src/frsf/cidisi/exercise/diagrama/grafo/Nodo.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AgenteRecargado/src/frsf/cidisi/exercise/diagrama/search/CostFunction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AgenteRecargado/src/frsf/cidisi/exercise/diagrama/search/Heuristic.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/agente/src/frsf/cidisi/exercise/diagrama/search/Heuristic.java"/>
-</editors>
-<item historyLabel="InformedSearchStrategy.java" index="4">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="DepthFirstSearch.java" index="3">
-<position info="not_deleted" x="1089" y="59"/>
-</item>
-<item historyLabel="Strategy.java" index="5">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="DepthFirstSearch.java" index="3">
-<position info="not_deleted" x="1182" y="0"/>
-</item>
-<item historyLabel="EstadoAmbiente.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="DepthFirstSearch.java" index="3">
-<position info="not_deleted" x="1182" y="0"/>
-</item>
-<item historyLabel="Inicializacion.java" index="0">
-<position info="not_deleted" x="11793" y="0"/>
-</item>
-<item historyLabel="Strategy.java" index="5">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="DepthFirstSearch.java" index="3">
-<position info="not_deleted" x="1182" y="0"/>
-</item>
-<item historyLabel="Strategy.java" index="5">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="DepthFirstSearch.java" index="3">
-<position info="not_deleted" x="1182" y="0"/>
-</item>
-<item historyLabel="GreedySearch.java" index="6">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="Search.java" index="7">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="EstadoAmbiente.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="DepthFirstSearch.java" index="3">
-<position info="not_deleted" x="871" y="0"/>
-</item>
-<item historyLabel="Strategy.java" index="5">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="CostFunction.java" index="8">
-<position info="not_deleted" x="0" y="510"/>
-</item>
-<item historyLabel="Agente.java" index="9">
-<position info="not_deleted" x="949" y="285"/>
-</item>
-<item historyLabel="AStarSearch.java" index="10">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="AgenteMain.java" index="11">
-<position info="not_deleted" x="530" y="0"/>
-</item>
-<item historyLabel="diagrama.idemia_diagram" index="12"/>
-<item historyLabel="DepthFirstSearch.java" index="3">
-<position info="not_deleted" x="871" y="0"/>
-</item>
-<item historyLabel="diagrama.idemia_diagram" index="12"/>
-<item historyLabel="AgenteMain.java" index="11">
-<position info="not_deleted" x="530" y="0"/>
-</item>
-<item historyLabel="Agente.java" index="9">
-<position info="not_deleted" x="949" y="285"/>
-</item>
-<item historyLabel="CostFunction.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="GreedySearch.java" index="6">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="Strategy.java" index="5">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="Inicio.java" index="1">
-<position info="not_deleted" x="2821" y="0"/>
-</item>
-<item historyLabel="Inicializacion.java" index="0">
-<position info="not_deleted" x="11793" y="0"/>
-</item>
-<item historyLabel="AgenteMain.java" index="11">
-<position info="not_deleted" x="530" y="0"/>
-</item>
-<item historyLabel="Agente.java" index="9">
-<position info="not_deleted" x="949" y="285"/>
-</item>
-<item historyLabel="CostFunction.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="CostFunction.java" index="8">
-<position info="not_deleted" x="479" y="0"/>
-</item>
-<item historyLabel="Agente.java" index="9">
-<position info="not_deleted" x="1090" y="0"/>
-</item>
-<item historyLabel="diagrama.idemia_diagram" index="13"/>
-<item historyLabel="diagrama.idemia_diagram" index="14"/>
-<item historyLabel="Nodo.java" index="15">
-<position info="not_deleted" x="785" y="15"/>
-</item>
-<item historyLabel="Nodo.java" index="16">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Nodo.java" index="16">
-<position info="not_deleted" x="241" y="12"/>
-</item>
-<item historyLabel="Nodo.java" index="16">
-<position info="not_deleted" x="143" y="0"/>
-</item>
-<item historyLabel="Nodo.java" index="16">
-<position info="not_deleted" x="241" y="12"/>
-</item>
-<item historyLabel="Nodo.java" index="16">
-<position info="not_deleted" x="143" y="0"/>
-</item>
-<item historyLabel="Nodo.java" index="16">
-<position info="not_deleted" x="241" y="12"/>
-</item>
-<item historyLabel="Nodo.java" index="16">
-<position info="not_deleted" x="121" y="0"/>
-</item>
-<item historyLabel="Nodo.java" index="16">
-<position info="not_deleted" x="204" y="12"/>
-</item>
-<item historyLabel="Nodo.java" index="16">
-<position info="not_deleted" x="215" y="0"/>
-</item>
-<item historyLabel="CostFunction.java" index="17">
-<position info="not_deleted" x="379" y="0"/>
-</item>
-<item historyLabel="Heuristic.java" index="18">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item active="true" historyLabel="Heuristic.java" index="19">
-<position info="not_deleted" x="437" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -426,11 +251,13 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BajarEste.java" tooltip="agente/src/frsf/cidisi/exercise/diagrama/search/actions/BajarEste.java">
+<persistable path="/agente/src/frsf/cidisi/exercise/diagrama/search/actions/BajarEste.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="utn.frsf.cidisi.idemia.diagram.part.IdemiaDiagramEditorID" name="diagrama.idemia_diagram" tooltip="agente/modeloIdemia/diagrama.idemia_diagram">
 <persistable path="/agente/modeloIdemia/diagrama.idemia_diagram"/>
 </file>
