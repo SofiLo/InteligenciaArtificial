@@ -12,7 +12,6 @@ public class Heuristic implements IEstimatedCostFunction {
     /**
      * It returns the estimated cost to reach the goal from a NTree node.
      */
-   
     public double getEstimatedCost(NTree node) {
         EstadoAgente agState = (EstadoAgente) node.getAgentState();
 	
