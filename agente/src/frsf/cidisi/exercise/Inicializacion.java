@@ -1,7 +1,5 @@
 package frsf.cidisi.exercise;
 
-import java.util.HashMap;
-
 import frsf.cidisi.exercise.diagrama.grafo.Grafo;
 import frsf.cidisi.exercise.diagrama.grafo.Nodo;
 

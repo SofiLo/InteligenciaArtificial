@@ -27,6 +27,8 @@ public class Ambiente extends Environment {
          AgentePerception perception = new AgentePerception();
 		
 		//TODO : Set the perceptions sensors
+         
+        
         
         // Return the perception
         return perception;
