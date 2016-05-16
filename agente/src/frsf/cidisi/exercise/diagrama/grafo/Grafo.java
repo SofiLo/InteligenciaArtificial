@@ -385,25 +385,9 @@ public class Grafo {
 		listaNodos.add(nodoDptoElectrica);
 
 		nodoAscensor.agregarDestinos(Constantes.ESTE, nodoPuertaPatioInterno);
-		nodoAscensor.agregarDestinos(Constantes.SUBIRESTE, nodoDptoCivil);// QUE
-																			// PASA
-																			// SI
-																			// ESTOY
-																			// EN
-																			// EL
-																			// 3RO
-																			// Y
-																			// QUIERO
-																			// BAJAR
-																			// A
-																			// CIVIL
-		nodoAscensor.agregarDestinos(Constantes.SUBIRNORTE, nodoDptoIndustrial);// LO
-																				// MISMO
-		nodoAscensor.agregarDestinos(Constantes.SUBIRESTE, nodoTICS);// ya tengo
-																		// dos
-																		// SUBIRESTE
-																		// QUE
-																		// HAGO
+		nodoAscensor.agregarDestinos(Constantes.SUBIRESTE, nodoDptoCivil);
+		nodoAscensor.agregarDestinos(Constantes.SUBIRNORTE, nodoDptoIndustrial);
+		nodoAscensor.agregarDestinos(Constantes.SUBIRESTE, nodoTICS);
 
 		listaNodos.add(nodoAscensor);
 
@@ -474,9 +458,9 @@ public class Grafo {
 		listaNodos.add(nodoBaños2);
 
 		nodoEscaleraElectrica.agregarDestinos(Constantes.BAJARSUR, nodoPuertaPatioInterno);
-		nodoEscaleraElectrica.agregarDestinos(Constantes.SUR, nodoDptoCivil);
+		nodoEscaleraElectrica.agregarDestinos(Constantes.SUBIRNORTE, nodoDptoCivil);
 		nodoEscaleraElectrica.agregarDestinos(Constantes.NORTE, nodoBaños2);
-		nodoEscaleraElectrica.agregarDestinos(Constantes.SUBIRNORTE, nodoEscaleraISI);
+		nodoEscaleraElectrica.agregarDestinos(Constantes.SUBIRSUR, nodoEscaleraISI);
 
 		listaNodos.add(nodoEscaleraElectrica);
 
@@ -510,8 +494,8 @@ public class Grafo {
 		listaNodos.add(nodoAula22);
 
 		nodoEscaleraISI.agregarDestinos(Constantes.SUR, nodoEscaleraChica);
-		nodoEscaleraISI.agregarDestinos(Constantes.BAJARNORTE, nodoEscaleraElectrica);
-		nodoEscaleraISI.agregarDestinos(Constantes.BAJARSUR, nodoAula22);
+		nodoEscaleraISI.agregarDestinos(Constantes.BAJARSUR, nodoEscaleraElectrica);
+		nodoEscaleraISI.agregarDestinos(Constantes.BAJARNORTE, nodoAula22);
 		nodoEscaleraISI.agregarDestinos(Constantes.ESTE, nodoLab1);
 
 		listaNodos.add(nodoEscaleraISI);
