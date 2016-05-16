@@ -5,51 +5,49 @@ import frsf.cidisi.faia.environment.Environment;
 
 public class Ambiente extends Environment {
 
-    public Ambiente() {
-        // Create the environment state
-        environmentState = new EstadoAmbiente();
-        environmentState.initState();
-    }
+	public Ambiente() {
+		// Create the environment state
+		environmentState = new EstadoAmbiente();
+		environmentState.initState();
+	}
 
-    public EstadoAmbiente getEnvironmentState() {
-        return (EstadoAmbiente) super.getEnvironmentState();
-    }
+	public EstadoAmbiente getEnvironmentState() {
+		return (EstadoAmbiente) super.getEnvironmentState();
+	}
 
-    /**
-     * This method is called by the simulator. Given the Agent, it creates
-     * a new perception reading, for example, the agent position.
-     * @param agent
-     * @return A perception that will be given to the agent by the simulator.
-     */
-    @Override
-    public  AgentePerception getPercept() {
-        // Create a new perception to return
-         AgentePerception perception = new AgentePerception();
-		
-		//TODO : Set the perceptions sensors
-        perception.setExisteObstaculo( ((EstadoAmbiente) environmentState).getPosicionAgente().isObstaculo());
-        // Return the perception
-        return perception;
-    }
+	/**
+	 * This method is called by the simulator. Given the Agent, it creates a new
+	 * perception reading, for example, the agent position.
+	 * 
+	 * @param agent
+	 * @return A perception that will be given to the agent by the simulator.
+	 */
+	@Override
+	public AgentePerception getPercept() {
+		// Create a new perception to return
+		AgentePerception perception = new AgentePerception();
 
-    
-    public String toString() {
-        return environmentState.toString();
-    }
+		// TODO : Set the perceptions sensors
+		perception.setNodoPercibido(((EstadoAmbiente) environmentState).getPosicionAgente());
 
-    
-    public boolean agentFailed(Action actionReturned) {
+		// Return the perception
+		return perception;
+	}
 
-        EstadoAmbiente envState =
-                this.getEnvironmentState();
+	public String toString() {
+		return environmentState.toString();
+	}
 
-        // TODO: Complete Method        
+	public boolean agentFailed(Action actionReturned) {
 
-        return false;
-    }
+		EstadoAmbiente envState = this.getEnvironmentState();
 
-	//TODO: Complete this section with agent-specific methods
-    // The following methods are agent-specific:
-    
-    
+		// TODO: Complete Method
+
+		return false;
+	}
+
+	// TODO: Complete this section with agent-specific methods
+	// The following methods are agent-specific:
+
 }

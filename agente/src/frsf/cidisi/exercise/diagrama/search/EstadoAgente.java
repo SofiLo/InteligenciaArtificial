@@ -12,7 +12,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 
 	private int energia;
 	private Nodo posicion;
-	private Grafo mapaAgente; //Lista de obstaculos
+	private Grafo mapaAgente; // Lista de obstaculos
 	private Nodo nodoDestino;
 
 	public EstadoAgente() {
@@ -26,9 +26,14 @@ public class EstadoAgente extends SearchBasedAgentState {
 	@Override
 	public SearchBasedAgentState clone() {
 
+		EstadoAgente nuevoEstado = new EstadoAgente();
+		
+		nuevoEstado.setNodoDestino(this.nodoDestino);
+		nuevoEstado.setPosicion(this.posicion);
+		
 		// TODO: Complete Method
 
-		return null;
+		return nuevoEstado;
 	}
 
 	/**
@@ -37,8 +42,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 	 */
 	@Override
 	public void updateState(Perception p) {
-
-		// TODO: Complete Method
+		posicion = ((AgentePerception) p).getNodoPercibido();
 	}
 
 	/**
@@ -46,9 +50,8 @@ public class EstadoAgente extends SearchBasedAgentState {
 	 */
 	@Override
 	public void initState() {
-//		energia = 1;
-//		mapaAgente = new Grafo();
-//		posicion = new Nodo("Mastil", 0, 0, true);
+
+		
 	}
 
 	/**
@@ -73,6 +76,22 @@ public class EstadoAgente extends SearchBasedAgentState {
 		// TODO: Complete Method
 
 		return true;
+	}
+
+	public Nodo getNodoDestino() {
+		return nodoDestino;
+	}
+
+	public void setNodoDestino(Nodo nodoDestino) {
+		this.nodoDestino = nodoDestino;
+	}
+
+	public Nodo getPosicion() {
+		return posicion;
+	}
+
+	public void setPosicion(Nodo posicion) {
+		this.posicion = posicion;
 	}
 
 	// TODO: Complete this section with agent-specific methods
