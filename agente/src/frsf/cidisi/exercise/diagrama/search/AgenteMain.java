@@ -24,10 +24,10 @@ public class AgenteMain {
 		 */
 
 		// TODO aca seteamos los obstaculos
-		environment.getEnvironmentState().setearObstaculos("Mastil");
+//		environment.getEnvironmentState().setearObstaculos("Mastil");
 		
 		// Aca defino la meta
-		((EstadoAgente) agent.getAgentState()).setNodoDestino(new Nodo("Mastil", 1, 0, false));
+		((EstadoAgente) agent.getAgentState()).setNodoDestino(new Nodo("Puerta Principal", 2, 0, false));
 
 		simulator.start();
 	}

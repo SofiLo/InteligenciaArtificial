@@ -23,13 +23,10 @@ public class EstadoAmbiente extends EnvironmentState {
     /**
      * This method is used to setup the initial real world.
      */
-    public void initState(){
+    public void initState() {
     	
     	//la posicion inicial del agente sera el mastil
-    	posicionAgente.setIdNodo(0);
-    	posicionAgente.setNombre("Mastil");
-    	posicionAgente.setNivel(0);
-    	posicionAgente.setObstaculo(true);
+    	posicionAgente = mapa.getNodoPorNombre("Mastil");
     }
     
     public void setearObstaculos(String nodoObstaculo) {  	

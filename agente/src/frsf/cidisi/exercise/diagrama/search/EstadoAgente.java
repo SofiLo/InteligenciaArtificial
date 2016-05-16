@@ -1,5 +1,8 @@
 package frsf.cidisi.exercise.diagrama.search;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 import frsf.cidisi.exercise.diagrama.grafo.Grafo;
 import frsf.cidisi.exercise.diagrama.grafo.Nodo;
 import frsf.cidisi.faia.agent.Perception;
@@ -14,9 +17,18 @@ public class EstadoAgente extends SearchBasedAgentState {
 	private Nodo posicion;
 	private Grafo mapaAgente; // Lista de obstaculos
 	private Nodo nodoDestino;
-
+	private ArrayList<Nodo> listaObstaculos;
+	
 	public EstadoAgente() {
 		this.initState();
+	}
+
+	public void setListaObstaculos(ArrayList<Nodo> listaObstaculos) {
+		this.listaObstaculos = listaObstaculos;
+	}
+
+	public ArrayList<Nodo> getListaObstaculos() {
+		return listaObstaculos;
 	}
 
 	/**
@@ -27,9 +39,18 @@ public class EstadoAgente extends SearchBasedAgentState {
 	public SearchBasedAgentState clone() {
 
 		EstadoAgente nuevoEstado = new EstadoAgente();
+		ArrayList<Nodo> nuevaLista = new ArrayList<Nodo>();
 		
-		nuevoEstado.setNodoDestino(this.nodoDestino);
-		nuevoEstado.setPosicion(this.posicion);
+		nuevoEstado.setNodoDestino(nodoDestino.clone());
+		nuevoEstado.setPosicion(posicion.clone());
+		
+		
+		Iterator<Nodo> iter = listaObstaculos.iterator();
+		while(iter.hasNext()) {
+			nuevaLista.add(iter.next().clone());
+		}
+		
+		nuevoEstado.setListaObstaculos(nuevaLista);
 		
 		// TODO: Complete Method
 
@@ -43,6 +64,10 @@ public class EstadoAgente extends SearchBasedAgentState {
 	@Override
 	public void updateState(Perception p) {
 		posicion = ((AgentePerception) p).getNodoPercibido();
+		
+		if(posicion.isObstaculo()) {
+			listaObstaculos.add(posicion);
+		}
 	}
 
 	/**
@@ -51,7 +76,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 	@Override
 	public void initState() {
 
-		
+		listaObstaculos = new ArrayList<Nodo>();
 	}
 
 	/**
@@ -75,7 +100,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 
 		// TODO: Complete Method
 
-		return true;
+		return (posicion.equals(((EstadoAgente) obj).getPosicion())?true:false);
 	}
 
 	public Nodo getNodoDestino() {
