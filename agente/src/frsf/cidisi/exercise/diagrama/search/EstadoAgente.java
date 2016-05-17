@@ -12,7 +12,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 
 	private int energia;
 	private Nodo posicion;
-	private Grafo mapaAgente; //Lista de obstaculos
+	private Grafo mapaAgente;
 	private Nodo nodoDestino;
 
 	public EstadoAgente() {
@@ -26,9 +26,15 @@ public class EstadoAgente extends SearchBasedAgentState {
 	@Override
 	public SearchBasedAgentState clone() {
 
-		// TODO: Complete Method
+		// TODO MODIFICADO: Complete Method
+		EstadoAgente nuevoEstado = new EstadoAgente();
+		nuevoEstado.setPosicion(posicion);
+		
+		Grafo grafoAgente = new Grafo();
+		nuevoEstado.setMapaAgente(grafoAgente);
+		
+		return nuevoEstado;
 
-		return null;
 	}
 
 	/**
@@ -38,7 +44,8 @@ public class EstadoAgente extends SearchBasedAgentState {
 	@Override
 	public void updateState(Perception p) {
 
-		// TODO: Complete Method
+		// TODO HECHO,FALTA PUSH FRAN: Complete Method
+	
 	}
 
 	/**
@@ -46,9 +53,12 @@ public class EstadoAgente extends SearchBasedAgentState {
 	 */
 	@Override
 	public void initState() {
-//		energia = 1;
-//		mapaAgente = new Grafo();
-//		posicion = new Nodo("Mastil", 0, 0, true);
+		
+		//TODO MODIFICADO:
+		energia = 1;
+		mapaAgente = new Grafo(); //se inicializa el mapa. La def está en el constructor de Grafo
+		posicion = new Nodo("Mastil", 0, 0, false);
+		
 	}
 
 	/**
@@ -56,10 +66,9 @@ public class EstadoAgente extends SearchBasedAgentState {
 	 */
 	@Override
 	public String toString() {
-		String str = "";
-
-		// TODO: Complete Method
-
+		
+		// TODO MODIFICADO: Complete Method
+		String str = "Posicion: " + posicion;
 		return str;
 	}
 
@@ -70,8 +79,13 @@ public class EstadoAgente extends SearchBasedAgentState {
 	@Override
 	public boolean equals(Object obj) {
 
-		// TODO: Complete Method
+		// TODO MODIF. VER CON PUSH FRAN: Complete Method
 
+		/*if (!(obj instanceof EstadoAgente)) {
+            return false;
+        }
+        return posicion.equals(((EstadoAgente) obj).getPosicion());*/
+		
 		return true;
 	}
 
@@ -103,4 +117,19 @@ public class EstadoAgente extends SearchBasedAgentState {
 	// nodoDestino = arg;
 	// }
 
+	public Grafo getMapaAgente() {
+		return mapaAgente;
+	}
+
+	public void setMapaAgente(Grafo mapaAgente) {
+		this.mapaAgente = mapaAgente;
+	}
+
+	public Nodo getPosicion() {
+		return posicion;
+	}
+
+	public void setPosicion(Nodo posicion) {
+		this.posicion = posicion;
+	}
 }

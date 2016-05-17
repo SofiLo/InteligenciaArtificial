@@ -8,7 +8,7 @@ public class Ambiente extends Environment {
     public Ambiente() {
         // Create the environment state
         this.environmentState = new EstadoAmbiente();
-        environmentState = new EstadoAmbiente();
+
         environmentState.initState();
     }
 
@@ -26,7 +26,7 @@ public class Ambiente extends Environment {
     public  AgentePerception getPercept() {
         // Create a new perception to return
          AgentePerception perception = new AgentePerception();
-		//TODO : Set the perceptions sensors
+		//TODO MODIFICADO: Set the perceptions sensors
         perception.setExisteObstaculo( ((EstadoAmbiente) environmentState).getPosicionAgente().isObstaculo());
         // Return the perception
         return perception;

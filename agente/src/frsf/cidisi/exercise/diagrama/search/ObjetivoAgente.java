@@ -10,7 +10,7 @@ public class ObjetivoAgente extends GoalTest {
     @Override
     public boolean isGoalState (AgentState agentState) {
     
-    	// TODO: Complete Method
+    	// TODO HECHO,FALTA PUSH FRAN: Complete Method
         if  (true) //( NodoActual = NodoDestino)
         	{
             return true;
