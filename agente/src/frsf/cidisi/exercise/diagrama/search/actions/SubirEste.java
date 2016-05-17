@@ -1,5 +1,7 @@
 package frsf.cidisi.exercise.diagrama.search.actions;
 
+import frsf.cidisi.exercise.Constantes;
+import frsf.cidisi.exercise.diagrama.grafo.Nodo;
 import frsf.cidisi.exercise.diagrama.search.*;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
@@ -19,6 +21,13 @@ public class SubirEste extends SearchAction {
         // TODO: Use this conditions
         // PreConditions: null
         // PostConditions: null
+		Nodo siguiente = agState.getPosicion().getDestinos().get(Constantes.SUBIRESTE);
+
+		if (siguiente != null) {
+			agState.setPosicion(siguiente);
+			return agState;
+		}
+
         
         return null;
     }
@@ -30,7 +39,7 @@ public class SubirEste extends SearchAction {
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         EstadoAmbiente environmentState = (EstadoAmbiente) est;
         EstadoAgente agState = ((EstadoAgente) ast);
-
+        
         // TODO: Use this conditions
         // PreConditions: null
         // PostConditions: null

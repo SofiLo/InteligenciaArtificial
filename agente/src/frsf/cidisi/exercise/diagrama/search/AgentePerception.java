@@ -1,5 +1,6 @@
 package frsf.cidisi.exercise.diagrama.search;
 
+import frsf.cidisi.exercise.diagrama.grafo.Nodo;
 import frsf.cidisi.faia.agent.Agent;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
@@ -11,17 +12,24 @@ public class AgentePerception extends Perception {
 	
 	
 	//TODO: Setup Sensors
-	private boolean existeobstaculo;
-	
+	//TODO: Aca deberiamos cambiar el diagrama.
+	private Nodo nodoPercibido;
  
-
-    public  AgentePerception() {
+	public  AgentePerception() {
     	//TODO: Complete Method
     }
 
     public AgentePerception(Agent agent, Environment environment) {
         super(agent, environment);
     }
+    
+    public Nodo getNodoPercibido() {
+		return nodoPercibido;
+	}
+
+	public void setNodoPercibido(Nodo nodoPercibido) {
+		this.nodoPercibido = nodoPercibido;
+	}
 
     /**
      * This method is used to setup the perception.
@@ -45,18 +53,9 @@ public class AgentePerception extends Perception {
 
         //TODO: Complete Method
 
-        return (existeobstaculo?"Hay obstaculo" : "No hay obstaculo");
+        return (nodoPercibido.isObstaculo()?"Hay obstaculo" : "No hay obstaculo");
     }
 
     // The following methods are agent-specific:
     //TODO: Complete this section with the agent-specific methods
-	
-     public boolean getExisteObstaculo(){
-        return existeobstaculo;
-     }
-     public void setExisteObstaculo(boolean arg){
-        this.existeobstaculo = arg;
-     }
-	
-   
 }
