@@ -16,19 +16,19 @@ public class BajarSur extends SearchAction {
      */
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
-        EstadoAgente agState = (EstadoAgente) s;
+EstadoAgente agState = (EstadoAgente) s;
         
-        // TODO: Use this conditions
-        // PreConditions: null
-        // PostConditions: null
+        // TODO MODIFICADO: Use this conditions
+
+        //Obtenemos el nodo adyacente que se alcanza yendo al ESTE
 		Nodo siguiente = agState.getPosicion().getDestinos().get(Constantes.BAJARSUR);
 
+		//Modificamos el estado del Agente
 		if (siguiente != null) {
 			agState.setPosicion(siguiente);
 			return agState;
 		}
 
-        
         return null;
     }
 
@@ -37,20 +37,29 @@ public class BajarSur extends SearchAction {
      */
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        EstadoAmbiente environmentState = (EstadoAmbiente) est;
+    	EstadoAmbiente environmentState = (EstadoAmbiente) est;
         EstadoAgente agState = ((EstadoAgente) ast);
 
-        // TODO: Use this conditions
-        // PreConditions: null
-        // PostConditions: null
+        // TODO MODIFICADO: Use this conditions
         
-        if (true) {
+        //Obtenemos el nodo adyacente que se alcanza yendo al ESTE
+		Nodo siguiente = agState.getPosicion().getDestinos().get(Constantes.BAJARSUR);
+
+		
+		if (siguiente != null) {
+			//Modificamos el estado del Agente
+			agState.setPosicion(siguiente);
+			
+			//Modificamos el estado del Ambiente
+			environmentState.setPosicionAgente(siguiente);
+			
+			return environmentState;
+		}
+
+     /*   if (true) {
             // Update the real world
-            
             // Update the agent state
-            
-            return environmentState;
-        }
+        }*/
 
         return null;
     }

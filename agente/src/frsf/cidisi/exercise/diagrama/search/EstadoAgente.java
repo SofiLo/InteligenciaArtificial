@@ -15,11 +15,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 
 	private int energia;
 	private Nodo posicion;
-<<<<<<< HEAD
-	private Grafo mapaAgente;
-=======
 	private Grafo mapaAgente; // Lista de obstaculos
->>>>>>> adf81b6964ea7fe121de9f9176873436d7c73353
 	private Nodo nodoDestino;
 	private ArrayList<Nodo> listaObstaculos;
 	
@@ -42,17 +38,6 @@ public class EstadoAgente extends SearchBasedAgentState {
 	@Override
 	public SearchBasedAgentState clone() {
 
-<<<<<<< HEAD
-		// TODO MODIFICADO: Complete Method
-		EstadoAgente nuevoEstado = new EstadoAgente();
-		nuevoEstado.setPosicion(posicion);
-		
-		Grafo grafoAgente = new Grafo();
-		nuevoEstado.setMapaAgente(grafoAgente);
-		
-		return nuevoEstado;
-
-=======
 		EstadoAgente nuevoEstado = new EstadoAgente();
 		ArrayList<Nodo> nuevaLista = new ArrayList<Nodo>();
 		
@@ -70,7 +55,6 @@ public class EstadoAgente extends SearchBasedAgentState {
 		// TODO: Complete Method
 
 		return nuevoEstado;
->>>>>>> adf81b6964ea7fe121de9f9176873436d7c73353
 	}
 
 	/**
@@ -79,17 +63,11 @@ public class EstadoAgente extends SearchBasedAgentState {
 	 */
 	@Override
 	public void updateState(Perception p) {
-<<<<<<< HEAD
-
-		// TODO HECHO,FALTA PUSH FRAN: Complete Method
-	
-=======
 		posicion = ((AgentePerception) p).getNodoPercibido();
 		
 		if(posicion.isObstaculo()) {
 			listaObstaculos.add(posicion);
 		}
->>>>>>> adf81b6964ea7fe121de9f9176873436d7c73353
 	}
 
 	/**
@@ -97,17 +75,8 @@ public class EstadoAgente extends SearchBasedAgentState {
 	 */
 	@Override
 	public void initState() {
-<<<<<<< HEAD
-		
-		//TODO MODIFICADO:
-		energia = 1;
-		mapaAgente = new Grafo(); //se inicializa el mapa. La def está en el constructor de Grafo
-		posicion = new Nodo("Mastil", 0, 0, false);
-		
-=======
 
 		listaObstaculos = new ArrayList<Nodo>();
->>>>>>> adf81b6964ea7fe121de9f9176873436d7c73353
 	}
 
 	/**
@@ -115,7 +84,6 @@ public class EstadoAgente extends SearchBasedAgentState {
 	 */
 	@Override
 	public String toString() {
-		
 		// TODO MODIFICADO: Complete Method
 		String str = "Posicion: " + posicion;
 		return str;
@@ -128,17 +96,13 @@ public class EstadoAgente extends SearchBasedAgentState {
 	@Override
 	public boolean equals(Object obj) {
 
-		// TODO MODIF. VER CON PUSH FRAN: Complete Method
-
-<<<<<<< HEAD
-		/*if (!(obj instanceof EstadoAgente)) {
+		// TODO MODIFICADO: Complete Method
+		if (!(obj instanceof EstadoAgente)) {
             return false;
         }
-        return posicion.equals(((EstadoAgente) obj).getPosicion());*/
-		
-		return true;
-=======
-		return (posicion.equals(((EstadoAgente) obj).getPosicion())?true:false);
+        return posicion.equals(((EstadoAgente) obj).getPosicion());
+
+		//return (posicion.equals(((EstadoAgente) obj).getPosicion())?true:false);
 	}
 
 	public Nodo getNodoDestino() {
@@ -155,7 +119,6 @@ public class EstadoAgente extends SearchBasedAgentState {
 
 	public void setPosicion(Nodo posicion) {
 		this.posicion = posicion;
->>>>>>> adf81b6964ea7fe121de9f9176873436d7c73353
 	}
 
 	// TODO: Complete this section with agent-specific methods
@@ -186,19 +149,4 @@ public class EstadoAgente extends SearchBasedAgentState {
 	// nodoDestino = arg;
 	// }
 
-	public Grafo getMapaAgente() {
-		return mapaAgente;
-	}
-
-	public void setMapaAgente(Grafo mapaAgente) {
-		this.mapaAgente = mapaAgente;
-	}
-
-	public Nodo getPosicion() {
-		return posicion;
-	}
-
-	public void setPosicion(Nodo posicion) {
-		this.posicion = posicion;
-	}
 }

@@ -1,5 +1,7 @@
 package frsf.cidisi.exercise.diagrama.search;
 
+import java.util.Collection;
+
 import frsf.cidisi.exercise.diagrama.grafo.Grafo;
 import frsf.cidisi.exercise.diagrama.grafo.Nodo;
 import frsf.cidisi.faia.state.EnvironmentState;
@@ -15,7 +17,7 @@ public class EstadoAmbiente extends EnvironmentState {
     public EstadoAmbiente() {
 
     	posicionAgente = new Nodo();
-    	mapa = new Grafo();	
+    	mapa = new Grafo();	//aca ya se inicializa el grafo
     	
         this.initState();
     }
@@ -38,10 +40,9 @@ public class EstadoAmbiente extends EnvironmentState {
      */
     @Override
     public String toString() {
-        String str = "";
-
         //TODO: Complete Method
-
+        
+        String str = "";
         return str;
     }
 
