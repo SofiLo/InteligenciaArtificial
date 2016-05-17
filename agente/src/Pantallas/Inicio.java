@@ -1,4 +1,4 @@
-package Pantallas;
+package pantallas;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -10,9 +10,12 @@ public class Inicio extends JFrame {
 	private JLabel lbl;
 	private JLabel lblInicio;
 	private JLabel lblDestino;
-	private ScrollPane scrollPane;
 	private JComboBox combobxInicio;
 	private JComboBox combobxDestino;
+	private JButton btnAgregarObstaculos;
+	private JPanel panelMuestra;
+	private JScrollPane scrollPane;
+	private JButton btnEjecutar;
 
 	/**
 	 * Launch the application.
@@ -57,6 +60,9 @@ public class Inicio extends JFrame {
 		combobxDestino = new JComboBox(aulas);
 		panel.add(combobxDestino);
 		
+		btnAgregarObstaculos = new JButton("+Obstaculos");
+		panel.add(btnAgregarObstaculos);
+		
 		//ACTION LISTENERS
 		 ActionListener actionListener = new ActionListener() 
 		 {
@@ -77,8 +83,16 @@ public class Inicio extends JFrame {
 		lbl.setIcon(new ImageIcon("C:\\Users\\homero.jpg"));
 		getContentPane().add(lbl, BorderLayout.CENTER);
 		
-		scrollPane = new ScrollPane();
-		getContentPane().add(scrollPane, BorderLayout.WEST);
+		panelMuestra = new JPanel();
+		getContentPane().add(panelMuestra, BorderLayout.WEST);
+		panelMuestra.setLayout(new BoxLayout(panelMuestra, BoxLayout.X_AXIS));
+		
+		btnEjecutar = new JButton("Ejecutar");
+		btnEjecutar.setHorizontalTextPosition(SwingConstants.CENTER);
+		panelMuestra.add(btnEjecutar);
+		
+		scrollPane = new JScrollPane();
+		panelMuestra.add(scrollPane);
 		
 	}
 

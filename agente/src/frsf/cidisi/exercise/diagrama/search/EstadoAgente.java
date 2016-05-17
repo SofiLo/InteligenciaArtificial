@@ -12,7 +12,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 
 	private int energia;
 	private Nodo posicion;
-	private Grafo mapaAgente; //Lista de obstaculos
+	private Grafo mapaAgente; //Tengo que tener el mapa, toda la estructura del ambiente.
 	private Nodo nodoDestino;
 
 	public EstadoAgente() {
@@ -39,6 +39,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 	public void updateState(Perception p) {
 
 		// TODO: Complete Method
+		
 	}
 
 	/**

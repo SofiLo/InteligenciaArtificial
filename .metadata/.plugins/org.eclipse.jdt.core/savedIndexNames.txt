@@ -1,20 +1,7 @@
 INDEX VERSION 1.126+C:\Users\Sofía\Desktop\Sofia\_Facultad\Inteligencia Artificial\InteligenciaArtificial\.metadata\.plugins\org.eclipse.jdt.core
-1144188029.index
-4149142647.index
 2845434657.index
-4018706093.index
 4146874359.index
-2706502329.index
-2708239607.index
-739078005.index
-3256372620.index
-384216248.index
-3015671029.index
-1075156909.index
-728132027.index
-898289412.index
-1820024274.index
+1822282976.index
 3792919871.index
-3626931047.index
-3521617142.index
-683184654.index
+2476897490.index
+3825501298.index

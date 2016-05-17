@@ -1,0 +1,122 @@
+package pantallas;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.BoxLayout;
+import java.awt.Dimension;
+import javax.swing.JTextArea;
+import javax.swing.JTable;
+import javax.swing.JTextPane;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.ListSelectionModel;
+import javax.swing.border.TitledBorder;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+
+public class DefObstaculos extends JFrame {
+
+	private JPanel contentPane;
+	private JPanel panelObs = new JPanel();
+	private String aulas[] = {"Mástil", "Cantina", "Alumnado", "Ingreso a torre", "Escalera Torre", "Puerta Principal", "Fotocopiadora", "Aula 2", "Aula 3", "Aula 4", "Aula 5", "Aula 1", "Aula de Estudio", "Departamento Mecánica", "Puerta a Patio Interno", "Departamento Eléctrica", "Ascensor", "Escalera Principal", "Baños Planta Baja", "Escalera Básicas", "Aula 9", "Aula 12", "Aula 18", "Aula 19", "Baños Primer Piso", "Escalera Chica", "Civil GIMNI", "Departamento Civil", "Baños segundo piso", "Escalea Eléctrica", "Puerta Estadio", "Estadio", "Departamento Industrial", "Aula 20", "Aula 21", "Aula 22", "Escalera ISI", "Laboratorio 1", "CIDISI", "Laboratorio 2", "Departamento ISI", "TICS", "Laboratorio 3", "Laboratorio de Conectividad", "Laboratorio 4", "Laboratorio 5"};
+	private JComboBox cbObstaculo = new JComboBox();
+	private JTable table = new JTable();
+	private final JButton eliminarObs = new JButton("-");
+	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					DefObstaculos frame = new DefObstaculos();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public DefObstaculos() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS));
+		panelObs.setMaximumSize(new Dimension(32767, 400));
+		
+
+		contentPane.add(panelObs);
+		panelObs.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		
+		cbObstaculo.setModel(new DefaultComboBoxModel(aulas));
+		panelObs.add(cbObstaculo);
+		
+		JButton agregarObs = new JButton("+");
+		agregarObs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Object aula[] = {(String) cbObstaculo.getSelectedItem()};
+				DefaultTableModel temp = (DefaultTableModel) table.getModel();
+				
+				
+				for(int i = 0; i<table.getRowCount(); i++)
+				{
+					if(temp.getValueAt(i, 0).equals(table.getRowSelectionAllowed())){
+						System.out.print("cacacacac");}
+					else{
+						temp.addRow(aula);}
+//				}
+				
+		}}});
+
+		panelObs.add(agregarObs);
+		eliminarObs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try
+				{
+				DefaultTableModel temp = (DefaultTableModel) table.getModel();
+				temp.removeRow(table.getSelectedRow());
+				}
+				catch(ArrayIndexOutOfBoundsException e1){
+					;
+				}
+			}
+		});
+		
+		panelObs.add(eliminarObs);
+	
+		JPanel panel = new JPanel();
+		contentPane.add(panel);
+	
+		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+			},
+			new String[] {
+				"New column"
+			}
+		));
+		panel.add(table);
+		
+	}
+
+}
