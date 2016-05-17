@@ -1,5 +1,8 @@
 package frsf.cidisi.exercise.diagrama.search;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 import frsf.cidisi.exercise.diagrama.grafo.Grafo;
 import frsf.cidisi.exercise.diagrama.grafo.Nodo;
 import frsf.cidisi.faia.agent.Perception;
@@ -12,11 +15,24 @@ public class EstadoAgente extends SearchBasedAgentState {
 
 	private int energia;
 	private Nodo posicion;
+<<<<<<< HEAD
 	private Grafo mapaAgente; //Tengo que tener el mapa, toda la estructura del ambiente.
+=======
+	private Grafo mapaAgente; // Lista de obstaculos
+>>>>>>> adf81b6964ea7fe121de9f9176873436d7c73353
 	private Nodo nodoDestino;
-
+	private ArrayList<Nodo> listaObstaculos;
+	
 	public EstadoAgente() {
 		this.initState();
+	}
+
+	public void setListaObstaculos(ArrayList<Nodo> listaObstaculos) {
+		this.listaObstaculos = listaObstaculos;
+	}
+
+	public ArrayList<Nodo> getListaObstaculos() {
+		return listaObstaculos;
 	}
 
 	/**
@@ -26,9 +42,23 @@ public class EstadoAgente extends SearchBasedAgentState {
 	@Override
 	public SearchBasedAgentState clone() {
 
+		EstadoAgente nuevoEstado = new EstadoAgente();
+		ArrayList<Nodo> nuevaLista = new ArrayList<Nodo>();
+		
+		nuevoEstado.setNodoDestino(nodoDestino.clone());
+		nuevoEstado.setPosicion(posicion.clone());
+		
+		
+		Iterator<Nodo> iter = listaObstaculos.iterator();
+		while(iter.hasNext()) {
+			nuevaLista.add(iter.next().clone());
+		}
+		
+		nuevoEstado.setListaObstaculos(nuevaLista);
+		
 		// TODO: Complete Method
 
-		return null;
+		return nuevoEstado;
 	}
 
 	/**
@@ -37,9 +67,17 @@ public class EstadoAgente extends SearchBasedAgentState {
 	 */
 	@Override
 	public void updateState(Perception p) {
+<<<<<<< HEAD
 
 		// TODO: Complete Method
 		
+=======
+		posicion = ((AgentePerception) p).getNodoPercibido();
+		
+		if(posicion.isObstaculo()) {
+			listaObstaculos.add(posicion);
+		}
+>>>>>>> adf81b6964ea7fe121de9f9176873436d7c73353
 	}
 
 	/**
@@ -47,9 +85,8 @@ public class EstadoAgente extends SearchBasedAgentState {
 	 */
 	@Override
 	public void initState() {
-//		energia = 1;
-//		mapaAgente = new Grafo();
-//		posicion = new Nodo("Mastil", 0, 0, true);
+
+		listaObstaculos = new ArrayList<Nodo>();
 	}
 
 	/**
@@ -73,7 +110,23 @@ public class EstadoAgente extends SearchBasedAgentState {
 
 		// TODO: Complete Method
 
-		return true;
+		return (posicion.equals(((EstadoAgente) obj).getPosicion())?true:false);
+	}
+
+	public Nodo getNodoDestino() {
+		return nodoDestino;
+	}
+
+	public void setNodoDestino(Nodo nodoDestino) {
+		this.nodoDestino = nodoDestino;
+	}
+
+	public Nodo getPosicion() {
+		return posicion;
+	}
+
+	public void setPosicion(Nodo posicion) {
+		this.posicion = posicion;
 	}
 
 	// TODO: Complete this section with agent-specific methods

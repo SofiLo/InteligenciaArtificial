@@ -11,7 +11,7 @@ public class ObjetivoAgente extends GoalTest {
     public boolean isGoalState (AgentState agentState) {
     
     	// TODO: Complete Method
-        if  (true) //( NodoActual = NodoDestino)
+        if  ( ((EstadoAgente) agentState).getNodoDestino().equals(((EstadoAgente) agentState).getPosicion()) ) //( NodoActual = NodoDestino)
         	{
             return true;
         	}
