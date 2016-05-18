@@ -1,0 +1,111 @@
+package pantallas;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class Inicio extends JFrame {
+	private JLabel lbl;
+	private JLabel lblInicio;
+	private JLabel lblDestino;
+	private JComboBox combobxInicio;
+	private JComboBox combobxDestino;
+	private JButton btnAgregarObstaculos;
+	private JPanel panelMuestra;
+	private JScrollPane scrollPane;
+	private JButton btnEjecutar;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Inicio frame = new Inicio();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Inicio() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 600, 400);
+		getContentPane().setLayout(new BorderLayout(0, 0));
+		
+		JPanel panel = new JPanel();
+		FlowLayout flowLayout = (FlowLayout) panel.getLayout();
+		flowLayout.setAlignment(FlowLayout.LEFT);
+		getContentPane().add(panel, BorderLayout.NORTH);
+		
+		lblInicio = new JLabel("Ingrese inicio");
+		panel.add(lblInicio);
+		
+		//Edito el combobox
+		String aulas[] = {"Mástil", "Cantina", "Alumnado", "Ingreso a torre", "Escalera Torre", "Puerta Principal", "Fotocopiadora", "Aula 2", "Aula 3", "Aula 4", "Aula 5", "Aula 1", "Aula de Estudio", "Departamento Mecánica", "Puerta a Patio Interno", "Departamento Eléctrica", "Ascensor", "Escalera Principal", "Baños Planta Baja", "Escalera Básicas", "Aula 9", "Aula 12", "Aula 18", "Aula 19", "Baños Primer Piso", "Escalera Chica", "Civil GIMNI", "Departamento Civil", "Baños segundo piso", "Escalea Eléctrica", "Puerta Estadio", "Estadio", "Departamento Industrial", "Aula 20", "Aula 21", "Aula 22", "Escalera ISI", "Laboratorio 1", "CIDISI", "Laboratorio 2", "Departamento ISI", "TICS", "Laboratorio 3", "Laboratorio de Conectividad", "Laboratorio 4", "Laboratorio 5"};
+		combobxInicio = new JComboBox(aulas);
+		panel.add(combobxInicio);
+				
+		lblDestino = new JLabel("Ingrese destino");
+		panel.add(lblDestino);
+		
+		combobxDestino = new JComboBox(aulas);
+		panel.add(combobxDestino);
+		
+		btnAgregarObstaculos = new JButton("+Obstaculos");
+		panel.add(btnAgregarObstaculos);
+		
+		//ACTION LISTENERS
+		 ActionListener actionListener = new ActionListener() 
+		 {
+			 public void actionPerformed(ActionEvent actionEvent) {
+		        System.out.println("Selected: " + combobxInicio.getSelectedItem());
+		        System.out.println(", Position: " + combobxInicio.getSelectedIndex());
+
+		        System.out.println("Selected: " + combobxDestino.getSelectedItem());
+		        System.out.println(", Position: " + combobxDestino.getSelectedIndex());
+		      }
+		 };
+		combobxInicio.addActionListener(actionListener);
+		combobxDestino.addActionListener(actionListener);
+		
+		
+		lbl = new JLabel();
+		lbl.setHorizontalAlignment(SwingConstants.CENTER);
+		lbl.setIcon(new ImageIcon("C:\\Users\\homero.jpg"));
+		getContentPane().add(lbl, BorderLayout.CENTER);
+		
+		panelMuestra = new JPanel();
+		getContentPane().add(panelMuestra, BorderLayout.WEST);
+		panelMuestra.setLayout(new BoxLayout(panelMuestra, BoxLayout.X_AXIS));
+		
+		btnEjecutar = new JButton("Ejecutar");
+		btnEjecutar.setHorizontalTextPosition(SwingConstants.CENTER);
+		panelMuestra.add(btnEjecutar);
+		
+		scrollPane = new JScrollPane();
+		panelMuestra.add(scrollPane);
+		
+	}
+
+	public String getInicio() {
+		String inicio = (String) combobxInicio.getSelectedItem();
+		
+		return inicio;
+	}
+
+	public String getDestino() {
+		String destino = (String) combobxDestino.getSelectedItem();
+		
+		return destino;
+	}
+	
+}

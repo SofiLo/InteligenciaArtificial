@@ -15,9 +15,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 
 	private int energia;
 	private Nodo posicion;
-
 	private Grafo mapaAgente; //Tengo que tener el mapa, toda la estructura del ambiente.
-
 	private Nodo nodoDestino;
 	private ArrayList<Nodo> listaObstaculos;
 	
