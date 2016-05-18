@@ -15,7 +15,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 
 	private int energia;
 	private Nodo posicion;
-	private Grafo mapaAgente; // Lista de obstaculos
+	private Grafo mapaAgente; //Tengo que tener el mapa, toda la estructura del ambiente.
 	private Nodo nodoDestino;
 	private ArrayList<Nodo> listaObstaculos;
 	
@@ -64,10 +64,16 @@ public class EstadoAgente extends SearchBasedAgentState {
 	 */
 	@Override
 	public void updateState(Perception p) {
+
 		posicion = ((AgentePerception) p).getNodoPercibido();
 	/*	if(posicion.isObstaculo()) {
 			listaObstaculos.add(posicion);
+<<<<<<< HEAD
 		}*/
+=======
+		}
+
+>>>>>>> f8ae916e8224d8254f11d4b75dfd623f8a0370e0
 	}
 
 	/**

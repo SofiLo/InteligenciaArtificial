@@ -87,9 +87,9 @@ public class Search extends Solve {
 
         tree = new NTree();
 
-        tree.setAgentState(agentState);
+        tree.setAgentState(agentState); //al tree le asigno el estado del agente en root
 
-        searchStrategy.initNodesToExpandList(tree);
+        searchStrategy.initNodesToExpandList(tree); // aca estan los nodos hoja
 
         boolean goal = false;
 

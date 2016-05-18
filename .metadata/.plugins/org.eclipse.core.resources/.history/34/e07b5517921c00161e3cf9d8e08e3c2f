@@ -1,0 +1,173 @@
+package pantallas;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.BoxLayout;
+import java.awt.Dimension;
+import javax.swing.JTextArea;
+import javax.swing.JTable;
+import javax.swing.JTextPane;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumnModel;
+import javax.swing.ListSelectionModel;
+import javax.swing.border.TitledBorder;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import java.awt.Component;
+import java.util.ArrayList;
+
+import javax.swing.SwingConstants;
+
+public class DefObstaculos extends JFrame {
+
+	private JPanel contentPane;
+	private JPanel panelObs = new JPanel();
+	private String aulas[] = {"Mástil", "Cantina", "Alumnado", "Ingreso a torre", "Escalera Torre", "Puerta Principal", "Fotocopiadora", "Aula 2", "Aula 3", "Aula 4", "Aula 5", "Aula 1", "Aula de Estudio", "Departamento Mecánica", "Puerta a Patio Interno", "Departamento Eléctrica", "Ascensor", "Escalera Principal", "Baños Planta Baja", "Escalera Básicas", "Aula 9", "Aula 12", "Aula 18", "Aula 19", "Baños Primer Piso", "Escalera Chica", "Civil GIMNI", "Departamento Civil", "Baños segundo piso", "Escalea Eléctrica", "Puerta Estadio", "Estadio", "Departamento Industrial", "Aula 20", "Aula 21", "Aula 22", "Escalera ISI", "Laboratorio 1", "CIDISI", "Laboratorio 2", "Departamento ISI", "TICS", "Laboratorio 3", "Laboratorio de Conectividad", "Laboratorio 4", "Laboratorio 5"};
+	private JComboBox<String> cbObstaculo = new JComboBox();
+	private JTable table = new JTable();
+	private final JButton eliminarObs = new JButton("-");
+	private final JPanel panelBotones = new JPanel();
+	private final JButton agregarCambios = new JButton("Agregar Cambios");
+	private final JButton cancelar = new JButton("Cancelar");
+	private final JButton limpiarTabla = new JButton("Limpiar tabla");
+	private final ArrayList<String> listaObstaculos = new ArrayList<String>();
+	private Inicio frame;
+	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					DefObstaculos frame = new DefObstaculos();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public DefObstaculos() {
+		setTitle("Definir Obstaculos del ambiente");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS));
+		panelObs.setMaximumSize(new Dimension(32767, 400));
+		
+
+		contentPane.add(panelObs);
+		panelObs.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		
+		cbObstaculo.setModel(new DefaultComboBoxModel(aulas));
+		panelObs.add(cbObstaculo);
+		
+		JButton agregarObs = new JButton("+");
+		agregarObs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String obs = (String) cbObstaculo.getSelectedItem();	
+				Object aula[] = {obs};
+				DefaultTableModel temp = (DefaultTableModel) table.getModel();
+				cbObstaculo.removeItem(obs);
+				temp.addRow(aula);
+			}
+
+		});
+
+		panelObs.add(agregarObs);
+		eliminarObs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try
+				{
+				DefaultTableModel temp = (DefaultTableModel) table.getModel();
+				String dato = String.valueOf(temp.getValueAt(table.getSelectedRow(),0));
+				cbObstaculo.addItem(dato);
+				temp.removeRow(table.getSelectedRow());
+				
+				}
+				catch(ArrayIndexOutOfBoundsException e1){
+					;
+				}
+			}
+		});
+		
+		panelObs.add(eliminarObs);
+	
+		JPanel panelTabla = new JPanel();
+		panelTabla.setPreferredSize(new Dimension(400, 150));
+		contentPane.add(panelTabla);
+		table.setName("");
+		table.setPreferredScrollableViewportSize(new Dimension(350, 150));
+	
+		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+			},
+			new String[] {
+				"Obst\u00E1culos"
+			}
+		));
+		panelTabla.add(table);
+		
+		JScrollPane scrollPane = new JScrollPane(table);
+		panelTabla.add(scrollPane);
+		panelBotones.setMaximumSize(new Dimension(450, 50));
+		
+		contentPane.add(panelBotones);
+		limpiarTabla.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				int i = JOptionPane.showConfirmDialog(frame,"¿Realmente desea limpiar la tabla?","Aceptar",JOptionPane.YES_NO_OPTION);
+				if(i==0){
+					DefaultTableModel temp = (DefaultTableModel) table.getModel();
+					int valor =temp.getRowCount();
+					
+					for(int j=0; j<valor; j++){
+						System.out.print("\n"+ temp.getRowCount());
+						System.out.print("\nvalor de j:" + j);
+				    	cbObstaculo.addItem((String) temp.getValueAt(j, 0));
+				    	//temp.removeRow(1);
+				    }
+					
+				}
+				else{
+					
+				}
+				
+				
+				
+			}
+		});
+		
+		panelBotones.add(limpiarTabla);
+		
+		panelBotones.add(agregarCambios);
+		
+		panelBotones.add(cancelar);
+	}
+
+}

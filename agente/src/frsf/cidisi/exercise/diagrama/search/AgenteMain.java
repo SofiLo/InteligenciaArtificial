@@ -6,6 +6,7 @@ import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
 
 public class AgenteMain {
 
+<<<<<<< HEAD
 	public static void main(String[] args) throws PrologConnectorException {
 		Agente agent = new Agente();
 
@@ -33,5 +34,32 @@ public class AgenteMain {
 		
 		simulator.start();
 	}
+=======
+
+    public static void main(String[] args) throws PrologConnectorException {
+    	
+        Agente agent = new Agente();
+
+        Ambiente environment = new Ambiente();
+
+        SearchBasedAgentSimulator simulator =
+                new SearchBasedAgentSimulator(environment, agent);
+        
+        /*//Aca se abre la interfaz? implemento a partir de eso. VER y CAMBIAR si es necesario
+        Inicio interfaz = new Inicio();
+
+        
+        //obtengo el inicio y destino que se ingresó en la interfaz
+        String inicio = interfaz.getInicio();
+        String destino = interfaz.getDestino();
+        */        
+        
+        //TODO aca seteamos los obstaculos 
+        environment.getEnvironmentState().setearObstaculos("Mastil");
+        
+        simulator.start();
+    }
+
+>>>>>>> f8ae916e8224d8254f11d4b75dfd623f8a0370e0
 
 }
