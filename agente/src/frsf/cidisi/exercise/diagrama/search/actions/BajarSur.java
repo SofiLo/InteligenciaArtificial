@@ -16,17 +16,17 @@ public class BajarSur extends SearchAction {
      */
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
-EstadoAgente agState = (EstadoAgente) s;
         
         // TODO MODIFICADO: Use this conditions
 
         //Obtenemos el nodo adyacente que se alcanza yendo al ESTE
-		Nodo siguiente = agState.getPosicion().getDestinos().get(Constantes.BAJARSUR);
+		Nodo siguiente = ((EstadoAgente) s).getPosicion().getDestinos().get(Constantes.BAJARSUR);
 
 		//Modificamos el estado del Agente
-		if (siguiente != null) {
-			agState.setPosicion(siguiente);
-			return agState;
+		if (siguiente != null && !siguiente.isObstaculo()) {
+			((EstadoAgente) s).setPosicion(siguiente);
+
+			return s;
 		}
 
         return null;
@@ -37,23 +37,21 @@ EstadoAgente agState = (EstadoAgente) s;
      */
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-    	EstadoAmbiente environmentState = (EstadoAmbiente) est;
-        EstadoAgente agState = ((EstadoAgente) ast);
-
         // TODO MODIFICADO: Use this conditions
         
         //Obtenemos el nodo adyacente que se alcanza yendo al ESTE
-		Nodo siguiente = agState.getPosicion().getDestinos().get(Constantes.BAJARSUR);
+		Nodo siguiente = ((EstadoAgente) ast).getPosicion().getDestinos().get(Constantes.BAJARSUR);
 
 		
-		if (siguiente != null) {
+		if (siguiente != null && !siguiente.isObstaculo()) {
 			//Modificamos el estado del Agente
-			agState.setPosicion(siguiente);
-			
+			((EstadoAgente) ast).setPosicion(siguiente);
+			int energiaActual = ((EstadoAgente) ast).getEnergia() - 10;
+			((EstadoAgente) ast).setEnergia(energiaActual);
 			//Modificamos el estado del Ambiente
-			environmentState.setPosicionAgente(siguiente);
+			((EstadoAmbiente) est).setPosicionAgente(siguiente);
 			
-			return environmentState;
+			return est;
 		}
 
      /*   if (true) {

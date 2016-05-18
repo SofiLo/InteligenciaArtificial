@@ -1,5 +1,6 @@
 package frsf.cidisi.exercise.diagrama.search;
 
+import frsf.cidisi.exercise.diagrama.search.actions.Apagar;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.environment.Environment;
 
@@ -24,7 +25,8 @@ public class Ambiente extends Environment {
 		AgentePerception perception = new AgentePerception();
 
 		// TODO MODIFICADO: Set the perceptions sensors
-		perception.setNodoPercibido(((EstadoAmbiente) environmentState).getPosicionAgente());
+		perception.setNodoPercibido(((EstadoAmbiente) environmentState)
+				.getPosicionAgente());
 
 		// Return the perception
 		return perception;
@@ -36,16 +38,21 @@ public class Ambiente extends Environment {
 
 	public boolean agentFailed(Action actionReturned) {
 
+		// TODO MODIFICADO: Complete Method
 		EstadoAmbiente envState = this.getEnvironmentState();
+		Agente agent = new Agente();
 
-		// TODO: Complete Method
+		if (actionReturned == null)
+			return true;
+		else if (actionReturned instanceof Apagar)
+			return true;
 
 		return false;
 	}
 
 	// TODO MODIFICADO: Complete this section with agent-specific methods
 	// The following methods are agent-specific:
-	
+
 	public EstadoAmbiente getEnvironmentState() {
 		return (EstadoAmbiente) super.getEnvironmentState();
 	}

@@ -86,4 +86,10 @@ public class Nodo {
 		clonado.setDestinos(destinos);
 		return clonado;
 	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return nombre;
+	}
 }

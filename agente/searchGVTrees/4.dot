@@ -1,0 +1,180 @@
+digraph g {
+node [shape = Mrecord];
+nodo0[label="{EO: 0|cost: 0.0|A: null}"]
+nodo1[label="{EO: 1|cost: 1.0|A: IrNorte}"]
+
+nodo0 -> nodo1;
+nodo2[label="{EO: 2|cost: 1.0|A: IrEste}"]
+nodo5[label="{EO: 5|cost: 2.0|A: IrEste|Departamento\nMecánica}"]
+nodo12[label="{EO: 12|cost: 3.0|A: IrNorte|Aula\nde\nEstudio}"]
+nodo23[label="{EO: 23|cost: 4.0|A: IrNorte|Escalera\nPrincipal}"]
+
+nodo12 -> nodo23;
+nodo24[label="{EO: 24|cost: 4.0|A: SubirNorte|Escalera\nPrincipal}"]
+nodo43[label="{EO: 43|cost: 5.0|A: IrNorte|Baños\nPrimer\nPiso}"]
+
+nodo24 -> nodo43;
+nodo44[label="{EO: 44|cost: 5.0|A: IrOeste|Baños\nPrimer\nPiso}"]
+
+nodo24 -> nodo44;
+
+nodo12 -> nodo24;
+
+nodo5 -> nodo12;
+nodo13[label="{EO: 13|cost: 3.0|A: IrEste|Aula\nde\nEstudio}"]
+nodo25[label="{EO: 25|cost: 4.0|A: IrNorte|Puerta\nPrincipal}"]
+nodo45[label="{EO: 45|cost: 5.0|A: IrNorte|Fotocopiadora}"]
+
+nodo25 -> nodo45;
+
+nodo13 -> nodo25;
+nodo26[label="{EO: 26|cost: 4.0|A: IrEste|Puerta\nPrincipal}"]
+nodo46[label="{EO: 46|cost: 5.0|A: IrSur|Aula\n1}"]
+
+nodo26 -> nodo46;
+
+nodo13 -> nodo26;
+nodo27[label="{EO: 27|cost: 4.0|A: IrSur|Puerta\nPrincipal}"]
+nodo47[label="{EO: 47|cost: 5.0|A: IrOeste|Mastil}"]
+
+nodo27 -> nodo47;
+
+nodo13 -> nodo27;
+
+nodo5 -> nodo13;
+
+nodo2 -> nodo5;
+
+nodo0 -> nodo2;
+nodo3[label="{EO: 3|cost: 1.0|A: IrOeste}"]
+nodo6[label="{EO: 6|cost: 2.0|A: SubirNorte|Ascensor}"]
+
+nodo3 -> nodo6;
+nodo7[label="{EO: 7|cost: 2.0|A: SubirEste|Ascensor}"]
+nodo14[label="{EO: 14|cost: 3.0|A: IrNorte|TICS}"]
+nodo28[label="{EO: 28|cost: 4.0|A: IrNorte|Departamento\nISI}"]
+nodo48[label="{EO: 48|cost: 5.0|A: IrNorte|CIDISI}"]
+
+nodo28 -> nodo48;
+
+nodo14 -> nodo28;
+
+nodo7 -> nodo14;
+
+nodo3 -> nodo7;
+
+nodo0 -> nodo3;
+nodo4[label="{EO: 4|cost: 1.0|A: SubirOeste}"]
+nodo8[label="{EO: 8|cost: 2.0|A: IrNorte|Escalera\nChica}"]
+nodo15[label="{EO: 15|cost: 3.0|A: IrEste|Escalera\nISI}"]
+nodo29[label="{EO: 29|cost: 4.0|A: IrNorte|Laboratorio\n1}"]
+nodo49[label="{EO: 49|cost: 5.0|A: IrNorte|Laboratorio\n2}"]
+
+nodo29 -> nodo49;
+
+nodo15 -> nodo29;
+nodo30[label="{EO: 30|cost: 4.0|A: IrSur|Laboratorio\n1}"]
+nodo50[label="{EO: 50|cost: 5.0|A: IrSur|CIDISI}"]
+
+nodo30 -> nodo50;
+
+nodo15 -> nodo30;
+
+nodo8 -> nodo15;
+nodo16[label="{EO: 16|cost: 3.0|A: BajarNorte|Escalera\nISI}"]
+nodo31[label="{EO: 31|cost: 4.0|A: IrNorte|Escalera\nEléctrica}"]
+nodo51[label="{EO: 51|cost: 5.0|A: IrEste|Baños\nsegundo\npiso}"]
+
+nodo31 -> nodo51;
+
+nodo16 -> nodo31;
+nodo32[label="{EO: 32|cost: 4.0|A: IrSur|Escalera\nEléctrica}"]
+nodo52[label="{EO: 52|cost: 5.0|A: IrSur|Departamento\nCivil}"]
+
+nodo32 -> nodo52;
+nodo53[label="{EO: 53|cost: 5.0|A: IrOeste|Departamento\nCivil}"]
+
+nodo32 -> nodo53;
+
+nodo16 -> nodo32;
+
+nodo8 -> nodo16;
+nodo17[label="{EO: 17|cost: 3.0|A: BajarSur|Escalera\nISI}"]
+nodo33[label="{EO: 33|cost: 4.0|A: IrSur|Aula\n22}"]
+nodo54[label="{EO: 54|cost: 5.0|A: IrSur|Aula\n21}"]
+
+nodo33 -> nodo54;
+
+nodo17 -> nodo33;
+
+nodo8 -> nodo17;
+
+nodo4 -> nodo8;
+nodo9[label="{EO: 9|cost: 2.0|A: SubirNorte|Escalera\nChica}"]
+nodo18[label="{EO: 18|cost: 3.0|A: IrNorte|Aula\n20}"]
+nodo34[label="{EO: 34|cost: 4.0|A: IrNorte|Aula\n21}"]
+nodo55[label="{EO: 55|cost: 5.0|A: IrNorte|Aula\n22}"]
+
+nodo34 -> nodo55;
+
+nodo18 -> nodo34;
+
+nodo9 -> nodo18;
+
+nodo4 -> nodo9;
+nodo10[label="{EO: 10|cost: 2.0|A: SubirOeste|Escalera\nChica}"]
+nodo19[label="{EO: 19|cost: 3.0|A: IrNorte|Departamento\nCivil}"]
+nodo35[label="{EO: 35|cost: 4.0|A: IrNorte|Escalera\nEléctrica}"]
+nodo56[label="{EO: 56|cost: 5.0|A: IrEste|Baños\nsegundo\npiso}"]
+
+nodo35 -> nodo56;
+
+nodo19 -> nodo35;
+nodo36[label="{EO: 36|cost: 4.0|A: SubirNorte|Escalera\nEléctrica}"]
+nodo57[label="{EO: 57|cost: 5.0|A: IrEste|Escalera\nISI}"]
+
+nodo36 -> nodo57;
+nodo58[label="{EO: 58|cost: 5.0|A: BajarSur|Escalera\nISI}"]
+
+nodo36 -> nodo58;
+
+nodo19 -> nodo36;
+
+nodo10 -> nodo19;
+nodo20[label="{EO: 20|cost: 3.0|A: IrSur|Departamento\nCivil}"]
+nodo37[label="{EO: 37|cost: 4.0|A: IrEste|Puerta\nEstadio}"]
+
+nodo20 -> nodo37;
+nodo38[label="{EO: 38|cost: 4.0|A: IrOeste|Puerta\nEstadio}"]
+
+nodo20 -> nodo38;
+
+nodo10 -> nodo20;
+nodo21[label="{EO: 21|cost: 3.0|A: IrOeste|Departamento\nCivil}"]
+nodo39[label="{EO: 39|cost: 4.0|A: SubirNorte|Ascensor}"]
+
+nodo21 -> nodo39;
+nodo40[label="{EO: 40|cost: 4.0|A: SubirEste|Ascensor}"]
+
+nodo21 -> nodo40;
+
+nodo10 -> nodo21;
+
+nodo4 -> nodo10;
+nodo11[label="{EO: 11|cost: 2.0|A: BajarEste|Escalera\nChica}"]
+nodo22[label="{EO: 22|cost: 3.0|A: IrEste|Departamento\nMecánica}"]
+nodo41[label="{EO: 41|cost: 4.0|A: IrNorte|Aula\nde\nEstudio}"]
+
+nodo22 -> nodo41;
+nodo42[label="{EO: 42|cost: 4.0|A: IrEste|Aula\nde\nEstudio}"]
+
+nodo22 -> nodo42;
+
+nodo11 -> nodo22;
+
+nodo4 -> nodo11;
+
+nodo0 -> nodo4;
+
+
+}

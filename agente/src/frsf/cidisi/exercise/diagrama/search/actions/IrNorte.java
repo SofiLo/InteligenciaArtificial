@@ -17,22 +17,21 @@ public class IrNorte extends SearchAction {
 	 */
 	@Override
 	public SearchBasedAgentState execute(SearchBasedAgentState s) {
-		
-		EstadoAgente agState = (EstadoAgente) s;
-        
-        // TODO MODIFICADO: Use this conditions
 
-        //Obtenemos el nodo adyacente que se alcanza yendo al ESTE
-		Nodo siguiente = agState.getPosicion().getDestinos().get(Constantes.NORTE);
+		// TODO MODIFICADO: Use this conditions
 
-		//Modificamos el estado del Agente
-		if (siguiente != null) {
-			agState.setPosicion(siguiente);
-			return agState;
+		// Obtenemos el nodo adyacente que se alcanza yendo al ESTE
+		Nodo siguiente = ((EstadoAgente) s).getPosicion().getDestinos().get(
+				Constantes.NORTE);
+
+		// Modificamos el estado del Agente
+		if (siguiente != null && !siguiente.isObstaculo()) {
+			((EstadoAgente) s).setPosicion(siguiente);
+			return s;
 		}
 
-        return null;
-		
+		return null;
+
 	}
 
 	/**
@@ -40,32 +39,30 @@ public class IrNorte extends SearchAction {
 	 */
 	@Override
 	public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-		
-		EstadoAmbiente environmentState = (EstadoAmbiente) est;
-        EstadoAgente agState = ((EstadoAgente) ast);
 
-        // TODO MODIFICADO: Use this conditions
-        
-        //Obtenemos el nodo adyacente que se alcanza yendo al ESTE
-		Nodo siguiente = agState.getPosicion().getDestinos().get(Constantes.NORTE);
+		// TODO MODIFICADO: Use this conditions
 
-		
-		if (siguiente != null) {
-			//Modificamos el estado del Agente
-			agState.setPosicion(siguiente);
-			
-			//Modificamos el estado del Ambiente
-			environmentState.setPosicionAgente(siguiente);
-			
-			return environmentState;
+		// Obtenemos el nodo adyacente que se alcanza yendo al ESTE
+		Nodo siguiente = ((EstadoAgente) ast).getPosicion().getDestinos().get(
+				Constantes.NORTE);
+
+		if (siguiente != null && !siguiente.isObstaculo()) {
+			// Modificamos el estado del Agente
+			((EstadoAgente) ast).setPosicion(siguiente);
+			int energiaActual = ((EstadoAgente) ast).getEnergia() - 10;
+			((EstadoAgente) ast).setEnergia(energiaActual);
+
+			// Modificamos el estado del Ambiente
+			((EstadoAmbiente) est).setPosicionAgente(siguiente);
+
+			return est;
 		}
 
-     /*   if (true) {
-            // Update the real world
-            // Update the agent state
-        }*/
+		/*
+		 * if (true) { // Update the real world // Update the agent state }
+		 */
 
-        return null;
+		return null;
 	}
 
 	/**

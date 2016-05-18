@@ -24,11 +24,13 @@ public class AgenteMain {
 		 */
 
 		// TODO aca seteamos los obstaculos
-//		environment.getEnvironmentState().setearObstaculos("Mastil");
+		environment.getEnvironmentState().setearObstaculos("Biblioteca");
 		
-		// Aca defino la meta
-		((EstadoAgente) agent.getAgentState()).setNodoDestino(new Nodo("Puerta Principal", 2, 0, false));
+		// Aca defino el nodo destino
+		((EstadoAgente) agent.getAgentState()).setNodoDestino(new Nodo("Estadio", 2, 0, false));
 
+		
+		
 		simulator.start();
 	}
 

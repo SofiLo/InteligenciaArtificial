@@ -1,5 +1,6 @@
 package frsf.cidisi.exercise.diagrama.search;
 
+import frsf.cidisi.exercise.diagrama.search.actions.Apagar;
 import frsf.cidisi.exercise.diagrama.search.actions.IrNorte;
 import frsf.cidisi.exercise.diagrama.search.actions.IrSur;
 import frsf.cidisi.exercise.diagrama.search.actions.IrEste;
@@ -36,11 +37,12 @@ public class Agente extends SearchBasedAgent {
 
         // Create the operators
         Vector<SearchAction> operators = new Vector<SearchAction>();
-        operators.addElement(new IrNorte());	
-        operators.addElement(new IrSur());	
-        operators.addElement(new IrEste());	
-        operators.addElement(new IrOeste());	
-        operators.addElement(new SubirNorte());	
+        operators.addElement(new Apagar());
+        operators.addElement(new IrNorte());
+        operators.addElement(new IrEste());
+        operators.addElement(new IrSur());
+        operators.addElement(new IrOeste());
+        operators.addElement(new SubirNorte());		
         operators.addElement(new SubirEste());	
         operators.addElement(new SubirSur());	
         operators.addElement(new SubirOeste());	
@@ -61,7 +63,7 @@ public class Agente extends SearchBasedAgent {
     public Action selectAction() {
 
         // Create the search strategy
-        DepthFirstSearch strategy = new DepthFirstSearch();          
+        BreathFirstSearch strategy = new BreathFirstSearch();          
 
         // Create a Search object with the strategy
         Search searchSolver = new Search(strategy);

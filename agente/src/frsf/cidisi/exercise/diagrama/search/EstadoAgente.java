@@ -24,7 +24,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 	}
 
 	public void setListaObstaculos(ArrayList<Nodo> listaObstaculos) {
-		this.listaObstaculos = listaObstaculos;
+		//this.listaObstaculos = listaObstaculos;
 	}
 
 	public ArrayList<Nodo> getListaObstaculos() {
@@ -43,14 +43,15 @@ public class EstadoAgente extends SearchBasedAgentState {
 		
 		nuevoEstado.setNodoDestino(nodoDestino.clone());
 		nuevoEstado.setPosicion(posicion.clone());
+	//	nuevoEstado.setMapaAgente(mapaAgente.clone());
 		
 		
-		Iterator<Nodo> iter = listaObstaculos.iterator();
+		/*Iterator<Nodo> iter = listaObstaculos.iterator();
 		while(iter.hasNext()) {
 			nuevaLista.add(iter.next().clone());
 		}
 		
-		nuevoEstado.setListaObstaculos(nuevaLista);
+		nuevoEstado.setListaObstaculos(nuevaLista);*/
 		
 		// TODO: Complete Method
 
@@ -64,10 +65,9 @@ public class EstadoAgente extends SearchBasedAgentState {
 	@Override
 	public void updateState(Perception p) {
 		posicion = ((AgentePerception) p).getNodoPercibido();
-		
-		if(posicion.isObstaculo()) {
+	/*	if(posicion.isObstaculo()) {
 			listaObstaculos.add(posicion);
-		}
+		}*/
 	}
 
 	/**
@@ -77,6 +77,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 	public void initState() {
 
 		listaObstaculos = new ArrayList<Nodo>();
+		energia = 1000;
 	}
 
 	/**
@@ -85,8 +86,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 	@Override
 	public String toString() {
 		// TODO MODIFICADO: Complete Method
-		String str = "Posicion: " + posicion;
-		return str;
+		return posicion.toString();
 	}
 
 	/**
@@ -121,6 +121,10 @@ public class EstadoAgente extends SearchBasedAgentState {
 		this.posicion = posicion;
 	}
 
+	public void setMapaAgente(Grafo mapaAgente) {
+		this.mapaAgente = mapaAgente;
+	}
+
 	// TODO: Complete this section with agent-specific methods
 	// The following methods are agent-specific:
 
@@ -130,12 +134,12 @@ public class EstadoAgente extends SearchBasedAgentState {
 	// public void setposicion(Other arg){
 	// posicion = arg;
 	// }
-	// public int getenergia(){
-	// return energia;
-	// }
-	// public void setenergia(int arg){
-	// energia = arg;
-	// }
+	public int getEnergia(){
+		return energia;
+	}
+	public void setEnergia(int arg){
+		energia = arg;
+	}
 	// public Other getlistaObstaculo(){
 	// return listaObstaculo;
 	// }

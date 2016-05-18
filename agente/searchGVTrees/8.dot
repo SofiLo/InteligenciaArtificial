@@ -1,0 +1,36 @@
+digraph g {
+node [shape = Mrecord];
+nodo0[label="{EO: 0|cost: 0.0|A: null}"]
+nodo1[label="{EO: 1|cost: 1.0|A: IrNorte}"]
+nodo3[label="{EO: 3|cost: 2.0|A: IrNorte|Laboratorio\n3}"]
+nodo6[label="{EO: 6|cost: 3.0|A: IrNorte|Laboratorio\nde\nConectividad}"]
+
+nodo3 -> nodo6;
+
+nodo1 -> nodo3;
+
+nodo0 -> nodo1;
+nodo2[label="{EO: 2|cost: 1.0|A: IrSur}"]
+nodo4[label="{EO: 4|cost: 2.0|A: IrSur|Laboratorio\n1}"]
+nodo7[label="{EO: 7|cost: 3.0|A: IrSur|CIDISI}"]
+
+nodo4 -> nodo7;
+
+nodo2 -> nodo4;
+nodo5[label="{EO: 5|cost: 2.0|A: IrOeste|Laboratorio\n1}"]
+nodo8[label="{EO: 8|cost: 3.0|A: IrSur|Escalera\nISI}"]
+
+nodo5 -> nodo8;
+nodo9[label="{EO: 9|cost: 3.0|A: BajarNorte|Escalera\nISI}"]
+
+nodo5 -> nodo9;
+nodo10[label="{EO: 10|cost: 3.0|A: BajarSur|Escalera\nISI}"]
+
+nodo5 -> nodo10;
+
+nodo2 -> nodo5;
+
+nodo0 -> nodo2;
+
+
+}
