@@ -62,8 +62,13 @@ public class EstadoAgente extends SearchBasedAgentState {
 
 		posicion = ((AgentePerception) p).getNodoPercibido();
 	/*	if(posicion.isObstaculo()) {
+<<<<<<< HEAD
 			listaObstaculos.add(posicion);
 		}*/
+=======
+			listaObstaculos.add(posicion);*/
+
+>>>>>>> fdf59ed0b84784c8de0a228fab6df93e661b98d8
 	}
 	/**
 	 * This method is optional, and sets the initial state of the agent.
@@ -106,6 +111,11 @@ public class EstadoAgente extends SearchBasedAgentState {
 	public void setNodoDestino(Nodo nodoDestino) {
 		this.nodoDestino = nodoDestino;
 	}
+	//OBTENGO EL NODO DE DESTINO POR SU NOMBRE
+//	public void setNodoDestinoNombre(String nombre){
+//		Grafo grafo = new Grafo();
+//		this.nodoDestino = grafo.getNodoPorNombre(nombre);
+//	}
 
 	public Nodo getPosicion() {
 		return posicion;
