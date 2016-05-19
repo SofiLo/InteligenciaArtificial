@@ -159,7 +159,6 @@ public class DefObstaculos extends JFrame {
 					listaObstaculos.add((String) temp.getValueAt(i, 0));
 					i++;
 				}
-				System.out.print(listaObstaculos);
 				DefObstaculos.this.setVisible(false);
 				frame.setEnabled(true);
 			}
@@ -178,4 +177,7 @@ public class DefObstaculos extends JFrame {
 		setVisible(true);
 	}
 
+	public ArrayList<String> getListaObstaculos(){
+		return listaObstaculos;
+	}
 }

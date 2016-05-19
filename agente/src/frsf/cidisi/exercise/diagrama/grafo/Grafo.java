@@ -565,7 +565,6 @@ public class Grafo {
 
 	public Nodo getNodoPorNombre(String nombre) {
 		Nodo nodo = new Nodo(nombre, 0, 0, false);
-
 		return listaNodos.get(listaNodos.indexOf(nodo));
 	}
 }

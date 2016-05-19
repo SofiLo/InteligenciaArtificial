@@ -27,8 +27,12 @@ public class EstadoAmbiente extends EnvironmentState {
      */
     public void initState() {
     	
+    	
+    	//la posicion inicial sera la que inicia por pantalla
+    	//posicionAgente = mapa.getNodoPorNombre(agMain.getInicioAgente());
+    	
     	//la posicion inicial del agente sera el mastil
-    	posicionAgente = mapa.getNodoPorNombre("Mastil");
+    	posicionAgente = mapa.getNodoPorNombre("Cantina");
     }
     
     public void setearObstaculos(String nodoObstaculo) {  	

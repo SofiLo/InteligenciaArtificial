@@ -20,9 +20,12 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EtchedBorder;
 import java.awt.Color;
 import java.awt.SystemColor;
-import javax.swing.border.LineBorder;
+import java.util.ArrayList;
 
-public class Inicio extends JFrame {
+import javax.swing.border.LineBorder;
+import javax.swing.DefaultComboBoxModel;
+
+public class Inicio extends JFrame implements ActionListener{
 	private JLabel lblInicio;
 	private JLabel lblDestino;
 	private JComboBox cbInicio;
@@ -34,25 +37,15 @@ public class Inicio extends JFrame {
 	private JLabel imagenMapa;
 	private JPanel panel_1;
 	DefObstaculos defObs;
+	private JPanel panelBotones;
+	private JButton btnAceptar;
+	private JButton btnCancelar;
+	String inicio,destino;
 		
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Inicio frame = new Inicio();
-					frame.setSize(800, 520);
-					frame.setResizable(false);
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the frame.
@@ -80,26 +73,13 @@ public class Inicio extends JFrame {
 		cbInicio = new JComboBox(aulas);
 		cbInicio.setBackground(new Color(255, 255, 255));
 		panel.add(cbInicio);
-		//cbInicio.addActionListener(actionListener);
+
 		
 		lblDestino = new JLabel("Ingrese destino");
 		panel.add(lblDestino);
 		
 		cbDestino = new JComboBox(aulas);
 		panel.add(cbDestino);
-		
-		btnAgregarObstaculos = new JButton("Agregar Obstaculos");
-		btnAgregarObstaculos.setActionCommand("Agregar Obstaculos");
-		btnAgregarObstaculos.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				defObs = new DefObstaculos(Inicio.this);
-				defObs.setVisible(true);
-				Inicio.this.setEnabled(false);
-				//frame.setEnabled(false);
-			}
-		});
-		panel.add(btnAgregarObstaculos);
 		
 		panelCorrida = new JPanel();
 		panelCorrida.setBackground(new Color(230, 230, 250));
@@ -128,38 +108,96 @@ public class Inicio extends JFrame {
 		imagenMapa.setIcon(new ImageIcon(Inicio.class.getResource("/javax/swing/plaf/metal/icons/ocean/file.gif")));
 		getContentPane().add(imagenMapa, BorderLayout.CENTER);
 		
+		panelBotones = new JPanel();
+		panelBotones.setBackground(new Color(230, 230, 250));
+		getContentPane().add(panelBotones, BorderLayout.SOUTH);
+		
+		btnAgregarObstaculos = new JButton("Agregar Obstaculos");
+		btnAgregarObstaculos.setHorizontalAlignment(SwingConstants.LEFT);
+		panelBotones.add(btnAgregarObstaculos);
+		btnAgregarObstaculos.setActionCommand("Agregar Obstaculos");
+		btnAgregarObstaculos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				defObs = new DefObstaculos(Inicio.this);
+				defObs.setVisible(true);
+				Inicio.this.setEnabled(false);
+				//frame.setEnabled(false);
+			}
+		});
+		
+		btnAceptar = new JButton("Aceptar");
+		btnAceptar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				
+				inicio = (String) cbInicio.getSelectedItem();
+				destino = (String) cbDestino.getSelectedItem();
+				System.out.print("inicio interfaz:" + cbInicio.getSelectedItem());
+				System.out.print("\ndestino interfaz:" + cbDestino.getSelectedItem());
+////				System.out.print(defObs.getListaObstaculos());
+			}
+		});
+		btnAceptar.setHorizontalAlignment(SwingConstants.RIGHT);
+		panelBotones.add(btnAceptar);
+		
+		btnCancelar = new JButton("Cancelar");
+		btnCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnCancelar.setHorizontalAlignment(SwingConstants.LEADING);
+		panelBotones.add(btnCancelar);
+		
 		
 //		//TRANSPARENT PANEL
 //		panel_1 = new JPanel();
 //		panel_1.setBackground(new Color(0,0,0,125));
 //		getContentPane().add(panel_1, BorderLayout.CENTER);
 		
-		
-		//cbDestino.addActionListener(actionListener);
+		cbInicio.addActionListener(this);
+		cbDestino.addActionListener(this);
 		
 		//ACTION LISTENERS
-		 ActionListener actionListener = new ActionListener() 
-		 {
-			 public void actionPerformed(ActionEvent actionEvent) {
-		        System.out.println("Selected: " + cbInicio.getSelectedItem());
-		        System.out.println(", Position: " + cbInicio.getSelectedIndex());
-
-		        System.out.println("Selected: " + cbDestino.getSelectedItem());
-		        System.out.println(", Position: " + cbDestino.getSelectedIndex());
-		      }
-		 };
+//		 ActionListener actionListener = new ActionListener() 
+//		 {
+//			 public void actionPerformed(ActionEvent actionEvent) {
+//		        System.out.println("Selected: " + cbInicio.getSelectedItem());
+//		        System.out.println(", Position: " + cbInicio.getSelectedIndex());
+//
+//		        System.out.println("Selected: " + cbDestino.getSelectedItem());
+//		        System.out.println(", Position: " + cbDestino.getSelectedIndex());
+//		      }
+//		 };
 		
 	}
+	
 
 	public String getInicio() {
 		String inicio = (String) cbInicio.getSelectedItem();
-		
 		return inicio;
 	}
 
 	public String getDestino() {
 		String destino = (String) cbDestino.getSelectedItem();
-		
 		return destino;
 	}
+	
+	public ArrayList<String> listaObstaculos(){
+		return defObs.getListaObstaculos();
+	}
+
+
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		System.out.println("Selected: " + cbInicio.getSelectedItem());
+        System.out.println(", Position: " + cbInicio.getSelectedIndex());
+
+        System.out.println("Selected: " + cbDestino.getSelectedItem());
+        System.out.println(", Position: " + cbDestino.getSelectedIndex());
+	}
+
+
+	
+	
 }
