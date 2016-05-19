@@ -61,7 +61,8 @@ public class Agente extends SearchBasedAgent {
      */
     @Override
     public Action selectAction() {
-
+    	
+    	//TODO VER ESTOOOOOO: Con Estrategia de costo
         // Create the search strategy
         BreathFirstSearch strategy = new BreathFirstSearch();          
 

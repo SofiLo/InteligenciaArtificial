@@ -51,7 +51,7 @@ public class AgentePerception extends Perception {
     public String toString() {
         StringBuffer str = new StringBuffer();
 
-        //TODO: Complete Method
+        //TODO MODIFICADO: Complete Method
 
         return (nodoPercibido.isObstaculo()?"Hay obstaculo" : "No hay obstaculo");
     }

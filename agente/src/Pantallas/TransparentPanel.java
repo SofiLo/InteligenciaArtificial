@@ -1,4 +1,4 @@
-package pantallas;
+package Pantallas;
 
 import javax.swing.*;
 import java.awt.*;

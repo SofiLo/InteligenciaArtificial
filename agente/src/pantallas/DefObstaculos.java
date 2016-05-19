@@ -1,4 +1,4 @@
-package pantallas;
+package Pantallas;
 
 import java.awt.Dimension;
 import java.awt.EventQueue;

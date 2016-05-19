@@ -17,19 +17,14 @@ public class EstadoAgente extends SearchBasedAgentState {
 	private Nodo posicion;
 	private Grafo mapaAgente; //Tengo que tener el mapa, toda la estructura del ambiente.
 	private Nodo nodoDestino;
-	private ArrayList<Nodo> listaObstaculos;
+
 	
 	public EstadoAgente() {
 		this.initState();
 	}
 
-	public void setListaObstaculos(ArrayList<Nodo> listaObstaculos) {
-		//this.listaObstaculos = listaObstaculos;
-	}
-
-	public ArrayList<Nodo> getListaObstaculos() {
-		return listaObstaculos;
-	}
+//	public ArrayList<Nodo> getListaObstaculos() {
+//		}
 
 	/**
 	 * This method clones the state of the agent. It's used in the search
@@ -68,21 +63,14 @@ public class EstadoAgente extends SearchBasedAgentState {
 		posicion = ((AgentePerception) p).getNodoPercibido();
 	/*	if(posicion.isObstaculo()) {
 			listaObstaculos.add(posicion);
-<<<<<<< HEAD
 		}*/
-=======
-		}
-
->>>>>>> f8ae916e8224d8254f11d4b75dfd623f8a0370e0
 	}
-
 	/**
 	 * This method is optional, and sets the initial state of the agent.
 	 */
 	@Override
 	public void initState() {
 
-		listaObstaculos = new ArrayList<Nodo>();
 		energia = 1000;
 	}
 

@@ -1,4 +1,4 @@
-package pantallas;
+package Pantallas;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
