@@ -20,7 +20,7 @@ public class IrSur extends SearchAction {
         // TODO MODIFICADO: Use this conditions
 
         //Obtenemos el nodo adyacente que se alcanza yendo al ESTE
-		Nodo siguiente = ((EstadoAgente) s).getPosicion().getDestinos().get(Constantes.SUR);
+		Nodo siguiente = ((EstadoAgente) s).getPosicion().getDestinos().get(Constantes.IRSUR);
 
 		//Modificamos el estado del Agente
 		if (siguiente != null && !siguiente.isObstaculo()) {
@@ -40,7 +40,7 @@ public class IrSur extends SearchAction {
         // TODO MODIFICADO: Use this conditions
         
         //Obtenemos el nodo adyacente que se alcanza yendo al ESTE
-		Nodo siguiente = ((EstadoAgente) ast).getPosicion().getDestinos().get(Constantes.SUR);
+		Nodo siguiente = ((EstadoAgente) ast).getPosicion().getDestinos().get(Constantes.IRSUR);
 
 		
 		if (siguiente != null && !siguiente.isObstaculo()) {
@@ -76,6 +76,6 @@ public class IrSur extends SearchAction {
      */
     @Override
     public String toString() {
-        return "IrSur";
+        return "IRSUR";
     }
 }

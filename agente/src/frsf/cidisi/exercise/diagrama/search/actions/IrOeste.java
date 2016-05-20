@@ -19,7 +19,7 @@ public class IrOeste extends SearchAction {
         // TODO MODIFICADO: Use this conditions
 
         //Obtenemos el nodo adyacente que se alcanza yendo al ESTE
-		Nodo siguiente = ((EstadoAgente) s).getPosicion().getDestinos().get(Constantes.OESTE);
+		Nodo siguiente = ((EstadoAgente) s).getPosicion().getDestinos().get(Constantes.IROESTE);
 
 		//Modificamos el estado del Agente
 		if (siguiente != null && !siguiente.isObstaculo()) {
@@ -39,7 +39,7 @@ public class IrOeste extends SearchAction {
         // TODO MODIFICADO: Use this conditions
         
         //Obtenemos el nodo adyacente que se alcanza yendo al ESTE
-		Nodo siguiente = ((EstadoAgente) ast).getPosicion().getDestinos().get(Constantes.OESTE);
+		Nodo siguiente = ((EstadoAgente) ast).getPosicion().getDestinos().get(Constantes.IROESTE);
 
 		
 		if (siguiente != null && !siguiente.isObstaculo()) {
@@ -76,6 +76,6 @@ public class IrOeste extends SearchAction {
      */
     @Override
     public String toString() {
-        return "IrOeste";
+        return "IROESTE";
     }
 }

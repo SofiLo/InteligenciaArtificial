@@ -16,7 +16,7 @@ public class Heuristic implements IEstimatedCostFunction {
         EstadoAgente agState = (EstadoAgente) node.getAgentState();
 	
 		//Method: Complete Method
-		
+
         return 0;
     }
 }

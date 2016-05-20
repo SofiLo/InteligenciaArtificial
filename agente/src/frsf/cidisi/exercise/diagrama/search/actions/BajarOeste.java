@@ -77,6 +77,6 @@ public class BajarOeste extends SearchAction {
      */
     @Override
     public String toString() {
-        return "BajarOeste";
+        return "BAJAROESTE";
     }
 }

@@ -20,7 +20,7 @@ public class IrEste extends SearchAction {
         // TODO MODIFICADO: Use this conditions
 
         //Obtenemos el nodo adyacente que se alcanza yendo al ESTE
-		Nodo siguiente = ((EstadoAgente) s).getPosicion().getDestinos().get(Constantes.ESTE);
+		Nodo siguiente = ((EstadoAgente) s).getPosicion().getDestinos().get(Constantes.IRESTE);
 
 		//Modificamos el estado del Agente
 		if (siguiente != null && !siguiente.isObstaculo()) {
@@ -40,7 +40,7 @@ public class IrEste extends SearchAction {
         // TODO MODIFICADO: Use this conditions
         
         //Obtenemos el nodo adyacente que se alcanza yendo al ESTE
-		Nodo siguiente = ((EstadoAgente) ast).getPosicion().getDestinos().get(Constantes.ESTE);
+		Nodo siguiente = ((EstadoAgente) ast).getPosicion().getDestinos().get(Constantes.IRESTE);
 
 		
 		if (siguiente != null && !siguiente.isObstaculo()) {
@@ -77,6 +77,6 @@ public class IrEste extends SearchAction {
      */
     @Override
     public String toString() {
-        return "IrEste";
+        return "IRESTE";
     }
 }

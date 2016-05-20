@@ -54,14 +54,18 @@ public class Nodo {
 	public void agregarDestinos(String orientacion, Nodo adyacente) {
 		destinos.put(orientacion, adyacente);
 	}
+	public void agregarDistancias(String orientacion, int valor) {
+		distancias.put(orientacion, valor);
+	}
 
 	public HashMap<String, Integer> getDistancias() {
-		return distancias;
+		return this.distancias;
 	}
 
 	public void setDistancias(HashMap<String, Integer> distancias) {
 		this.distancias = distancias;
 	}
+
 
 	public String getNombre() {
 		return nombre;

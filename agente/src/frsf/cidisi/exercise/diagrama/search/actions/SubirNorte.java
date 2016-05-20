@@ -77,6 +77,6 @@ public class SubirNorte extends SearchAction {
      */
     @Override
     public String toString() {
-        return "SubirNorte";
+        return "SUBIRNORTE";
     }
 }

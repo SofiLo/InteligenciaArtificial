@@ -7,6 +7,7 @@ import frsf.cidisi.exercise.Constantes;
 public class Grafo {
 
 	ArrayList<Nodo> listaNodos = new ArrayList<Nodo>();
+	
 
 	public Grafo() {
 
@@ -295,270 +296,411 @@ public class Grafo {
 		nodoLab5.setNivel(2);
 		nodoLab5.setObstaculo(false);
 
-		nodoInicial.agregarDestinos(Constantes.OESTE, nodoCantina);
-		nodoInicial.agregarDestinos(Constantes.NORTE, nodoPuertaPpal);
+		nodoInicial.agregarDestinos(Constantes.IROESTE, nodoCantina);
+		nodoInicial.agregarDestinos(Constantes.IRNORTE, nodoPuertaPpal);
+		
+		nodoInicial.agregarDistancias(Constantes.IROESTE, 10);
+		nodoInicial.agregarDistancias(Constantes.IRNORTE, 10);
 
 		listaNodos.add(nodoInicial);
 
-		nodoCantina.agregarDestinos(Constantes.ESTE, nodoInicial);
-		nodoCantina.agregarDestinos(Constantes.OESTE, nodoBiblioteca);
+		nodoCantina.agregarDestinos(Constantes.IRESTE, nodoInicial);
+		nodoCantina.agregarDestinos(Constantes.IROESTE, nodoBiblioteca);
+		
+		nodoCantina.agregarDistancias(Constantes.IROESTE, 5);
+		nodoCantina.agregarDistancias(Constantes.IRESTE, 10);
 
 		listaNodos.add(nodoCantina);
 
-		nodoBiblioteca.agregarDestinos(Constantes.ESTE, nodoCantina);
-		nodoBiblioteca.agregarDestinos(Constantes.OESTE, nodoAlumnado);
+		nodoBiblioteca.agregarDestinos(Constantes.IRESTE, nodoCantina);
+		nodoBiblioteca.agregarDestinos(Constantes.IROESTE, nodoAlumnado);
 
+		nodoBiblioteca.agregarDistancias(Constantes.IROESTE, 5);
+		nodoBiblioteca.agregarDistancias(Constantes.IRESTE, 5);
+		
 		listaNodos.add(nodoBiblioteca);
 
-		nodoAlumnado.agregarDestinos(Constantes.ESTE, nodoBiblioteca);
-		nodoAlumnado.agregarDestinos(Constantes.OESTE, nodoIngresoTorre);
+		nodoAlumnado.agregarDestinos(Constantes.IRESTE, nodoBiblioteca);
+		nodoAlumnado.agregarDestinos(Constantes.IROESTE, nodoIngresoTorre);
+
+		nodoAlumnado.agregarDistancias(Constantes.IROESTE, 5);
+		nodoAlumnado.agregarDistancias(Constantes.IRESTE, 5);
 
 		listaNodos.add(nodoAlumnado);
 
-		nodoIngresoTorre.agregarDestinos(Constantes.ESTE, nodoAlumnado);
-		nodoIngresoTorre.agregarDestinos(Constantes.SUR, nodoEscaleraTorre);
+		nodoIngresoTorre.agregarDestinos(Constantes.IRESTE, nodoAlumnado);
+		nodoIngresoTorre.agregarDestinos(Constantes.IRSUR, nodoEscaleraTorre);
+		nodoIngresoTorre.agregarDestinos(Constantes.IROESTE, nodoPuertaEstadio);
 
+		nodoIngresoTorre.agregarDistancias(Constantes.IRESTE, 5);
+		nodoIngresoTorre.agregarDistancias(Constantes.IRSUR, 7);
+		nodoIngresoTorre.agregarDistancias(Constantes.IROESTE, 6);
+		
 		listaNodos.add(nodoIngresoTorre);
 
-		nodoEscaleraTorre.agregarDestinos(Constantes.NORTE, nodoIngresoTorre);
-		nodoEscaleraTorre.agregarDestinos(Constantes.ESTE, nodoPuertaEstadio);
+		nodoEscaleraTorre.agregarDestinos(Constantes.IRNORTE, nodoIngresoTorre);
+		nodoEscaleraTorre.agregarDestinos(Constantes.IRESTE, nodoPuertaEstadio);
+
+		nodoEscaleraTorre.agregarDistancias(Constantes.IRNORTE, 7);
+		nodoEscaleraTorre.agregarDistancias(Constantes.IRESTE, 20);
 
 		listaNodos.add(nodoEscaleraTorre);
 
-		nodoPuertaPpal.agregarDestinos(Constantes.SUR, nodoInicial);
-		nodoPuertaPpal.agregarDestinos(Constantes.NORTE, nodoFotocopiadora);
-		nodoPuertaPpal.agregarDestinos(Constantes.ESTE, nodoAula1);
-		nodoPuertaPpal.agregarDestinos(Constantes.OESTE, nodoAulaEstudio);
+		nodoPuertaPpal.agregarDestinos(Constantes.IRSUR, nodoInicial);
+		nodoPuertaPpal.agregarDestinos(Constantes.IRNORTE, nodoFotocopiadora);
+		nodoPuertaPpal.agregarDestinos(Constantes.IRESTE, nodoAula1);
+		nodoPuertaPpal.agregarDestinos(Constantes.IROESTE, nodoAulaEstudio);
+		
+		nodoPuertaPpal.agregarDistancias(Constantes.IRSUR, 10);
+		nodoPuertaPpal.agregarDistancias(Constantes.IRESTE, 5);
+		nodoPuertaPpal.agregarDistancias(Constantes.IRNORTE, 5);
+		nodoPuertaPpal.agregarDistancias(Constantes.IROESTE, 5);
 
 		listaNodos.add(nodoPuertaPpal);
 
-		nodoFotocopiadora.agregarDestinos(Constantes.SUR, nodoPuertaPpal);
-		nodoFotocopiadora.agregarDestinos(Constantes.NORTE, nodoAula2);
+		nodoFotocopiadora.agregarDestinos(Constantes.IRSUR, nodoPuertaPpal);
+		nodoFotocopiadora.agregarDestinos(Constantes.IRNORTE, nodoAula2);
 
+		nodoFotocopiadora.agregarDistancias(Constantes.IRSUR, 5);
+		nodoFotocopiadora.agregarDistancias(Constantes.IRNORTE, 4);
+		
 		listaNodos.add(nodoFotocopiadora);
 
-		nodoAula2.agregarDestinos(Constantes.SUR, nodoFotocopiadora);
-		nodoAula2.agregarDestinos(Constantes.NORTE, nodoAula3);
+		nodoAula2.agregarDestinos(Constantes.IRSUR, nodoFotocopiadora);
+		nodoAula2.agregarDestinos(Constantes.IRNORTE, nodoAula3);
 
+		nodoAula2.agregarDistancias(Constantes.IRSUR, 4);
+		nodoAula2.agregarDistancias(Constantes.IRNORTE, 4);
+		
 		listaNodos.add(nodoAula2);
 
-		nodoAula3.agregarDestinos(Constantes.SUR, nodoAula2);
-		nodoAula3.agregarDestinos(Constantes.NORTE, nodoAula4);
+		nodoAula3.agregarDestinos(Constantes.IRSUR, nodoAula2);
+		nodoAula3.agregarDestinos(Constantes.IRNORTE, nodoAula4);
+		
+		nodoAula3.agregarDistancias(Constantes.IRSUR, 4);
+		nodoAula3.agregarDistancias(Constantes.IRNORTE, 4);
 
 		listaNodos.add(nodoAula3);
 
-		nodoAula4.agregarDestinos(Constantes.SUR, nodoAula3);
-		nodoAula4.agregarDestinos(Constantes.NORTE, nodoAula5);
+		nodoAula4.agregarDestinos(Constantes.IRSUR, nodoAula3);
+		nodoAula4.agregarDestinos(Constantes.IRNORTE, nodoAula5);
+		
+		nodoAula4.agregarDistancias(Constantes.IRSUR, 4);
+		nodoAula4.agregarDistancias(Constantes.IRNORTE, 4);
 
 		listaNodos.add(nodoAula4);
 
-		nodoAula5.agregarDestinos(Constantes.SUR, nodoAula4);
+		nodoAula5.agregarDestinos(Constantes.IRSUR, nodoAula4);
 
+		nodoAula5.agregarDistancias(Constantes.IRSUR, 4);
+		
 		listaNodos.add(nodoAula5);
 
-		nodoAula1.agregarDestinos(Constantes.OESTE, nodoPuertaPpal);
-		nodoAula1.agregarDestinos(Constantes.SUR, nodoEscaleraBasicas);
+		nodoAula1.agregarDestinos(Constantes.IROESTE, nodoPuertaPpal);
+		nodoAula1.agregarDestinos(Constantes.IRSUR, nodoEscaleraBasicas);
 
+		nodoAula1.agregarDistancias(Constantes.IRSUR, 2);
+		nodoAula1.agregarDistancias(Constantes.IROESTE, 5);
+		
 		listaNodos.add(nodoAula1);
 
-		nodoAulaEstudio.agregarDestinos(Constantes.ESTE, nodoPuertaPpal);
-		nodoAulaEstudio.agregarDestinos(Constantes.OESTE, nodoDptoMecanica);
-		nodoAulaEstudio.agregarDestinos(Constantes.NORTE, nodoEscaleraPpal);
+		nodoAulaEstudio.agregarDestinos(Constantes.IRESTE, nodoPuertaPpal);
+		nodoAulaEstudio.agregarDestinos(Constantes.IROESTE, nodoDptoMecanica);
+		nodoAulaEstudio.agregarDestinos(Constantes.IRNORTE, nodoEscaleraPpal);
 
+		nodoAulaEstudio.agregarDistancias(Constantes.IRNORTE, 3);
+		nodoAulaEstudio.agregarDistancias(Constantes.IRESTE, 5);
+		nodoAulaEstudio.agregarDistancias(Constantes.IROESTE, 4);
+		
 		listaNodos.add(nodoAulaEstudio);
 
-		nodoDptoMecanica.agregarDestinos(Constantes.ESTE, nodoAulaEstudio);
-		nodoDptoMecanica.agregarDestinos(Constantes.OESTE, nodoPuertaPatioInterno);
-		nodoDptoMecanica.agregarDestinos(Constantes.OESTE, nodoPuertaPatioInterno);
+		nodoDptoMecanica.agregarDestinos(Constantes.IRESTE, nodoAulaEstudio);
+		nodoDptoMecanica.agregarDestinos(Constantes.IROESTE, nodoPuertaPatioInterno);
+		nodoDptoMecanica.agregarDestinos(Constantes.SUBIROESTE, nodoEscaleraChica);
 
+		nodoDptoMecanica.agregarDistancias(Constantes.SUBIROESTE, 15);
+		nodoDptoMecanica.agregarDistancias(Constantes.IRESTE, 4);
+		nodoDptoMecanica.agregarDistancias(Constantes.IROESTE, 3);
+		
 		listaNodos.add(nodoDptoMecanica);
 
-		nodoPuertaPatioInterno.agregarDestinos(Constantes.ESTE, nodoDptoMecanica);
-		nodoPuertaPatioInterno.agregarDestinos(Constantes.NORTE, nodoDptoElectrica);
-		nodoPuertaPatioInterno.agregarDestinos(Constantes.OESTE, nodoAscensor);
-		nodoPuertaPatioInterno.agregarDestinos(Constantes.SUBIROESTE, nodoEscaleraChica);
-
+		nodoPuertaPatioInterno.agregarDestinos(Constantes.IRESTE, nodoDptoMecanica);
+		nodoPuertaPatioInterno.agregarDestinos(Constantes.IRNORTE, nodoDptoElectrica);
+		nodoPuertaPatioInterno.agregarDestinos(Constantes.IROESTE, nodoAscensor);
+		nodoPuertaPatioInterno.agregarDestinos(Constantes.SUBIROESTE, nodoEscaleraElectrica);
+		
+		nodoPuertaPatioInterno.agregarDistancias(Constantes.IRNORTE, 5);
+		nodoPuertaPatioInterno.agregarDistancias(Constantes.IRESTE, 3);
+		nodoPuertaPatioInterno.agregarDistancias(Constantes.IROESTE, 4);
+		nodoPuertaPatioInterno.agregarDistancias(Constantes.SUBIROESTE, 15);
+		
 		listaNodos.add(nodoPuertaPatioInterno);
 
-		nodoDptoElectrica.agregarDestinos(Constantes.SUR, nodoPuertaPatioInterno);
+		nodoDptoElectrica.agregarDestinos(Constantes.IRSUR, nodoPuertaPatioInterno);
 
+		nodoDptoElectrica.agregarDistancias(Constantes.IRSUR, 5);
+		
 		listaNodos.add(nodoDptoElectrica);
 
-		nodoAscensor.agregarDestinos(Constantes.ESTE, nodoPuertaPatioInterno);
-		nodoAscensor.agregarDestinos(Constantes.SUBIRESTE, nodoDptoCivil);// QUE
-																			// PASA
-																			// SI
-																			// ESTOY
-																			// EN
-																			// EL
-																			// 3RO
-																			// Y
-																			// QUIERO
-																			// BAJAR
-																			// A
-																			// CIVIL
-		nodoAscensor.agregarDestinos(Constantes.SUBIRNORTE, nodoDptoIndustrial);// LO
-																				// MISMO
-		nodoAscensor.agregarDestinos(Constantes.SUBIRESTE, nodoTICS);// ya tengo
-																		// dos
-																		// SUBIRESTE
-																		// QUE
-																		// HAGO
+		nodoAscensor.agregarDestinos(Constantes.IRESTE, nodoPuertaPatioInterno);
+		nodoAscensor.agregarDestinos(Constantes.BAJARESTE, nodoDptoCivil);
+		nodoAscensor.agregarDestinos(Constantes.SUBIRNORTE, nodoDptoIndustrial);
+		nodoAscensor.agregarDestinos(Constantes.SUBIRESTE, nodoTICS);
 
+		nodoAscensor.agregarDistancias(Constantes.IRESTE, 4);
+		nodoAscensor.agregarDistancias(Constantes.BAJARESTE, 1);
+		nodoAscensor.agregarDistancias(Constantes.SUBIRNORTE, 1);
+		nodoAscensor.agregarDistancias(Constantes.SUBIRESTE, 1);
+		
 		listaNodos.add(nodoAscensor);
 
-		nodoEscaleraPpal.agregarDestinos(Constantes.SUR, nodoAulaEstudio);
-		nodoEscaleraPpal.agregarDestinos(Constantes.NORTE, nodoBañosPlantaBaja);
+		nodoEscaleraPpal.agregarDestinos(Constantes.IRSUR, nodoAulaEstudio);
+		nodoEscaleraPpal.agregarDestinos(Constantes.IRNORTE, nodoBañosPlantaBaja);
 		nodoEscaleraPpal.agregarDestinos(Constantes.SUBIRNORTE, nodoBañosPrimerPiso);
 
+		nodoEscaleraPpal.agregarDistancias(Constantes.IRSUR, 3);
+		nodoEscaleraPpal.agregarDistancias(Constantes.SUBIRNORTE, 10);
+		nodoEscaleraPpal.agregarDistancias(Constantes.IRNORTE, 8);
+		
 		listaNodos.add(nodoEscaleraPpal);
 
-		nodoBañosPlantaBaja.agregarDestinos(Constantes.SUR, nodoEscaleraPpal);
+		nodoBañosPlantaBaja.agregarDestinos(Constantes.IRSUR, nodoEscaleraPpal);
+		
+		nodoBañosPlantaBaja.agregarDistancias(Constantes.IRSUR, 8);
 
 		listaNodos.add(nodoBañosPlantaBaja);
 
-		nodoEscaleraBasicas.agregarDestinos(Constantes.SUBIRNORTE, nodoAula1);
-		nodoEscaleraBasicas.agregarDestinos(Constantes.SUBIROESTE, nodoAula9);
+		nodoEscaleraBasicas.agregarDestinos(Constantes.BAJARNORTE, nodoAula1);
+		nodoEscaleraBasicas.agregarDestinos(Constantes.SUBIRNORTE, nodoAula9);
+		
+		nodoEscaleraBasicas.agregarDistancias(Constantes.BAJARNORTE, 10);
+		nodoEscaleraBasicas.agregarDistancias(Constantes.SUBIRNORTE, 10);
 
 		listaNodos.add(nodoEscaleraBasicas);
 
-		nodoAula9.agregarDestinos(Constantes.SUR, nodoEscaleraBasicas);
-		nodoAula9.agregarDestinos(Constantes.NORTE, nodoAula12);
+		nodoAula9.agregarDestinos(Constantes.IRSUR, nodoEscaleraBasicas);
+		nodoAula9.agregarDestinos(Constantes.IRNORTE, nodoAula12);
 
+		nodoAula9.agregarDistancias(Constantes.IRNORTE, 5);
+		nodoAula9.agregarDistancias(Constantes.IRSUR, 10);
+		
 		listaNodos.add(nodoAula9);
 
-		nodoAula12.agregarDestinos(Constantes.SUR, nodoAula9);
-		nodoAula12.agregarDestinos(Constantes.NORTE, nodoAula18);
-		nodoAula12.agregarDestinos(Constantes.OESTE, nodoAula19);
+		nodoAula12.agregarDestinos(Constantes.IRSUR, nodoAula9);
+		nodoAula12.agregarDestinos(Constantes.IRNORTE, nodoAula18);
+		nodoAula12.agregarDestinos(Constantes.IROESTE, nodoAula19);
 
+		nodoAula12.agregarDistancias(Constantes.IRNORTE, 5);
+		nodoAula12.agregarDistancias(Constantes.IRSUR, 5);
+		nodoAula12.agregarDistancias(Constantes.IROESTE, 5);
+		
 		listaNodos.add(nodoAula12);
 
-		nodoAula18.agregarDestinos(Constantes.SUR, nodoAula12);
+		nodoAula18.agregarDestinos(Constantes.IRSUR, nodoAula12);
 
+		nodoAula18.agregarDistancias(Constantes.IRSUR, 5);
+		
 		listaNodos.add(nodoAula18);
 
-		nodoAula19.agregarDestinos(Constantes.ESTE, nodoAula12);
-		nodoAula19.agregarDestinos(Constantes.SUR, nodoBañosPrimerPiso);
+		nodoAula19.agregarDestinos(Constantes.IRESTE, nodoAula12);
+		nodoAula19.agregarDestinos(Constantes.IRSUR, nodoBañosPrimerPiso);
 
+		nodoAula19.agregarDistancias(Constantes.IRSUR, 7);
+		nodoAula19.agregarDistancias(Constantes.IRESTE, 5);
+		
 		listaNodos.add(nodoAula19);
 
-		nodoBañosPrimerPiso.agregarDestinos(Constantes.SUR, nodoEscaleraPpal);
-		nodoBañosPrimerPiso.agregarDestinos(Constantes.NORTE, nodoAula19);
-		nodoBañosPrimerPiso.agregarDestinos(Constantes.OESTE, nodoOficinaCivilGIMNI);
+		nodoBañosPrimerPiso.agregarDestinos(Constantes.IRNORTE, nodoEscaleraPpal);
+		nodoBañosPrimerPiso.agregarDestinos(Constantes.IRSUR, nodoAula19);
+		nodoBañosPrimerPiso.agregarDestinos(Constantes.IROESTE, nodoOficinaCivilGIMNI);
 
+		nodoBañosPrimerPiso.agregarDistancias(Constantes.IRSUR, 7);
+		nodoBañosPrimerPiso.agregarDistancias(Constantes.IRNORTE, 10);
+		nodoBañosPrimerPiso.agregarDistancias(Constantes.IROESTE, 8);
+		
 		listaNodos.add(nodoBañosPrimerPiso);
 
 		// aca tambien
 		nodoEscaleraChica.agregarDestinos(Constantes.BAJARESTE, nodoDptoMecanica);
 		nodoEscaleraChica.agregarDestinos(Constantes.SUBIROESTE, nodoDptoCivil);
 		nodoEscaleraChica.agregarDestinos(Constantes.SUBIRNORTE, nodoAula20);
-		nodoEscaleraChica.agregarDestinos(Constantes.NORTE, nodoEscaleraISI);
+		nodoEscaleraChica.agregarDestinos(Constantes.IRNORTE, nodoEscaleraISI);
 
+		nodoEscaleraChica.agregarDistancias(Constantes.BAJARESTE, 10);
+		nodoEscaleraChica.agregarDistancias(Constantes.SUBIROESTE, 10);
+		nodoEscaleraChica.agregarDistancias(Constantes.SUBIRNORTE, 10);
+		nodoEscaleraChica.agregarDistancias(Constantes.IRNORTE, 10);
+		
 		listaNodos.add(nodoEscaleraChica);
 
-		nodoOficinaCivilGIMNI.agregarDestinos(Constantes.ESTE, nodoBañosPrimerPiso);
-		nodoOficinaCivilGIMNI.agregarDestinos(Constantes.OESTE, nodoBaños2);
+		nodoOficinaCivilGIMNI.agregarDestinos(Constantes.IRESTE, nodoBañosPrimerPiso);
+		nodoOficinaCivilGIMNI.agregarDestinos(Constantes.IROESTE, nodoBaños2);
 
+		nodoOficinaCivilGIMNI.agregarDistancias(Constantes.IRESTE, 8);
+		nodoOficinaCivilGIMNI.agregarDistancias(Constantes.IROESTE, 5);
+		
 		listaNodos.add(nodoOficinaCivilGIMNI);
 
-		nodoDptoCivil.agregarDestinos(Constantes.OESTE, nodoAscensor);
-		nodoDptoCivil.agregarDestinos(Constantes.ESTE, nodoEscaleraChica);
-		nodoDptoCivil.agregarDestinos(Constantes.NORTE, nodoEscaleraElectrica);
-		nodoDptoCivil.agregarDestinos(Constantes.SUR, nodoPuertaEstadio);
+		nodoDptoCivil.agregarDestinos(Constantes.IROESTE, nodoAscensor);
+		nodoDptoCivil.agregarDestinos(Constantes.IRESTE, nodoEscaleraChica);
+		nodoDptoCivil.agregarDestinos(Constantes.IRNORTE, nodoEscaleraElectrica);
+		nodoDptoCivil.agregarDestinos(Constantes.IRSUR, nodoPuertaEstadio);
 
+		nodoDptoCivil.agregarDistancias(Constantes.IROESTE, 1);
+		nodoDptoCivil.agregarDistancias(Constantes.IRESTE, 10);
+		nodoDptoCivil.agregarDistancias(Constantes.IRNORTE, 10);
+		nodoDptoCivil.agregarDistancias(Constantes.IRSUR, 9);
+		
 		listaNodos.add(nodoDptoCivil);
 
-		nodoBaños2.agregarDestinos(Constantes.ESTE, nodoOficinaCivilGIMNI);
-		nodoBaños2.agregarDestinos(Constantes.SUR, nodoEscaleraElectrica);
+		nodoBaños2.agregarDestinos(Constantes.IRESTE, nodoOficinaCivilGIMNI);
+		nodoBaños2.agregarDestinos(Constantes.IRSUR, nodoEscaleraElectrica);
 
+		nodoBaños2.agregarDistancias(Constantes.IRESTE, 4);
+		nodoBaños2.agregarDistancias(Constantes.IRSUR, 7);
+		
 		listaNodos.add(nodoBaños2);
 
 		nodoEscaleraElectrica.agregarDestinos(Constantes.BAJARSUR, nodoPuertaPatioInterno);
-		nodoEscaleraElectrica.agregarDestinos(Constantes.SUR, nodoDptoCivil);
-		nodoEscaleraElectrica.agregarDestinos(Constantes.NORTE, nodoBaños2);
+		nodoEscaleraElectrica.agregarDestinos(Constantes.IRSUR, nodoDptoCivil);
+		nodoEscaleraElectrica.agregarDestinos(Constantes.IRNORTE, nodoBaños2);
 		nodoEscaleraElectrica.agregarDestinos(Constantes.SUBIRNORTE, nodoEscaleraISI);
 
+		nodoEscaleraElectrica.agregarDistancias(Constantes.BAJARSUR, 8);
+		nodoEscaleraElectrica.agregarDistancias(Constantes.IRSUR, 5);
+		nodoEscaleraElectrica.agregarDistancias(Constantes.IRNORTE, 7);
+		nodoEscaleraElectrica.agregarDistancias(Constantes.SUBIRNORTE, 10);
+		
 		listaNodos.add(nodoEscaleraElectrica);
 
-		nodoPuertaEstadio.agregarDestinos(Constantes.OESTE, nodoIngresoTorre);
-		nodoPuertaEstadio.agregarDestinos(Constantes.NORTE, nodoDptoCivil);
-		nodoPuertaEstadio.agregarDestinos(Constantes.ESTE, nodoEstadio);
+		nodoPuertaEstadio.agregarDestinos(Constantes.IROESTE, nodoIngresoTorre);
+		nodoPuertaEstadio.agregarDestinos(Constantes.IRNORTE, nodoDptoCivil);
+		nodoPuertaEstadio.agregarDestinos(Constantes.IRESTE, nodoEstadio);
+		
+		nodoPuertaEstadio.agregarDistancias(Constantes.IROESTE, 6);
+		nodoPuertaEstadio.agregarDistancias(Constantes.IRNORTE, 8);
+		nodoPuertaEstadio.agregarDistancias(Constantes.IRESTE, 4);
 
 		listaNodos.add(nodoPuertaEstadio);
 
-		nodoEstadio.agregarDestinos(Constantes.OESTE, nodoPuertaEstadio);
+		nodoEstadio.agregarDestinos(Constantes.IROESTE, nodoPuertaEstadio);
+		
+		nodoEstadio.agregarDistancias(Constantes.IROESTE, 4);
 
 		listaNodos.add(nodoEstadio);
 
-		nodoDptoIndustrial.agregarDestinos(Constantes.SUR, nodoAscensor);
+		nodoDptoIndustrial.agregarDestinos(Constantes.IRSUR, nodoAscensor);
 
+		nodoDptoIndustrial.agregarDistancias(Constantes.IRSUR, 1);
+		
 		listaNodos.add(nodoDptoIndustrial);
 
-		nodoAula20.agregarDestinos(Constantes.SUR, nodoEscaleraChica);
-		nodoAula20.agregarDestinos(Constantes.NORTE, nodoAula21);
+		nodoAula20.agregarDestinos(Constantes.IRSUR, nodoEscaleraChica);
+		nodoAula20.agregarDestinos(Constantes.IRNORTE, nodoAula21);
 
+		nodoAula20.agregarDistancias(Constantes.IRSUR, 8);
+		nodoAula20.agregarDistancias(Constantes.IRNORTE, 4);
+		
 		listaNodos.add(nodoAula20);
 
-		nodoAula21.agregarDestinos(Constantes.SUR, nodoAula20);
-		nodoAula21.agregarDestinos(Constantes.NORTE, nodoAula22);
+		nodoAula21.agregarDestinos(Constantes.IRSUR, nodoAula20);
+		nodoAula21.agregarDestinos(Constantes.IRNORTE, nodoAula22);
 
+		nodoAula21.agregarDistancias(Constantes.IRSUR, 4);
+		nodoAula21.agregarDistancias(Constantes.IRNORTE, 4);
+		
 		listaNodos.add(nodoAula21);
 
-		nodoAula22.agregarDestinos(Constantes.SUR, nodoAula21);
-		nodoAula22.agregarDestinos(Constantes.NORTE, nodoEscaleraISI);
+		nodoAula22.agregarDestinos(Constantes.IRSUR, nodoAula21);
+		nodoAula22.agregarDestinos(Constantes.IRNORTE, nodoEscaleraISI);
 
+		nodoAula22.agregarDistancias(Constantes.IRSUR, 4);
+		nodoAula22.agregarDistancias(Constantes.IRNORTE, 8);
+		
 		listaNodos.add(nodoAula22);
 
-		nodoEscaleraISI.agregarDestinos(Constantes.SUR, nodoEscaleraChica);
+		nodoEscaleraISI.agregarDestinos(Constantes.IRSUR, nodoEscaleraChica);
 		nodoEscaleraISI.agregarDestinos(Constantes.BAJARNORTE, nodoEscaleraElectrica);
 		nodoEscaleraISI.agregarDestinos(Constantes.BAJARSUR, nodoAula22);
-		nodoEscaleraISI.agregarDestinos(Constantes.ESTE, nodoLab1);
+		nodoEscaleraISI.agregarDestinos(Constantes.IRESTE, nodoLab1);
+
+		nodoEscaleraISI.agregarDistancias(Constantes.IRSUR, 10);
+		nodoEscaleraISI.agregarDistancias(Constantes.BAJARNORTE, 10);
+		nodoEscaleraISI.agregarDistancias(Constantes.BAJARSUR, 8);
+		nodoEscaleraISI.agregarDistancias(Constantes.IRESTE, 7);
 
 		listaNodos.add(nodoEscaleraISI);
 
-		nodoLab1.agregarDestinos(Constantes.OESTE, nodoEscaleraISI);
-		nodoLab1.agregarDestinos(Constantes.SUR, nodoCIDISI);
-		nodoLab1.agregarDestinos(Constantes.NORTE, nodoLab2);
+		nodoLab1.agregarDestinos(Constantes.IROESTE, nodoEscaleraISI);
+		nodoLab1.agregarDestinos(Constantes.IRSUR, nodoCIDISI);
+		nodoLab1.agregarDestinos(Constantes.IRNORTE, nodoLab2);
 
+		nodoLab1.agregarDistancias(Constantes.IROESTE, 7);
+		nodoLab1.agregarDistancias(Constantes.IRSUR, 5);
+		nodoLab1.agregarDistancias(Constantes.IRNORTE, 5);
+		
 		listaNodos.add(nodoLab1);
 
-		nodoCIDISI.agregarDestinos(Constantes.NORTE, nodoLab1);
-		nodoCIDISI.agregarDestinos(Constantes.SUR, nodoDptoISI);
+		nodoCIDISI.agregarDestinos(Constantes.IRNORTE, nodoLab1);
+		nodoCIDISI.agregarDestinos(Constantes.IRSUR, nodoDptoISI);
 
+		nodoCIDISI.agregarDistancias(Constantes.IRSUR, 5);
+		nodoCIDISI.agregarDistancias(Constantes.IRNORTE, 5);
+		
 		listaNodos.add(nodoCIDISI);
 
-		nodoLab2.agregarDestinos(Constantes.SUR, nodoLab1);
-		nodoLab2.agregarDestinos(Constantes.NORTE, nodoLab3);
+		nodoLab2.agregarDestinos(Constantes.IRSUR, nodoLab1);
+		nodoLab2.agregarDestinos(Constantes.IRNORTE, nodoLab3);
+		
+		nodoLab2.agregarDistancias(Constantes.IRSUR, 5);
+		nodoLab2.agregarDistancias(Constantes.IRNORTE, 5);
 
 		listaNodos.add(nodoLab2);
 
-		nodoLab3.agregarDestinos(Constantes.SUR, nodoLab2);
-		nodoLab3.agregarDestinos(Constantes.NORTE, nodoLabConectividad);
+		nodoLab3.agregarDestinos(Constantes.IRSUR, nodoLab2);
+		nodoLab3.agregarDestinos(Constantes.IRNORTE, nodoLabConectividad);
 
+		nodoLab3.agregarDistancias(Constantes.IRSUR, 5);
+		nodoLab3.agregarDistancias(Constantes.IRNORTE, 5);
+		
 		listaNodos.add(nodoLab3);
 
-		nodoLabConectividad.agregarDestinos(Constantes.SUR, nodoLab3);
-		nodoLabConectividad.agregarDestinos(Constantes.NORTE, nodoLab4);
+		nodoLabConectividad.agregarDestinos(Constantes.IRSUR, nodoLab3);
+		nodoLabConectividad.agregarDestinos(Constantes.IRNORTE, nodoLab4);
+		
+		nodoLabConectividad.agregarDistancias(Constantes.IRSUR, 5);
+		nodoLabConectividad.agregarDistancias(Constantes.IRNORTE, 5);
 
 		listaNodos.add(nodoLabConectividad);
 
-		nodoLab4.agregarDestinos(Constantes.SUR, nodoLabConectividad);
-		nodoLab4.agregarDestinos(Constantes.ESTE, nodoLab5);
+		nodoLab4.agregarDestinos(Constantes.IRSUR, nodoLabConectividad);
+		nodoLab4.agregarDestinos(Constantes.IRESTE, nodoLab5);
 
+		nodoLab4.agregarDistancias(Constantes.IRSUR, 5);
+		nodoLab4.agregarDistancias(Constantes.IRESTE, 5);
+		
 		listaNodos.add(nodoLab4);
 
-		nodoLab5.agregarDestinos(Constantes.OESTE, nodoLab4);
+		nodoLab5.agregarDestinos(Constantes.IROESTE, nodoLab4);
 
+		nodoLab5.agregarDistancias(Constantes.IROESTE, 5);
+		
 		listaNodos.add(nodoLab5);
 
-		nodoDptoISI.agregarDestinos(Constantes.SUR, nodoTICS);
-		nodoDptoISI.agregarDestinos(Constantes.NORTE, nodoCIDISI);
+		nodoDptoISI.agregarDestinos(Constantes.IRSUR, nodoTICS);
+		nodoDptoISI.agregarDestinos(Constantes.IRNORTE, nodoCIDISI);
 
+		nodoDptoISI.agregarDistancias(Constantes.IRSUR, 5);
+		nodoDptoISI.agregarDistancias(Constantes.IRNORTE, 5);
+		
 		listaNodos.add(nodoDptoISI);
 
-		nodoTICS.agregarDestinos(Constantes.NORTE, nodoDptoISI);
-		nodoTICS.agregarDestinos(Constantes.OESTE, nodoAscensor);
+		nodoTICS.agregarDestinos(Constantes.IRNORTE, nodoDptoISI);
+		nodoTICS.agregarDestinos(Constantes.IROESTE, nodoAscensor);
 
+		nodoTICS.agregarDistancias(Constantes.IRNORTE, 5);
+		nodoTICS.agregarDistancias(Constantes.IROESTE, 3);
+		
 		listaNodos.add(nodoTICS);
 
 	}

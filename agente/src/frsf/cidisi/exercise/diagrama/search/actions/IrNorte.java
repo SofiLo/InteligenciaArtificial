@@ -22,7 +22,7 @@ public class IrNorte extends SearchAction {
 
 		// Obtenemos el nodo adyacente que se alcanza yendo al ESTE
 		Nodo siguiente = ((EstadoAgente) s).getPosicion().getDestinos().get(
-				Constantes.NORTE);
+				Constantes.IRNORTE);
 
 		// Modificamos el estado del Agente
 		if (siguiente != null && !siguiente.isObstaculo()) {
@@ -44,7 +44,7 @@ public class IrNorte extends SearchAction {
 
 		// Obtenemos el nodo adyacente que se alcanza yendo al ESTE
 		Nodo siguiente = ((EstadoAgente) ast).getPosicion().getDestinos().get(
-				Constantes.NORTE);
+				Constantes.IRNORTE);
 
 		if (siguiente != null && !siguiente.isObstaculo()) {
 			// Modificamos el estado del Agente
@@ -79,6 +79,6 @@ public class IrNorte extends SearchAction {
 	 */
 	@Override
 	public String toString() {
-		return "IrNorte";
+		return "IRNORTE";
 	}
 }

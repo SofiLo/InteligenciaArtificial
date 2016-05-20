@@ -56,6 +56,6 @@ public class Apagar extends SearchAction {
      */
     @Override
     public String toString() {
-        return "IrEste";
+        return "APAGAR";
     }
 }

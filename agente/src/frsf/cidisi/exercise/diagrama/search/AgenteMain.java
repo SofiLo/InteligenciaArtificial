@@ -3,23 +3,17 @@ package frsf.cidisi.exercise.diagrama.search;
 import java.awt.EventQueue;
 
 import pantallas.Inicio;
+
 import frsf.cidisi.exercise.diagrama.grafo.Nodo;
 import frsf.cidisi.faia.exceptions.PrologConnectorException;
 import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
 
 public class AgenteMain {
 
-<<<<<<< HEAD
-	public static void main(String[] args) throws PrologConnectorException {
-		Agente agent = new Agente();
-	
-
-=======
 	static Inicio frame = new Inicio();
 	
 	public static void main(String[] args) throws PrologConnectorException {
 		Agente agent = new Agente();
->>>>>>> fdf59ed0b84784c8de0a228fab6df93e661b98d8
 		Ambiente environment = new Ambiente();
 		String inicio; 
 		String destino;
@@ -46,20 +40,15 @@ public class AgenteMain {
 		
 		System.out.print("\ninicio"+inicio);
 		System.out.print("\ndestino" +destino);
-		//System.out.print("\nlista obstaculos: "+frame.listaObstaculos());
+		System.out.print("\nlista obstaculos: "+frame.listaObstaculos());
 
 		// TODO aca seteamos los obstaculos
 		environment.getEnvironmentState().setearObstaculos("Biblioteca");
 		
 		// Aca defino el nodo destino
-<<<<<<< HEAD
+
 		((EstadoAgente) agent.getAgentState()).setNodoDestino(new Nodo("Estadio", 2, 0, false));
 		
-		simulator.start();
-	}
-=======
-		//((EstadoAgente) agent.getAgentState()).setNodoDestinoNombre(destino);
-		((EstadoAgente) agent.getAgentState()).setNodoDestino(new Nodo("Estadio", 0, 0, false));
 		
 		simulator.start();
 	}
@@ -68,5 +57,4 @@ public class AgenteMain {
 		return frame.getInicio();
 	}
 
->>>>>>> fdf59ed0b84784c8de0a228fab6df93e661b98d8
 }
