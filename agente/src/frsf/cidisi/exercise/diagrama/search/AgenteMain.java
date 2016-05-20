@@ -1,6 +1,6 @@
 package frsf.cidisi.exercise.diagrama.search;
 
-import pantallas.Inicio;
+import Pantallas.Inicio;
 import frsf.cidisi.faia.exceptions.PrologConnectorException;
 
 public class AgenteMain {	
@@ -12,7 +12,7 @@ public class AgenteMain {
 		SearchExtendido simulator = new SearchExtendido(environment, agent);
 			
 		//Interfaz
-		final Inicio frame = new Inicio((EstadoAgente) agent.getAgentState(), simulator, environment);
+		final Inicio frame = new Inicio(agent, simulator, environment);
 		
 		simulator.setFrame(frame);
 	}
