@@ -1,6 +1,6 @@
 package frsf.cidisi.exercise.diagrama.search;
 
-import Pantallas.Inicio;
+import pantallas.Inicio;
 import frsf.cidisi.faia.exceptions.PrologConnectorException;
 
 public class AgenteMain {	

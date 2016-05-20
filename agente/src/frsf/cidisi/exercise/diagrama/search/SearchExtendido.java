@@ -1,6 +1,6 @@
 package frsf.cidisi.exercise.diagrama.search;
 
-import Pantallas.Inicio;
+import pantallas.Inicio;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Agent;
 import frsf.cidisi.faia.agent.GoalBasedAgent;

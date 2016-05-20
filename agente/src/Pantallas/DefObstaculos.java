@@ -1,4 +1,4 @@
-package Pantallas;
+package pantallas;
 
 import java.awt.Color;
 import java.awt.Dimension;

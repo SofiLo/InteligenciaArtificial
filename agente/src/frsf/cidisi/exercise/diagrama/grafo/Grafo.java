@@ -330,20 +330,18 @@ public class Grafo {
 
 		nodoIngresoTorre.agregarDestinos(Constantes.IRESTE, nodoAlumnado);
 		nodoIngresoTorre.agregarDestinos(Constantes.IRSUR, nodoEscaleraTorre);
-		nodoIngresoTorre.agregarDestinos(Constantes.IROESTE, nodoPuertaEstadio);
-
+		
 		nodoIngresoTorre.agregarDistancias(Constantes.IRESTE, 5);
 		nodoIngresoTorre.agregarDistancias(Constantes.IRSUR, 7);
-		nodoIngresoTorre.agregarDistancias(Constantes.IROESTE, 6);
 		
 		listaNodos.add(nodoIngresoTorre);
-
-		nodoEscaleraTorre.agregarDestinos(Constantes.IRNORTE, nodoIngresoTorre);
+		
 		nodoEscaleraTorre.agregarDestinos(Constantes.IRESTE, nodoPuertaEstadio);
-
+		nodoEscaleraTorre.agregarDestinos(Constantes.IRNORTE, nodoIngresoTorre);
+		
+		nodoEscaleraTorre.agregarDistancias(Constantes.IRESTE, 15);
 		nodoEscaleraTorre.agregarDistancias(Constantes.IRNORTE, 7);
-		nodoEscaleraTorre.agregarDistancias(Constantes.IRESTE, 20);
-
+		
 		listaNodos.add(nodoEscaleraTorre);
 
 		nodoPuertaPpal.agregarDestinos(Constantes.IRSUR, nodoInicial);
@@ -397,9 +395,9 @@ public class Grafo {
 		listaNodos.add(nodoAula5);
 
 		nodoAula1.agregarDestinos(Constantes.IROESTE, nodoPuertaPpal);
-		nodoAula1.agregarDestinos(Constantes.IRSUR, nodoEscaleraBasicas);
+		nodoAula1.agregarDestinos(Constantes.SUBIRSUR, nodoEscaleraBasicas);
 
-		nodoAula1.agregarDistancias(Constantes.IRSUR, 2);
+		nodoAula1.agregarDistancias(Constantes.SUBIRSUR, 15);
 		nodoAula1.agregarDistancias(Constantes.IROESTE, 5);
 		
 		listaNodos.add(nodoAula1);
@@ -473,8 +471,8 @@ public class Grafo {
 		nodoEscaleraBasicas.agregarDestinos(Constantes.BAJARNORTE, nodoAula1);
 		nodoEscaleraBasicas.agregarDestinos(Constantes.SUBIRNORTE, nodoAula9);
 		
-		nodoEscaleraBasicas.agregarDistancias(Constantes.BAJARNORTE, 10);
-		nodoEscaleraBasicas.agregarDistancias(Constantes.SUBIRNORTE, 10);
+		nodoEscaleraBasicas.agregarDistancias(Constantes.BAJARNORTE, 15);
+		nodoEscaleraBasicas.agregarDistancias(Constantes.SUBIRNORTE, 15);
 
 		listaNodos.add(nodoEscaleraBasicas);
 
@@ -482,7 +480,7 @@ public class Grafo {
 		nodoAula9.agregarDestinos(Constantes.IRNORTE, nodoAula12);
 
 		nodoAula9.agregarDistancias(Constantes.IRNORTE, 5);
-		nodoAula9.agregarDistancias(Constantes.IRSUR, 10);
+		nodoAula9.agregarDistancias(Constantes.IRSUR, 15);
 		
 		listaNodos.add(nodoAula9);
 
@@ -510,12 +508,12 @@ public class Grafo {
 		
 		listaNodos.add(nodoAula19);
 
-		nodoBañosPrimerPiso.agregarDestinos(Constantes.IRNORTE, nodoEscaleraPpal);
-		nodoBañosPrimerPiso.agregarDestinos(Constantes.IRSUR, nodoAula19);
+		nodoBañosPrimerPiso.agregarDestinos(Constantes.BAJARNORTE, nodoEscaleraPpal);
+		nodoBañosPrimerPiso.agregarDestinos(Constantes.IRNORTE, nodoAula19);
 		nodoBañosPrimerPiso.agregarDestinos(Constantes.IROESTE, nodoOficinaCivilGIMNI);
 
-		nodoBañosPrimerPiso.agregarDistancias(Constantes.IRSUR, 7);
-		nodoBañosPrimerPiso.agregarDistancias(Constantes.IRNORTE, 10);
+		nodoBañosPrimerPiso.agregarDistancias(Constantes.IRNORTE, 7);
+		nodoBañosPrimerPiso.agregarDistancias(Constantes.BAJARNORTE, 10);
 		nodoBañosPrimerPiso.agregarDistancias(Constantes.IROESTE, 8);
 		
 		listaNodos.add(nodoBañosPrimerPiso);
@@ -526,10 +524,10 @@ public class Grafo {
 		nodoEscaleraChica.agregarDestinos(Constantes.SUBIRNORTE, nodoAula20);
 		nodoEscaleraChica.agregarDestinos(Constantes.IRNORTE, nodoEscaleraISI);
 
-		nodoEscaleraChica.agregarDistancias(Constantes.BAJARESTE, 10);
-		nodoEscaleraChica.agregarDistancias(Constantes.SUBIROESTE, 10);
-		nodoEscaleraChica.agregarDistancias(Constantes.SUBIRNORTE, 10);
-		nodoEscaleraChica.agregarDistancias(Constantes.IRNORTE, 10);
+		nodoEscaleraChica.agregarDistancias(Constantes.BAJARESTE, 15);
+		nodoEscaleraChica.agregarDistancias(Constantes.SUBIROESTE, 15);
+		nodoEscaleraChica.agregarDistancias(Constantes.SUBIRNORTE, 15);
+		nodoEscaleraChica.agregarDistancias(Constantes.IRNORTE, 15);
 		
 		listaNodos.add(nodoEscaleraChica);
 
@@ -547,8 +545,8 @@ public class Grafo {
 		nodoDptoCivil.agregarDestinos(Constantes.IRSUR, nodoPuertaEstadio);
 
 		nodoDptoCivil.agregarDistancias(Constantes.IROESTE, 1);
-		nodoDptoCivil.agregarDistancias(Constantes.IRESTE, 10);
-		nodoDptoCivil.agregarDistancias(Constantes.IRNORTE, 10);
+		nodoDptoCivil.agregarDistancias(Constantes.IRESTE, 15);
+		nodoDptoCivil.agregarDistancias(Constantes.IRNORTE, 15);
 		nodoDptoCivil.agregarDistancias(Constantes.IRSUR, 9);
 		
 		listaNodos.add(nodoDptoCivil);
@@ -556,7 +554,7 @@ public class Grafo {
 		nodoBaños2.agregarDestinos(Constantes.IRESTE, nodoOficinaCivilGIMNI);
 		nodoBaños2.agregarDestinos(Constantes.IRSUR, nodoEscaleraElectrica);
 
-		nodoBaños2.agregarDistancias(Constantes.IRESTE, 4);
+		nodoBaños2.agregarDistancias(Constantes.IRESTE, 5);
 		nodoBaños2.agregarDistancias(Constantes.IRSUR, 7);
 		
 		listaNodos.add(nodoBaños2);
@@ -566,10 +564,10 @@ public class Grafo {
 		nodoEscaleraElectrica.agregarDestinos(Constantes.IRNORTE, nodoBaños2);
 		nodoEscaleraElectrica.agregarDestinos(Constantes.SUBIRNORTE, nodoEscaleraISI);
 
-		nodoEscaleraElectrica.agregarDistancias(Constantes.BAJARSUR, 8);
-		nodoEscaleraElectrica.agregarDistancias(Constantes.IRSUR, 5);
+		nodoEscaleraElectrica.agregarDistancias(Constantes.BAJARSUR, 15);
+		nodoEscaleraElectrica.agregarDistancias(Constantes.IRSUR, 15);
 		nodoEscaleraElectrica.agregarDistancias(Constantes.IRNORTE, 7);
-		nodoEscaleraElectrica.agregarDistancias(Constantes.SUBIRNORTE, 10);
+		nodoEscaleraElectrica.agregarDistancias(Constantes.SUBIRNORTE, 15);
 		
 		listaNodos.add(nodoEscaleraElectrica);
 
@@ -577,8 +575,8 @@ public class Grafo {
 		nodoPuertaEstadio.agregarDestinos(Constantes.IRNORTE, nodoDptoCivil);
 		nodoPuertaEstadio.agregarDestinos(Constantes.IRESTE, nodoEstadio);
 		
-		nodoPuertaEstadio.agregarDistancias(Constantes.IROESTE, 6);
-		nodoPuertaEstadio.agregarDistancias(Constantes.IRNORTE, 8);
+		nodoPuertaEstadio.agregarDistancias(Constantes.IROESTE, 15);
+		nodoPuertaEstadio.agregarDistancias(Constantes.IRNORTE, 9);
 		nodoPuertaEstadio.agregarDistancias(Constantes.IRESTE, 4);
 
 		listaNodos.add(nodoPuertaEstadio);
@@ -598,7 +596,7 @@ public class Grafo {
 		nodoAula20.agregarDestinos(Constantes.IRSUR, nodoEscaleraChica);
 		nodoAula20.agregarDestinos(Constantes.IRNORTE, nodoAula21);
 
-		nodoAula20.agregarDistancias(Constantes.IRSUR, 8);
+		nodoAula20.agregarDistancias(Constantes.IRSUR, 15);
 		nodoAula20.agregarDistancias(Constantes.IRNORTE, 4);
 		
 		listaNodos.add(nodoAula20);
@@ -615,7 +613,7 @@ public class Grafo {
 		nodoAula22.agregarDestinos(Constantes.IRNORTE, nodoEscaleraISI);
 
 		nodoAula22.agregarDistancias(Constantes.IRSUR, 4);
-		nodoAula22.agregarDistancias(Constantes.IRNORTE, 8);
+		nodoAula22.agregarDistancias(Constantes.IRNORTE, 15);
 		
 		listaNodos.add(nodoAula22);
 
@@ -624,9 +622,9 @@ public class Grafo {
 		nodoEscaleraISI.agregarDestinos(Constantes.BAJARSUR, nodoAula22);
 		nodoEscaleraISI.agregarDestinos(Constantes.IRESTE, nodoLab1);
 
-		nodoEscaleraISI.agregarDistancias(Constantes.IRSUR, 10);
-		nodoEscaleraISI.agregarDistancias(Constantes.BAJARNORTE, 10);
-		nodoEscaleraISI.agregarDistancias(Constantes.BAJARSUR, 8);
+		nodoEscaleraISI.agregarDistancias(Constantes.IRSUR, 15);
+		nodoEscaleraISI.agregarDistancias(Constantes.BAJARNORTE, 15);
+		nodoEscaleraISI.agregarDistancias(Constantes.BAJARSUR, 15);
 		nodoEscaleraISI.agregarDistancias(Constantes.IRESTE, 7);
 
 		listaNodos.add(nodoEscaleraISI);
@@ -699,7 +697,7 @@ public class Grafo {
 		nodoTICS.agregarDestinos(Constantes.IROESTE, nodoAscensor);
 
 		nodoTICS.agregarDistancias(Constantes.IRNORTE, 5);
-		nodoTICS.agregarDistancias(Constantes.IROESTE, 3);
+		nodoTICS.agregarDistancias(Constantes.IROESTE, 1);
 		
 		listaNodos.add(nodoTICS);
 
