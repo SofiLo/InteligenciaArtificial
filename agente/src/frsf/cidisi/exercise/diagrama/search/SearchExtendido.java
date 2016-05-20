@@ -62,14 +62,14 @@ public class SearchExtendido extends SearchBasedAgentSimulator {
             System.out.println("Action returned: " + action);
             
             //JOptionPane.showMessageDialog(frame, "hola wachin, ahora me voy pal: " + action);
-            ((Inicio) frame).mostrarRecorrido("Accion: " + action.toString());
+           setRecorrido(action.toString());
             
-            try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+//            try {
+//				Thread.sleep(1000);
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
             System.out.println();
 
             this.actionReturned(agent, action);
@@ -91,5 +91,9 @@ public class SearchExtendido extends SearchBasedAgentSimulator {
 
         // Launch simulationFinished event
         SimulatorEventNotifier.runEventHandlers(EventType.SimulationFinished, null);
+	}
+	
+	public void setRecorrido(String text) {
+		 ((Inicio) frame).mostrarRecorrido("Accion: " + text);
 	}
 }
