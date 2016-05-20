@@ -26,14 +26,10 @@ public class CostFunction implements IStepCostFunction {
 		HashMap<String, Integer> distancias = ((EstadoAgente) node.getAgentState()).getPosicion().getDistancias();
 		
 		if((distancias.get(accion)==null)){
-//			System.out.print("\nEl vector distancias no tiene ese operador\n");
 			return 0;
 		}else{
 			return distancias.get(accion);
 		}
-				
-		/*System.out.print("distancia del nodo "+((EstadoAgente) node.getAgentState()).getPosicion()
-				.getNombre()+" con el operador: "+accion+" esss:  "+));
-		return distancias.get(accion);*/
+
 	}
 }
