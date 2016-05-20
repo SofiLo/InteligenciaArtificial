@@ -1,0 +1,10 @@
+package frsf.cidisi.exercise.diagrama.search;
+
+import frsf.cidisi.faia.agent.Action;
+import frsf.cidisi.faia.agent.Agent;
+import frsf.cidisi.faia.simulator.GoalBasedAgentSimulator;
+import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
+
+public class SearchExtendido extends SearchBasedAgentSimulator {
+
+}

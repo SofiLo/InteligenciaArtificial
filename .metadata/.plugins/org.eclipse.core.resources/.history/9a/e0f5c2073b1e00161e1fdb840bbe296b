@@ -1,0 +1,14 @@
+package frsf.cidisi.exercise.diagrama.search;
+
+import frsf.cidisi.faia.agent.Agent;
+import frsf.cidisi.faia.environment.Environment;
+import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
+
+public class SearchExtendido extends SearchBasedAgentSimulator {
+
+	public SearchExtendido(Environment environment, Agent agent) {
+		super(environment, agent);
+	}
+	
+
+}

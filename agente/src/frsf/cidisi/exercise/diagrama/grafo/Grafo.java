@@ -567,4 +567,8 @@ public class Grafo {
 		Nodo nodo = new Nodo(nombre, 0, 0, false);
 		return listaNodos.get(listaNodos.indexOf(nodo));
 	}
+	
+	public ArrayList<Nodo> getListaNodos() {
+		return listaNodos;
+	}
 }

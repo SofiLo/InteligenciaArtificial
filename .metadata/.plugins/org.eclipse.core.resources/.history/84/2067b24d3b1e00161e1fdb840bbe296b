@@ -1,0 +1,19 @@
+package frsf.cidisi.exercise.diagrama.search;
+
+import pantallas.Inicio;
+import frsf.cidisi.faia.agent.Agent;
+import frsf.cidisi.faia.environment.Environment;
+import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
+
+public class SearchExtendido extends SearchBasedAgentSimulator {
+
+	private Inicio frame;
+	
+	public SearchExtendido(Environment environment, Agent agent) {
+		super(environment, agent);
+	}
+
+	public void setFrame(Inicio frame) {
+		this.frame = frame;
+	}
+}

@@ -5,10 +5,24 @@
 <fullyQualifiedTypeName name="java.awt.Dimension"/>
 <fullyQualifiedTypeName name="java.awt.GridBagLayout"/>
 <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
-<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
-<fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
 <fullyQualifiedTypeName name="javax.swing.JPanel"/>
 <fullyQualifiedTypeName name="pantallas.DefinicionObstaculos"/>
 <fullyQualifiedTypeName name="javax.swing.JLabel"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.DSTORE"/>
+<fullyQualifiedTypeName name="frsf.cidisi.exercise.diagrama.search.AgenteMain"/>
+<fullyQualifiedTypeName name="frsf.cidisi.exercise.diagrama.search.EstadoAgente"/>
+<fullyQualifiedTypeName name="frsf.cidisi.exercise.diagrama.grafo.Grafo"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
+<fullyQualifiedTypeName name="frsf.cidisi.faia.simulator.Simulator"/>
+<fullyQualifiedTypeName name="frsf.cidisi.exercise.diagrama.search.EstadoAmbiente"/>
+<fullyQualifiedTypeName name="javax.swing.JRootPane"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="frsf.cidisi.exercise.diagrama.grafo.Nodo"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="frsf.cidisi.faia.simulator.GoalBasedAgentSimulator"/>
+<fullyQualifiedTypeName name="frsf.cidisi.faia.simulator.SearchBasedAgentSimulator"/>
+<fullyQualifiedTypeName name="pantallas.Inicio"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="frsf.cidisi.exercise.diagrama.search.SearchExtendido"/>
 </qualifiedTypeNameHistroy>

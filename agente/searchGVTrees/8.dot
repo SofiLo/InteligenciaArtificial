@@ -2,23 +2,20 @@ digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
 nodo1[label="{EO: 1|cost: 1.0|A: IrNorte}"]
-nodo4[label="{EO: 4|cost: 2.0|A: IrNorte|Departamento\nCivil}"]
+nodo3[label="{EO: 3|cost: 2.0|A: IrNorte|Soy\nel\nAgente\nestoy\nen:\nLaboratorio\n3}"]
 
-nodo1 -> nodo4;
-nodo5[label="{EO: 5|cost: 2.0|A: IrEste|Departamento\nCivil}"]
-
-nodo1 -> nodo5;
-nodo6[label="{EO: 6|cost: 2.0|A: IrOeste|Departamento\nCivil}"]
-
-nodo1 -> nodo6;
+nodo1 -> nodo3;
 
 nodo0 -> nodo1;
-nodo2[label="{EO: 2|cost: 1.0|A: IrEste}"]
+nodo2[label="{EO: 2|cost: 1.0|A: IrSur}"]
+nodo4[label="{EO: 4|cost: 2.0|A: IrSur|Soy\nel\nAgente\nestoy\nen:\nLaboratorio\n1}"]
+
+nodo2 -> nodo4;
+nodo5[label="{EO: 5|cost: 2.0|A: IrOeste|Soy\nel\nAgente\nestoy\nen:\nLaboratorio\n1}"]
+
+nodo2 -> nodo5;
 
 nodo0 -> nodo2;
-nodo3[label="{EO: 3|cost: 1.0|A: IrOeste}"]
-
-nodo0 -> nodo3;
 
 
 }
