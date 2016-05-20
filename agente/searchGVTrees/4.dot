@@ -1,0 +1,57 @@
+digraph g {
+node [shape = Mrecord];
+nodo0[label="{EO: 0|cost: 0.0|A: null}"]
+nodo1[label="{EO: 1|cost: 1.0|A: IRNORTE}"]
+
+nodo0 -> nodo1;
+nodo2[label="{EO: 2|cost: 1.0|A: IRESTE}"]
+nodo5[label="{EO: 5|cost: 2.0|A: IRESTE|Soy\nel\nAgente\nestoy\nen:\nDepartamento\nMecánica}"]
+nodo13[label="{EO: 13|cost: 3.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nAula\nde\nEstudio}"]
+
+nodo5 -> nodo13;
+nodo14[label="{EO: 14|cost: 3.0|A: IRESTE|Soy\nel\nAgente\nestoy\nen:\nAula\nde\nEstudio}"]
+
+nodo5 -> nodo14;
+
+nodo2 -> nodo5;
+nodo6[label="{EO: 6|cost: 2.0|A: SUBIROESTE|Soy\nel\nAgente\nestoy\nen:\nDepartamento\nMecánica}"]
+nodo15[label="{EO: 15|cost: 3.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nChica}"]
+
+nodo6 -> nodo15;
+nodo16[label="{EO: 16|cost: 3.0|A: SUBIRNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nChica}"]
+
+nodo6 -> nodo16;
+nodo17[label="{EO: 17|cost: 3.0|A: SUBIROESTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nChica}"]
+
+nodo6 -> nodo17;
+
+nodo2 -> nodo6;
+
+nodo0 -> nodo2;
+nodo3[label="{EO: 3|cost: 1.0|A: IROESTE}"]
+nodo7[label="{EO: 7|cost: 2.0|A: SUBIRNORTE|Soy\nel\nAgente\nestoy\nen:\nAscensor}"]
+
+nodo3 -> nodo7;
+nodo8[label="{EO: 8|cost: 2.0|A: SUBIRESTE|Soy\nel\nAgente\nestoy\nen:\nAscensor}"]
+
+nodo3 -> nodo8;
+nodo9[label="{EO: 9|cost: 2.0|A: BAJARESTE|Soy\nel\nAgente\nestoy\nen:\nAscensor}"]
+
+nodo3 -> nodo9;
+
+nodo0 -> nodo3;
+nodo4[label="{EO: 4|cost: 1.0|A: SUBIROESTE}"]
+nodo10[label="{EO: 10|cost: 2.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nEléctrica}"]
+
+nodo4 -> nodo10;
+nodo11[label="{EO: 11|cost: 2.0|A: IRSUR|Soy\nel\nAgente\nestoy\nen:\nEscalera\nEléctrica}"]
+
+nodo4 -> nodo11;
+nodo12[label="{EO: 12|cost: 2.0|A: SUBIRNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nEléctrica}"]
+
+nodo4 -> nodo12;
+
+nodo0 -> nodo4;
+
+
+}
