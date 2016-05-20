@@ -1,10 +1,52 @@
 digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
-nodo1[label="{EO: 1|cost: 1.0|A: IRNORTE}"]
+nodo1[label="{EO: 1|cost: 5.0|A: IRNORTE}"]
+nodo3[label="{EO: 3|cost: 10.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nLaboratorio\n1}"]
+nodo6[label="{EO: 6|cost: 15.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nLaboratorio\n2}"]
+
+nodo3 -> nodo6;
+
+nodo1 -> nodo3;
+nodo4[label="{EO: 4|cost: 12.0|A: IROESTE|Soy\nel\nAgente\nestoy\nen:\nLaboratorio\n1}"]
+nodo11[label="{EO: 11|cost: 27.0|A: IRSUR|Soy\nel\nAgente\nestoy\nen:\nEscalera\nISI}"]
+
+nodo4 -> nodo11;
+nodo12[label="{EO: 12|cost: 27.0|A: BAJARNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nISI}"]
+
+nodo4 -> nodo12;
+nodo13[label="{EO: 13|cost: 27.0|A: BAJARSUR|Soy\nel\nAgente\nestoy\nen:\nEscalera\nISI}"]
+
+nodo4 -> nodo13;
+
+nodo1 -> nodo4;
 
 nodo0 -> nodo1;
-nodo2[label="{EO: 2|cost: 1.0|A: IRSUR}"]
+nodo2[label="{EO: 2|cost: 5.0|A: IRSUR}"]
+nodo5[label="{EO: 5|cost: 10.0|A: IRSUR|Soy\nel\nAgente\nestoy\nen:\nDepartamento\nISI}"]
+nodo7[label="{EO: 7|cost: 11.0|A: IROESTE|Soy\nel\nAgente\nestoy\nen:\nTICS}"]
+nodo8[label="{EO: 8|cost: 15.0|A: IRESTE|Soy\nel\nAgente\nestoy\nen:\nAscensor}"]
+
+nodo7 -> nodo8;
+nodo9[label="{EO: 9|cost: 12.0|A: SUBIRNORTE|Soy\nel\nAgente\nestoy\nen:\nAscensor}"]
+
+nodo7 -> nodo9;
+nodo10[label="{EO: 10|cost: 12.0|A: BAJARESTE|Soy\nel\nAgente\nestoy\nen:\nAscensor}"]
+nodo14[label="{EO: 14|cost: 27.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nDepartamento\nCivil}"]
+
+nodo10 -> nodo14;
+nodo15[label="{EO: 15|cost: 27.0|A: IRESTE|Soy\nel\nAgente\nestoy\nen:\nDepartamento\nCivil}"]
+
+nodo10 -> nodo15;
+nodo16[label="{EO: 16|cost: 21.0|A: IRSUR|Soy\nel\nAgente\nestoy\nen:\nDepartamento\nCivil}"]
+
+nodo10 -> nodo16;
+
+nodo7 -> nodo10;
+
+nodo5 -> nodo7;
+
+nodo2 -> nodo5;
 
 nodo0 -> nodo2;
 

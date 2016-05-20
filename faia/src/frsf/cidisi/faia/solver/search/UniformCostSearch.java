@@ -36,6 +36,7 @@ public class UniformCostSearch extends Strategy {
         //Add the nodes at the bottom of the list of nodes to expand
         for (NTree nt : nodes) {
             nt.setCost(nt.getParent().getCost() + stepCostFunction.calculateCost(nt));
+
         }
         nodesToExpand.addAll(nodes);
     }

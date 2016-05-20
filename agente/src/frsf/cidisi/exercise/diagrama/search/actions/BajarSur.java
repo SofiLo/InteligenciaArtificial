@@ -67,7 +67,7 @@ public class BajarSur extends SearchAction {
      */
     @Override
     public Double getCost() {
-        return new Double(1);
+        return new Double(0);
     }
 
     /**

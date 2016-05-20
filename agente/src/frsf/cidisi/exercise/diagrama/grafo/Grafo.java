@@ -406,7 +406,7 @@ public class Grafo {
 		nodoAulaEstudio.agregarDestinos(Constantes.IROESTE, nodoDptoMecanica);
 		nodoAulaEstudio.agregarDestinos(Constantes.IRNORTE, nodoEscaleraPpal);
 
-		nodoAulaEstudio.agregarDistancias(Constantes.IRNORTE, 3);
+		nodoAulaEstudio.agregarDistancias(Constantes.IRNORTE, 15);
 		nodoAulaEstudio.agregarDistancias(Constantes.IRESTE, 5);
 		nodoAulaEstudio.agregarDistancias(Constantes.IROESTE, 4);
 		
@@ -456,7 +456,7 @@ public class Grafo {
 		nodoEscaleraPpal.agregarDestinos(Constantes.IRNORTE, nodoBañosPlantaBaja);
 		nodoEscaleraPpal.agregarDestinos(Constantes.SUBIRNORTE, nodoBañosPrimerPiso);
 
-		nodoEscaleraPpal.agregarDistancias(Constantes.IRSUR, 3);
+		nodoEscaleraPpal.agregarDistancias(Constantes.IRSUR, 15);
 		nodoEscaleraPpal.agregarDistancias(Constantes.SUBIRNORTE, 10);
 		nodoEscaleraPpal.agregarDistancias(Constantes.IRNORTE, 8);
 		

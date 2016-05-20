@@ -68,7 +68,7 @@ public class BajarOeste extends SearchAction {
      */
     @Override
     public Double getCost() {
-        return new Double(1);
+        return new Double(0);
     }
 
     /**
