@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -232,16 +233,13 @@ public class Inicio extends JFrame {
 		panelCorrida.setLayout(fl_panelCorrida);
 
 		textArea = new JTextArea();
-		textArea.setSize(new Dimension(200, 50));
+		textArea.setSize(new Dimension(600, 100));
+		textArea.setLineWrap(true);
+		textArea.setWrapStyleWord(true);
+		textArea.setBorder(BorderFactory.createEmptyBorder(8, 8, 8, 8));
 
 		scrollPane = new JScrollPane(textArea);
-		scrollPane.setSize(new Dimension(200, 50));
-		scrollPane.setEnabled(false);
 		panelCorrida.add(scrollPane);
-
-		// panelCorrida.add(textArea);
-
-		// scrollPane.setViewportView(textArea);
 
 		defObs = new DefObstaculos(Inicio.this);
 
@@ -262,7 +260,7 @@ public class Inicio extends JFrame {
 
 	public void mostrarRecorrido(String string) {
 
-		textArea.setText(string);
+		textArea.append(string+"\n");
 	}
 
 }
