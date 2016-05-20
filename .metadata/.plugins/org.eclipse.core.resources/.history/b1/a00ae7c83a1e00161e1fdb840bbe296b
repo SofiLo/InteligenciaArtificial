@@ -1,0 +1,7 @@
+package frsf.cidisi.exercise.diagrama.search;
+
+import frsf.cidisi.faia.simulator.GoalBasedAgentSimulator;
+
+public class SearchExtendido extends GoalBasedAgentSimulator {
+
+}

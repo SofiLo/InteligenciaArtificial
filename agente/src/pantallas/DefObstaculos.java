@@ -1,13 +1,13 @@
 package pantallas;
 
+import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.EventQueue;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+
 import javax.swing.BoxLayout;
-import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -16,18 +16,16 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.EtchedBorder;
-import javax.swing.table.DefaultTableModel;
-import java.awt.Color;
-import javax.swing.border.LineBorder;
 import javax.swing.border.BevelBorder;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+import javax.swing.table.DefaultTableModel;
 
 public class DefObstaculos extends JFrame {
 
 	private JPanel contentPane;
 	private JPanel panelObs = new JPanel();
-	private String[] aulas = { "Mástil", "Cantina", "Alumnado",
+	private String[] aulas = { "Mastil", "Cantina", "Alumnado",
 			"Ingreso a torre", "Escalera Torre", "Puerta Principal",
 			"Fotocopiadora", "Aula 2", "Aula 3", "Aula 4", "Aula 5", "Aula 1",
 			"Aula de Estudio", "Departamento Mecánica",
@@ -54,10 +52,12 @@ public class DefObstaculos extends JFrame {
 	public DefObstaculos(Inicio inicio) {
 		setSize(500, 330);
 		setResizable(false);
+		frame = inicio;	
 		
 		setTitle("Definir Obstaculos del ambiente");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 300);		
+		
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(95, 158, 160));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -153,6 +153,9 @@ public class DefObstaculos extends JFrame {
 		panelBotones.add(limpiarTabla);
 		agregarCambios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				listaObstaculos.clear();
+				
 				DefaultTableModel temp = (DefaultTableModel) table.getModel();
 				int i = 0;
 				while (i < temp.getRowCount()) {
@@ -160,6 +163,7 @@ public class DefObstaculos extends JFrame {
 					i++;
 				}
 				DefObstaculos.this.setVisible(false);
+				frame.setObstaculos(listaObstaculos);
 				frame.setEnabled(true);
 			}
 		});
@@ -173,11 +177,8 @@ public class DefObstaculos extends JFrame {
 		});
 
 		panelBotones.add(cancelar);
-		frame = inicio;		
-		setVisible(true);
-	}
-
-	public ArrayList<String> getListaObstaculos(){
-		return listaObstaculos;
+		
+		setVisible(false);
+		setDefaultCloseOperation(HIDE_ON_CLOSE);
 	}
 }

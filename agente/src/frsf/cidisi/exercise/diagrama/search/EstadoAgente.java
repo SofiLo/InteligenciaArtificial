@@ -1,7 +1,6 @@
 package frsf.cidisi.exercise.diagrama.search;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import frsf.cidisi.exercise.diagrama.grafo.Grafo;
 import frsf.cidisi.exercise.diagrama.grafo.Nodo;
@@ -20,6 +19,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 
 	
 	public EstadoAgente() {
+		mapaAgente = new Grafo();
 		this.initState();
 	}
 
@@ -78,7 +78,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 	@Override
 	public String toString() {
 		// TODO MODIFICADO: Complete Method
-		return posicion.toString();
+		return "Soy el Agente, estoy en: " + posicion.toString();
 	}
 
 	/**
@@ -105,10 +105,9 @@ public class EstadoAgente extends SearchBasedAgentState {
 		this.nodoDestino = nodoDestino;
 	}
 	//OBTENGO EL NODO DE DESTINO POR SU NOMBRE
-//	public void setNodoDestinoNombre(String nombre){
-//		Grafo grafo = new Grafo();
-//		this.nodoDestino = grafo.getNodoPorNombre(nombre);
-//	}
+	public void setNodoDestinoNombre(String nombre){
+		nodoDestino = mapaAgente.getNodoPorNombre(nombre);
+	}
 
 	public Nodo getPosicion() {
 		return posicion;

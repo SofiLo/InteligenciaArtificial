@@ -1,0 +1,35 @@
+package frsf.cidisi.exercise.diagrama.search;
+
+import java.awt.EventQueue;
+
+import pantallas.Inicio;
+import frsf.cidisi.exercise.diagrama.grafo.Nodo;
+import frsf.cidisi.faia.exceptions.PrologConnectorException;
+import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
+
+public class AgenteMain {	
+	
+	public static void main(String[] args) throws PrologConnectorException {
+		//Simulador
+		Agente agent = new Agente();
+		Ambiente environment = new Ambiente();
+		SearchBasedAgentSimulator simulator = new SearchBasedAgentSimulator(environment, agent);
+			
+		//Interfaz
+		final Inicio frame = new Inicio((EstadoAgente) agent.getAgentState(), simulator, environment);
+		
+		// TODO aca seteamos los obstaculos
+		environment.getEnvironmentState().setearObstaculos("Biblioteca");
+		
+		// Aca defino el nodo destino
+		//((EstadoAgente) agent.getAgentState()).setNodoDestinoNombre(destino);
+		((EstadoAgente) agent.getAgentState()).setNodoDestino(new Nodo("Estadio", 0, 0, false));
+		
+//		simulator.start();
+	}
+	
+//	public String getInicioAgente(){
+//		return frame.getInicio();
+//	}
+
+}
