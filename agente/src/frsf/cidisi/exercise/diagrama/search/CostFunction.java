@@ -13,7 +13,7 @@ public class CostFunction implements IStepCostFunction {
 	/**
 	 * This method calculates the cost of the given NTree node.
 	 */
-	public int calculateCost(NTree node) {
+	public double calculateCost(NTree node) {
 
 		// TODO VER ESTOOOOOO:
 		String accion;
@@ -28,7 +28,7 @@ public class CostFunction implements IStepCostFunction {
 		if((distancias.get(accion)==null)){
 			return 0;
 		}else{
-			return (int)distancias.get(accion);
+			return distancias.get(accion);
 		}
 
 	}

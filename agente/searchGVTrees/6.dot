@@ -2,24 +2,12 @@ digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
 nodo1[label="{EO: 1|cost: 5.0|A: IRNORTE}"]
-nodo9[label="{EO: 9|cost: 10.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nDepartamento\nISI}"]
-nodo15[label="{EO: 15|cost: 15.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nCIDISI}"]
-nodo20[label="{EO: 20|cost: 20.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nLaboratorio\n1}"]
-nodo34[label="{EO: 34|cost: 25.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nLaboratorio\n2}"]
-
-nodo20 -> nodo34;
+nodo9[label="{EO: 9|cost: 10.0|A: IRNORTE|Departamento\nISI}"]
+nodo15[label="{EO: 15|cost: 15.0|A: IRNORTE|CIDISI}"]
+nodo20[label="{EO: 20|cost: 20.0|A: IRNORTE|Laboratorio\n1}"]
 
 nodo15 -> nodo20;
-nodo21[label="{EO: 21|cost: 22.0|A: IROESTE|Soy\nel\nAgente\nestoy\nen:\nLaboratorio\n1}"]
-nodo35[label="{EO: 35|cost: 37.0|A: IRSUR|Soy\nel\nAgente\nestoy\nen:\nEscalera\nISI}"]
-
-nodo21 -> nodo35;
-nodo36[label="{EO: 36|cost: 37.0|A: BAJARNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nISI}"]
-
-nodo21 -> nodo36;
-nodo37[label="{EO: 37|cost: 37.0|A: BAJARSUR|Soy\nel\nAgente\nestoy\nen:\nEscalera\nISI}"]
-
-nodo21 -> nodo37;
+nodo21[label="{EO: 21|cost: 22.0|A: IROESTE|Laboratorio\n1}"]
 
 nodo15 -> nodo21;
 
@@ -29,99 +17,81 @@ nodo1 -> nodo9;
 
 nodo0 -> nodo1;
 nodo2[label="{EO: 2|cost: 1.0|A: IROESTE}"]
-nodo3[label="{EO: 3|cost: 5.0|A: IRESTE|Soy\nel\nAgente\nestoy\nen:\nAscensor}"]
-nodo10[label="{EO: 10|cost: 10.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nPuerta\na\nPatio\nInterno}"]
+nodo3[label="{EO: 3|cost: 5.0|A: IRESTE|Ascensor}"]
+nodo10[label="{EO: 10|cost: 10.0|A: IRNORTE|Puerta\na\nPatio\nInterno}"]
 
 nodo3 -> nodo10;
-nodo11[label="{EO: 11|cost: 8.0|A: IRESTE|Soy\nel\nAgente\nestoy\nen:\nPuerta\na\nPatio\nInterno}"]
-nodo13[label="{EO: 13|cost: 12.0|A: IRESTE|Soy\nel\nAgente\nestoy\nen:\nDepartamento\nMecánica}"]
-nodo18[label="{EO: 18|cost: 27.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nAula\nde\nEstudio}"]
+nodo11[label="{EO: 11|cost: 8.0|A: IRESTE|Puerta\na\nPatio\nInterno}"]
+nodo13[label="{EO: 13|cost: 12.0|A: IRESTE|Departamento\nMecánica}"]
+nodo18[label="{EO: 18|cost: 27.0|A: IRNORTE|Aula\nde\nEstudio}"]
 
 nodo13 -> nodo18;
-nodo19[label="{EO: 19|cost: 17.0|A: IRESTE|Soy\nel\nAgente\nestoy\nen:\nAula\nde\nEstudio}"]
-nodo28[label="{EO: 28|cost: 22.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nPuerta\nPrincipal}"]
-nodo38[label="{EO: 38|cost: 26.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nFotocopiadora}"]
-
-nodo28 -> nodo38;
+nodo19[label="{EO: 19|cost: 17.0|A: IRESTE|Aula\nde\nEstudio}"]
+nodo28[label="{EO: 28|cost: 22.0|A: IRNORTE|Puerta\nPrincipal}"]
 
 nodo19 -> nodo28;
-nodo29[label="{EO: 29|cost: 22.0|A: IRESTE|Soy\nel\nAgente\nestoy\nen:\nPuerta\nPrincipal}"]
-nodo39[label="{EO: 39|cost: 37.0|A: SUBIRSUR|Soy\nel\nAgente\nestoy\nen:\nAula\n1}"]
-
-nodo29 -> nodo39;
+nodo29[label="{EO: 29|cost: 22.0|A: IRESTE|Puerta\nPrincipal}"]
 
 nodo19 -> nodo29;
-nodo30[label="{EO: 30|cost: 27.0|A: IRSUR|Soy\nel\nAgente\nestoy\nen:\nPuerta\nPrincipal}"]
+nodo30[label="{EO: 30|cost: 27.0|A: IRSUR|Puerta\nPrincipal}"]
 
 nodo19 -> nodo30;
 
 nodo13 -> nodo19;
 
 nodo11 -> nodo13;
-nodo14[label="{EO: 14|cost: 23.0|A: SUBIROESTE|Soy\nel\nAgente\nestoy\nen:\nDepartamento\nMecánica}"]
-nodo40[label="{EO: 40|cost: 38.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nChica}"]
-
-nodo14 -> nodo40;
-nodo41[label="{EO: 41|cost: 38.0|A: SUBIRNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nChica}"]
-
-nodo14 -> nodo41;
-nodo42[label="{EO: 42|cost: 38.0|A: SUBIROESTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nChica}"]
-
-nodo14 -> nodo42;
+nodo14[label="{EO: 14|cost: 23.0|A: SUBIROESTE|Departamento\nMecánica}"]
 
 nodo11 -> nodo14;
 
 nodo3 -> nodo11;
-nodo12[label="{EO: 12|cost: 20.0|A: SUBIROESTE|Soy\nel\nAgente\nestoy\nen:\nPuerta\na\nPatio\nInterno}"]
-nodo31[label="{EO: 31|cost: 27.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nEléctrica}"]
+nodo12[label="{EO: 12|cost: 20.0|A: SUBIROESTE|Puerta\na\nPatio\nInterno}"]
+nodo31[label="{EO: 31|cost: 27.0|A: IRNORTE|Escalera\nEléctrica}"]
 
 nodo12 -> nodo31;
-nodo32[label="{EO: 32|cost: 35.0|A: IRSUR|Soy\nel\nAgente\nestoy\nen:\nEscalera\nEléctrica}"]
+nodo32[label="{EO: 32|cost: 35.0|A: IRSUR|Escalera\nEléctrica}"]
 
 nodo12 -> nodo32;
-nodo33[label="{EO: 33|cost: 35.0|A: SUBIRNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nEléctrica}"]
+nodo33[label="{EO: 33|cost: 35.0|A: SUBIRNORTE|Escalera\nEléctrica}"]
 
 nodo12 -> nodo33;
 
 nodo3 -> nodo12;
 
 nodo2 -> nodo3;
-nodo4[label="{EO: 4|cost: 2.0|A: SUBIRNORTE|Soy\nel\nAgente\nestoy\nen:\nAscensor}"]
+nodo4[label="{EO: 4|cost: 2.0|A: SUBIRNORTE|Ascensor}"]
 
 nodo2 -> nodo4;
-nodo5[label="{EO: 5|cost: 2.0|A: BAJARESTE|Soy\nel\nAgente\nestoy\nen:\nAscensor}"]
-nodo6[label="{EO: 6|cost: 17.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nDepartamento\nCivil}"]
-nodo22[label="{EO: 22|cost: 24.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nEléctrica}"]
-nodo43[label="{EO: 43|cost: 29.0|A: IRESTE|Soy\nel\nAgente\nestoy\nen:\nBaños\nsegundo\npiso}"]
-
-nodo22 -> nodo43;
+nodo5[label="{EO: 5|cost: 2.0|A: BAJARESTE|Ascensor}"]
+nodo6[label="{EO: 6|cost: 17.0|A: IRNORTE|Departamento\nCivil}"]
+nodo22[label="{EO: 22|cost: 24.0|A: IRNORTE|Escalera\nEléctrica}"]
 
 nodo6 -> nodo22;
-nodo23[label="{EO: 23|cost: 32.0|A: SUBIRNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nEléctrica}"]
+nodo23[label="{EO: 23|cost: 32.0|A: SUBIRNORTE|Escalera\nEléctrica}"]
 
 nodo6 -> nodo23;
-nodo24[label="{EO: 24|cost: 32.0|A: BAJARSUR|Soy\nel\nAgente\nestoy\nen:\nEscalera\nEléctrica}"]
+nodo24[label="{EO: 24|cost: 32.0|A: BAJARSUR|Escalera\nEléctrica}"]
 
 nodo6 -> nodo24;
 
 nodo5 -> nodo6;
-nodo7[label="{EO: 7|cost: 17.0|A: IRESTE|Soy\nel\nAgente\nestoy\nen:\nDepartamento\nCivil}"]
-nodo25[label="{EO: 25|cost: 32.0|A: IRNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nChica}"]
+nodo7[label="{EO: 7|cost: 17.0|A: IRESTE|Departamento\nCivil}"]
+nodo25[label="{EO: 25|cost: 32.0|A: IRNORTE|Escalera\nChica}"]
 
 nodo7 -> nodo25;
-nodo26[label="{EO: 26|cost: 32.0|A: SUBIRNORTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nChica}"]
+nodo26[label="{EO: 26|cost: 32.0|A: SUBIRNORTE|Escalera\nChica}"]
 
 nodo7 -> nodo26;
-nodo27[label="{EO: 27|cost: 32.0|A: BAJARESTE|Soy\nel\nAgente\nestoy\nen:\nEscalera\nChica}"]
+nodo27[label="{EO: 27|cost: 32.0|A: BAJARESTE|Escalera\nChica}"]
 
 nodo7 -> nodo27;
 
 nodo5 -> nodo7;
-nodo8[label="{EO: 8|cost: 11.0|A: IRSUR|Soy\nel\nAgente\nestoy\nen:\nDepartamento\nCivil}"]
-nodo16[label="{EO: 16|cost: 15.0|A: IRESTE|Soy\nel\nAgente\nestoy\nen:\nPuerta\nEstadio}"]
+nodo8[label="{EO: 8|cost: 11.0|A: IRSUR|Departamento\nCivil}"]
+nodo16[label="{EO: 16|cost: 15.0|A: IRESTE|Puerta\nEstadio}"]
 
 nodo8 -> nodo16;
-nodo17[label="{EO: 17|cost: 26.0|A: IROESTE|Soy\nel\nAgente\nestoy\nen:\nPuerta\nEstadio}"]
+nodo17[label="{EO: 17|cost: 26.0|A: IROESTE|Puerta\nEstadio}"]
 
 nodo8 -> nodo17;
 

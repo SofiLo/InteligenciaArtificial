@@ -61,15 +61,11 @@ public class SearchExtendido extends SearchBasedAgentSimulator {
 
             System.out.println("Action returned: " + action);
             
-            //JOptionPane.showMessageDialog(frame, "hola wachin, ahora me voy pal: " + action);
-           setRecorrido(action.toString());
+            setRecorrido("\nPercepción: " + perception.toString());
+            setRecorrido("\nEstado Agente: " + ((EstadoAgente) agent.getAgentState()).toString());
+            setRecorrido("\nAcción: " + action.toString());
             
-//            try {
-//				Thread.sleep(1000);
-//			} catch (InterruptedException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
+            
             System.out.println();
 
             this.actionReturned(agent, action);
@@ -94,6 +90,6 @@ public class SearchExtendido extends SearchBasedAgentSimulator {
 	}
 	
 	public void setRecorrido(String text) {
-		 ((Inicio) frame).mostrarRecorrido("Accion: " + text);
+		 ((Inicio) frame).mostrarRecorrido(text);
 	}
 }

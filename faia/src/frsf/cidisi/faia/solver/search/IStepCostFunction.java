@@ -23,5 +23,5 @@ package frsf.cidisi.faia.solver.search;
  */
 public interface IStepCostFunction {
 
-    public int calculateCost(NTree node);
+    public double calculateCost(NTree node);
 }

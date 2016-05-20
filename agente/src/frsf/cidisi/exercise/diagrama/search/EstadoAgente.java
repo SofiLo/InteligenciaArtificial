@@ -78,7 +78,7 @@ public class EstadoAgente extends SearchBasedAgentState {
 	@Override
 	public String toString() {
 		// TODO MODIFICADO: Complete Method
-		return "Soy el Agente, estoy en: " + posicion.toString();
+		return posicion.toString();
 	}
 
 	/**

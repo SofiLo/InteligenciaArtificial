@@ -33,6 +33,7 @@ import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
 import frsf.cidisi.faia.simulator.Simulator;
 import frsf.cidisi.faia.solver.search.BreathFirstSearch;
 import frsf.cidisi.faia.solver.search.UniformCostSearch;
+import javax.swing.ScrollPaneConstants;
 
 public class Inicio extends JFrame {
 	private JLabel lblInicio;
@@ -181,7 +182,7 @@ public class Inicio extends JFrame {
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				if (!cbDestino.getSelectedItem().equals("") && !cbInicio.getSelectedItem().equals("")) {
+				if (!cbDestino.getSelectedItem().equals("") && !cbInicio.getSelectedItem().equals("") && (rdbtnAnchura.isSelected() || rdbtnCostoUniforme.isSelected() || rdbtnVueloDePjaro.isSelected())) {
 					inicio = (String) cbInicio.getSelectedItem();
 					destino = (String) cbDestino.getSelectedItem();
 
@@ -192,14 +193,42 @@ public class Inicio extends JFrame {
 						agente.setEstrategia(new BreathFirstSearch());
 					else if(rdbtnCostoUniforme.isSelected())
 						agente.setEstrategia(new UniformCostSearch(new CostFunction()));
-//					else if(rdbtnVueloDePjaro.isSelected())
-//						agente.setEstrategia(new ASt);
+					else
+						JOptionPane.showMessageDialog(Inicio.this, ":( Lo sentimos, éste método se encontrará disponible en nuestra próxima versión de AgenteFRSF");
 
 					Inicio.this.simulator.start();
 				} else
 					JOptionPane.showMessageDialog(Inicio.this, "No puede haber opciones vacias");
 			}
 		});
+		
+		rdbtnAnchura.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				rdbtnCostoUniforme.setSelected(false);
+				rdbtnVueloDePjaro.setSelected(false);
+				
+			}
+		});
+		
+		rdbtnCostoUniforme.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				rdbtnAnchura.setSelected(false);
+				rdbtnVueloDePjaro.setSelected(false);
+				
+			}
+		});
+
+		rdbtnVueloDePjaro.addActionListener(new ActionListener() {
+	
+			public void actionPerformed(ActionEvent e) {
+				rdbtnCostoUniforme.setSelected(false);
+				rdbtnAnchura.setSelected(false);
+		
+			}
+		});
+		
 		btnAceptar.setHorizontalAlignment(SwingConstants.RIGHT);
 		btnAgregarObstaculos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -226,6 +255,7 @@ public class Inicio extends JFrame {
 		getContentPane().add(imagenMapa, BorderLayout.CENTER);
 
 		panelCorrida = new JPanel();
+		panelCorrida.setPreferredSize(new Dimension(350, 80));
 		panelCorrida.setBackground(new Color(230, 230, 250));
 		panelCorrida.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
 		getContentPane().add(panelCorrida, BorderLayout.SOUTH);
@@ -233,12 +263,16 @@ public class Inicio extends JFrame {
 		panelCorrida.setLayout(fl_panelCorrida);
 
 		textArea = new JTextArea();
+		textArea.setPreferredSize(new Dimension(350, 70));
 		textArea.setSize(new Dimension(600, 100));
 		textArea.setLineWrap(true);
 		textArea.setWrapStyleWord(true);
 		textArea.setBorder(BorderFactory.createEmptyBorder(8, 8, 8, 8));
 
 		scrollPane = new JScrollPane(textArea);
+		scrollPane.setEnabled(false);
+		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		scrollPane.setPreferredSize(new Dimension(350, 70));
 		panelCorrida.add(scrollPane);
 
 		defObs = new DefObstaculos(Inicio.this);
@@ -259,8 +293,7 @@ public class Inicio extends JFrame {
 	}
 
 	public void mostrarRecorrido(String string) {
-
-		textArea.append(string+"\n");
+		textArea.append(string);
 	}
 
 }
