@@ -1,153 +1,81 @@
 digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
-nodo1[label="{EO: 1|cost: 15.0|A: IRNORTE}"]
-nodo22[label="{EO: 22|cost: 23.0|A: IRNORTE|Escalera\nPrincipal}"]
+nodo1[label="{EO: 1|cost: 5.0|A: IRESTE}"]
+nodo4[label="{EO: 4|cost: 10.0|A: IRNORTE|Puerta\nPrincipal}"]
+nodo10[label="{EO: 10|cost: 14.0|A: IRNORTE|Fotocopiadora}"]
+nodo18[label="{EO: 18|cost: 18.0|A: IRNORTE|Aula\n2}"]
+nodo21[label="{EO: 21|cost: 22.0|A: IRNORTE|Aula\n3}"]
 
-nodo1 -> nodo22;
-nodo23[label="{EO: 23|cost: 25.0|A: SUBIRNORTE|Escalera\nPrincipal}"]
-nodo38[label="{EO: 38|cost: 32.0|A: IRNORTE|Baños\nPrimer\nPiso}"]
-nodo49[label="{EO: 49|cost: 37.0|A: IRESTE|Aula\n19}"]
+nodo18 -> nodo21;
 
-nodo38 -> nodo49;
-
-nodo23 -> nodo38;
-nodo39[label="{EO: 39|cost: 33.0|A: IROESTE|Baños\nPrimer\nPiso}"]
-
-nodo23 -> nodo39;
-
-nodo1 -> nodo23;
-
-nodo0 -> nodo1;
-nodo2[label="{EO: 2|cost: 5.0|A: IRESTE}"]
-nodo6[label="{EO: 6|cost: 10.0|A: IRNORTE|Puerta\nPrincipal}"]
-nodo12[label="{EO: 12|cost: 14.0|A: IRNORTE|Fotocopiadora}"]
-nodo21[label="{EO: 21|cost: 18.0|A: IRNORTE|Aula\n2}"]
-nodo26[label="{EO: 26|cost: 22.0|A: IRNORTE|Aula\n3}"]
-nodo36[label="{EO: 36|cost: 26.0|A: IRNORTE|Aula\n4}"]
-
-nodo26 -> nodo36;
-
-nodo21 -> nodo26;
-
-nodo12 -> nodo21;
-
-nodo6 -> nodo12;
-
-nodo2 -> nodo6;
-nodo7[label="{EO: 7|cost: 10.0|A: IRESTE|Puerta\nPrincipal}"]
-nodo13[label="{EO: 13|cost: 25.0|A: SUBIRSUR|Aula\n1}"]
-nodo37[label="{EO: 37|cost: 40.0|A: SUBIRNORTE|Escalera\nBásicas}"]
-
-nodo13 -> nodo37;
-
-nodo7 -> nodo13;
-
-nodo2 -> nodo7;
-nodo8[label="{EO: 8|cost: 15.0|A: IRSUR|Puerta\nPrincipal}"]
-nodo24[label="{EO: 24|cost: 25.0|A: IROESTE|Mastil}"]
-nodo40[label="{EO: 40|cost: 30.0|A: IROESTE|Cantina}"]
-nodo48[label="{EO: 48|cost: 35.0|A: IROESTE|Biblioteca}"]
-
-nodo40 -> nodo48;
-
-nodo24 -> nodo40;
-
-nodo8 -> nodo24;
-
-nodo2 -> nodo8;
-
-nodo0 -> nodo2;
-nodo3[label="{EO: 3|cost: 4.0|A: IROESTE}"]
-nodo4[label="{EO: 4|cost: 7.0|A: IROESTE|Departamento\nMecánica}"]
-nodo9[label="{EO: 9|cost: 12.0|A: IRNORTE|Puerta\na\nPatio\nInterno}"]
-
-nodo4 -> nodo9;
-nodo10[label="{EO: 10|cost: 11.0|A: IROESTE|Puerta\na\nPatio\nInterno}"]
-nodo14[label="{EO: 14|cost: 12.0|A: SUBIRNORTE|Ascensor}"]
-
-nodo10 -> nodo14;
-nodo15[label="{EO: 15|cost: 12.0|A: SUBIRESTE|Ascensor}"]
-nodo17[label="{EO: 17|cost: 17.0|A: IRNORTE|TICS}"]
-nodo25[label="{EO: 25|cost: 22.0|A: IRNORTE|Departamento\nISI}"]
-nodo35[label="{EO: 35|cost: 27.0|A: IRNORTE|CIDISI}"]
-nodo45[label="{EO: 45|cost: 32.0|A: IRNORTE|Laboratorio\n1}"]
-
-nodo35 -> nodo45;
-nodo46[label="{EO: 46|cost: 34.0|A: IROESTE|Laboratorio\n1}"]
-
-nodo35 -> nodo46;
-
-nodo25 -> nodo35;
-
-nodo17 -> nodo25;
-
-nodo15 -> nodo17;
-
-nodo10 -> nodo15;
-nodo16[label="{EO: 16|cost: 12.0|A: BAJARESTE|Ascensor}"]
-nodo18[label="{EO: 18|cost: 27.0|A: IRNORTE|Departamento\nCivil}"]
-nodo41[label="{EO: 41|cost: 34.0|A: IRNORTE|Escalera\nEléctrica}"]
-
-nodo18 -> nodo41;
-nodo42[label="{EO: 42|cost: 42.0|A: SUBIRNORTE|Escalera\nEléctrica}"]
-
-nodo18 -> nodo42;
-
-nodo16 -> nodo18;
-nodo19[label="{EO: 19|cost: 27.0|A: IRESTE|Departamento\nCivil}"]
-nodo43[label="{EO: 43|cost: 42.0|A: IRNORTE|Escalera\nChica}"]
-
-nodo19 -> nodo43;
-nodo44[label="{EO: 44|cost: 42.0|A: SUBIRNORTE|Escalera\nChica}"]
-
-nodo19 -> nodo44;
-
-nodo16 -> nodo19;
-nodo20[label="{EO: 20|cost: 21.0|A: IRSUR|Departamento\nCivil}"]
-nodo30[label="{EO: 30|cost: 25.0|A: IRESTE|Puerta\nEstadio}"]
-
-nodo20 -> nodo30;
-nodo31[label="{EO: 31|cost: 36.0|A: IROESTE|Puerta\nEstadio}"]
-
-nodo20 -> nodo31;
-
-nodo16 -> nodo20;
-
-nodo10 -> nodo16;
+nodo10 -> nodo18;
 
 nodo4 -> nodo10;
-nodo11[label="{EO: 11|cost: 22.0|A: SUBIROESTE|Puerta\na\nPatio\nInterno}"]
-nodo32[label="{EO: 32|cost: 29.0|A: IRNORTE|Escalera\nEléctrica}"]
-nodo47[label="{EO: 47|cost: 34.0|A: IRESTE|Baños\nsegundo\npiso}"]
 
-nodo32 -> nodo47;
+nodo1 -> nodo4;
+nodo5[label="{EO: 5|cost: 10.0|A: IRESTE|Puerta\nPrincipal}"]
+nodo11[label="{EO: 11|cost: 25.0|A: SUBIRSUR|Aula\n1}"]
 
-nodo11 -> nodo32;
-nodo33[label="{EO: 33|cost: 37.0|A: IRSUR|Escalera\nEléctrica}"]
+nodo5 -> nodo11;
 
-nodo11 -> nodo33;
-nodo34[label="{EO: 34|cost: 37.0|A: SUBIRNORTE|Escalera\nEléctrica}"]
+nodo1 -> nodo5;
+nodo6[label="{EO: 6|cost: 15.0|A: IRSUR|Puerta\nPrincipal}"]
+nodo19[label="{EO: 19|cost: 25.0|A: IROESTE|Mastil}"]
 
-nodo11 -> nodo34;
+nodo6 -> nodo19;
 
-nodo4 -> nodo11;
+nodo1 -> nodo6;
 
-nodo3 -> nodo4;
-nodo5[label="{EO: 5|cost: 19.0|A: SUBIROESTE|Departamento\nMecánica}"]
-nodo27[label="{EO: 27|cost: 34.0|A: IRNORTE|Escalera\nChica}"]
+nodo0 -> nodo1;
+nodo2[label="{EO: 2|cost: 4.0|A: IROESTE}"]
+nodo3[label="{EO: 3|cost: 7.0|A: IROESTE|Departamento\nMecánica}"]
+nodo7[label="{EO: 7|cost: 12.0|A: IRNORTE|Puerta\na\nPatio\nInterno}"]
 
-nodo5 -> nodo27;
-nodo28[label="{EO: 28|cost: 34.0|A: SUBIRNORTE|Escalera\nChica}"]
+nodo3 -> nodo7;
+nodo8[label="{EO: 8|cost: 11.0|A: IROESTE|Puerta\na\nPatio\nInterno}"]
+nodo12[label="{EO: 12|cost: 12.0|A: SUBIRNORTE|Ascensor}"]
 
-nodo5 -> nodo28;
-nodo29[label="{EO: 29|cost: 34.0|A: SUBIROESTE|Escalera\nChica}"]
+nodo8 -> nodo12;
+nodo13[label="{EO: 13|cost: 12.0|A: SUBIRESTE|Ascensor}"]
+nodo15[label="{EO: 15|cost: 17.0|A: IRNORTE|TICS}"]
+nodo20[label="{EO: 20|cost: 22.0|A: IRNORTE|Departamento\nISI}"]
 
-nodo5 -> nodo29;
+nodo15 -> nodo20;
 
-nodo3 -> nodo5;
+nodo13 -> nodo15;
 
-nodo0 -> nodo3;
+nodo8 -> nodo13;
+nodo14[label="{EO: 14|cost: 12.0|A: BAJARESTE|Ascensor}"]
+nodo16[label="{EO: 16|cost: 27.0|A: IRNORTE|Departamento\nCivil}"]
+
+nodo14 -> nodo16;
+nodo17[label="{EO: 17|cost: 21.0|A: IRSUR|Departamento\nCivil}"]
+nodo22[label="{EO: 22|cost: 25.0|A: IRESTE|Puerta\nEstadio}"]
+
+nodo17 -> nodo22;
+nodo23[label="{EO: 23|cost: 36.0|A: IROESTE|Puerta\nEstadio}"]
+
+nodo17 -> nodo23;
+
+nodo14 -> nodo17;
+
+nodo8 -> nodo14;
+
+nodo3 -> nodo8;
+nodo9[label="{EO: 9|cost: 22.0|A: SUBIROESTE|Puerta\na\nPatio\nInterno}"]
+nodo24[label="{EO: 24|cost: 29.0|A: IRNORTE|Escalera\nEléctrica}"]
+
+nodo9 -> nodo24;
+nodo25[label="{EO: 25|cost: 37.0|A: IRSUR|Escalera\nEléctrica}"]
+
+nodo9 -> nodo25;
+
+nodo3 -> nodo9;
+
+nodo2 -> nodo3;
+
+nodo0 -> nodo2;
 
 
 }

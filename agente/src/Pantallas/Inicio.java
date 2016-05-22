@@ -75,15 +75,7 @@ public class Inicio extends JFrame {
 		setBounds(100, 100, 710, 400);
 
 		// Edito el combobox
-		String aulas[] = { "Mastil", "Cantina", "Alumnado", "Ingreso a torre", "Escalera Torre", "Puerta Principal",
-				"Fotocopiadora", "Aula 2", "Aula 3", "Aula 4", "Aula 5", "Aula 1", "Aula de Estudio",
-				"Departamento Mecánica", "Puerta a Patio Interno", "Departamento Eléctrica", "Ascensor",
-				"Escalera Principal", "Baños Planta Baja", "Escalera Básicas", "Aula 9", "Aula 12", "Aula 18",
-				"Aula 19", "Baños Primer Piso", "Escalera Chica", "Civil GIMNI", "Departamento Civil",
-				"Baños segundo piso", "Escalea Eléctrica", "Puerta Estadio", "Estadio", "Departamento Industrial",
-				"Aula 20", "Aula 21", "Aula 22", "Escalera ISI", "Laboratorio 1", "CIDISI", "Laboratorio 2",
-				"Departamento ISI", "TICS", "Laboratorio 3", "Laboratorio de Conectividad", "Laboratorio 4",
-				"Laboratorio 5", "" };
+		String aulas[] = {"Mastil", "Cantina", "Alumnado", "Ingreso a Torre", "Escalera Torre", "Puerta Principal", "Fotocopiadora", "Aula 2", "Aula 3", "Aula 4", "Aula 5", "Aula 1", "Aula de Estudio", "Departamento Mecánica", "Puerta a Patio Interno", "Departamento Eléctrica", "Ascensor", "Escalera Principal", "Baños Planta Baja", "Escalera Básicas", "Aula 9", "Aula 12", "Aula 18", "Aula 19", "Baños Primer Piso", "Escalera Chica", "Civil GIMNI", "Departamento Civil", "Baños segundo piso", "Escalera Eléctrica", "Puerta Estadio", "Estadio", "Departamento Industrial", "Aula 20", "Aula 21", "Aula 22", "Escalera ISI", "Laboratorio 1", "CIDISI", "Laboratorio 2", "Departamento ISI", "TICS", "Laboratorio 3", "Laboratiorio de Conectividad", "Laboratorio 4", "Laboratorio 5" };
 		getContentPane().setLayout(new BorderLayout(0, 0));
 
 		JPanel panel = new JPanel();
@@ -293,7 +285,7 @@ public class Inicio extends JFrame {
 	}
 
 	public void mostrarRecorrido(String string) {
-		textArea.append(string);
+		textArea.append(""+string);
 	}
 
 }
